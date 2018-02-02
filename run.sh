@@ -76,7 +76,7 @@ fi
 
 #Run Weka's random forest classifiers on the arff file and store the tree output into temp.txt
 >&2 echo "Running Random Forest Classification Algorithm on Data . . . "
-java -cp dependency_jars/weka.jar weka.classifiers.trees.RandomForest -U -B -P 50 -I 500 -no-cv -print -t $INPUT_FILE&> foresttemp.txt
+java -cp dependency_jars/weka.jar weka.classifiers.trees.RandomForest -U -B -P 50 -I 500 -no-cv -print -t $INPUT_FILE &> foresttemp.txt
 rm -f arfftemp.arff
 
 #Take the output of weka's Random Forest classifier and put it into our MotifFounder Algorithm
@@ -96,4 +96,5 @@ else
 	rm -f motifs.txt
 fi
 
+echo "Done!"
 exit 0
