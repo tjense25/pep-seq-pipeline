@@ -61,7 +61,7 @@ done
 if [ $balance ] && [ ! $arff ]
 then
 	>&2 echo "Balancing Input Data . . . "
-	python py_scripts/balance_data.py $INPUT_FILE &> balancedtemp.csv
+	cat $INPUT_FILE | python py_scripts/balance_data.py &> balancedtemp.csv
 	INPUT_FILE=balancedtemp.csv
 fi
 
@@ -69,9 +69,9 @@ fi
 if [ ! $arff ]
 then
 	>&2 echo "Converting Input Data to Arff Format . . ."
-	python py_scripts/convert_to_arff.py $INPUT_FILE &> arfftemp.arff
+	cat $INPUT_FILE | python py_scripts/convert_to_arff.py &> arfftemp.arff
 	INPUT_FILE=arfftemp.arff
-	rm -f balancedtemp.csv
+	#rm -f balancedtemp.csv
 fi
 
 #Run Weka's random forest classifiers on the arff file and store the tree output into temp.txt
@@ -84,9 +84,9 @@ rm -f arfftemp.arff
 java -jar dependency_jars/MotifFinder.jar foresttemp.txt $K &> motifs.txt
 rm -f foresttemp.txt
 
-#IF output is true, save the output file to the specifies directory in results. If it does not exist, create such a directory
+#If output is true, save the output file to the specifies directory in results. If it does not exist, create such a directory
 #If output not specified print out the motifs data to standard output
-if [ output ]
+if [ $output ]
 then
 	>&2 echo "Saving Output to results/$OUTDIR . . . "
 	mkdir results/$OUTDIR 2> /dev/null
@@ -96,5 +96,5 @@ else
 	rm -f motifs.txt
 fi
 
-echo "Done!"
+echo "Pep-seq pipeline executed successfully!"
 exit 0

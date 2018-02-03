@@ -12,31 +12,26 @@ overrepresented calss'''
 def main():
 	REP_NUM = 3 #Number of times to repeat anti and toxic peps
 	NEU_NUM	= 32000 #Number of neutral motifs to keep
-	if len(sys.argv) == 2 and sys.argv[1].endswith('.csv'):
-		InFile = open(sys.argv[1], 'rU')
-		linenumber = 0
-		neutral_lines = []
-		for line in InFile:
-			if(linenumber == 0):
-				linenumber += 1
-				continue
+	linenumber = 0
+	neutral_lines = []
+	for line in sys.stdin:
+		#ignore the first line (only contains column names)
+		if(linenumber == 0):
+			linenumber += 1
+			continue
+		else:
+			columns = line.strip('\n').split(',')
+			toxicity = columns[8];
+			if toxicity == 'neutral':
+				neutral_lines.append(line)
 			else:
-				columns = line.strip('\n').split(',')
-				toxicity = columns[8];
-				if toxicity == 'neutral':
-					neutral_lines.append(line)
-				else:
-					#Repeat antitoxic and toxic lines
-					for i in range(REP_NUM):
-						sys.stdout.write(line)
-					
-		#Take random sample out of the Neutral motifs and print them
-		for i in random.sample(range(0, len(neutral_lines)), NEU_NUM):
-			sys.stdout.write(neutral_lines[i])
-		InFile.close();
-	else:
-		print("ERROR: Please pass in a valid input file")
-
+				#Repeat antitoxic and toxic lines
+				for i in range(REP_NUM):
+					sys.stdout.write(line)
+				
+	#Take random sample out of the Neutral motifs and print them
+	for i in random.sample(range(0, len(neutral_lines)), NEU_NUM):
+		sys.stdout.write(neutral_lines[i])
 
 if __name__ == "__main__":
 	main()
