@@ -96,8 +96,7 @@ To find partial motifs we take the output of the Random Forest (or j48)
 classifier and traverse the tree to recreate the motifs the learner used to
 correctly classify the peptides. We use the MotifFinderDecisionTree java
 program that we created to do this. Full documentation on this program can be
-found at this link: <a href="https://github.com/tjense25/MotifFinderDecisionTree"
-https://github.com/tjense25/MotifFinderDecisionTree </a> 
+found at this link: <a href="https://github.com/tjense25/MotifFinderDecisionTree"> https://github.com/tjense25/MotifFinderDecisionTree </a> 
 
 The general idea is that the program will traverse through all 500 decision
 trees and store at each node a growing motif based on how the tree was split
