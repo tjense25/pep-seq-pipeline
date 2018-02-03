@@ -79,9 +79,9 @@ unclassified instances because these gave us the highest true positive and
 lowest false positive scores for our training set. The complete weka command we
 used is below:
 
-'''bash
+```bash
 java -cp dependency_jars/weka.jar weka.classifiers.trees.RandomForest -U -B -P 50 -I 500 -print -no-cv  -t $INPUT_FILE 
-'''
+```
 
 If the data is already in arff format, you can skip to this step by including 
 the command line parameter --arff. It is also possible to run a normal decision
