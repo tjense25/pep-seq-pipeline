@@ -113,7 +113,18 @@ rm -f arfftemp.arff
 
 #Take the output of weka's Random Forest classifier and put it into our MotifFounder Algorithm
 >&2 echo "Finding Motifs From Random Forest . . . "
-java -jar dependency_jars/MotifFinder.jar foresttemp.txt $K &> motifs.txt
+if [ $anti ] && [ $neutral ]
+then
+	java -jar dependency_jars/MotifFinder.jar foresttemp.txt -k $K &> motifs.txt
+elif [ $anti ]
+then
+	java -jar dependency_jars/MotifFinder.jar foresttemp.txt -k $K -noneu &> motifs.txt
+elif [ $neutral ]
+then
+	java -jar dependency_jars/MotifFinder.jar foresttemp.txt -k $K -noanti &> motifs.txt
+else
+	java -jar dependency_jars/MotifFinder.jar foresttemp.txt -k $K -noneu -noanti &> motifs.txt
+fi
 rm -f foresttemp.txt
 
 #If output is true, save the output file to the specifies directory in results. If it does not exist, create such a directory
