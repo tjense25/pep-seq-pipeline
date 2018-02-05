@@ -3,13 +3,9 @@ import sys
 import random
 import re
 
-'''Symulated data 7 adds a lot of noise to the data while keeping the complexity of the motifs as sim6. 
-   Instead of having specific motifs for the neutral data, they are now generated completely randomly following
-   no motif. The idea being that there are specific motifs that cause a peptide to either be toxic or antitoxic,
-   but nothing in particular that causes it to have no effect. If the machine can successfully find the motifs for 
-   toxic or antitoxic, it can simply call everything that doesn't match one of those motifs neutral. Also we added
-   additional noise in that not all motifs are represented with exactly 10 peptides. The expression depth for each of 
-   the motifs now ranges randomly from 5 to 20 proteins per motifs in the training data set.'''
+'''Sim8 is exactly the same as sim7, but now includes all 20 Amino Acids, instead of the
+	12 AA subset we were dealing with for the raw_data. We are testing to see if including
+	more amino acids would change the motif finding ability of the pipeline'''
 
 #Function creates a set of motifs by randomly selecting
 #4 out of 8 positions to put a random residue in
@@ -46,15 +42,15 @@ def getPepsMatchingMotif(num_to_create, motif, residues):
 def main():
 
 	#Training Data file-- will contain 5 to 20 data points per motif
-	OutFile = open('arff_files/simulated_data/simulated_data_7.arff', 'w')
+	OutFile = open('simulated_data/simulated_data_8.arff', 'w')
 	#Test data file will contain 2 peps per motif
-	TEST  = open('arff_files/simulated_data/TEST7.arff', 'w')
+	TEST  = open('simulated_data/TEST8.arff', 'w')
 
 	toxic = set()
 	neutral = set()
 	antitoxic = set()
 	
-	residues = ['R','H','D','S','N','C','G','V','I','L','F','Y'] #Some residues not inluded because they're not present in original dataset
+	residues = ['A','E','K','M','P','Q','T','W','R','H','D','S','N','C','G','V','I','L','F','Y'] #Now containing all residues :0
 
 	#Create a list of 200  motifs (first 100 will be toxic, the last 100 will be antitoxic)
 	motifs = createMotifs(200, residues)
@@ -82,9 +78,9 @@ def main():
 		OutFile.write('@attribute pos%d {' % i)
 		TEST.write('@attribute pos%d {' % i)
 		for r in residues:
-			if r == 'R':
-				OutFile.write('R')
-				TEST.write('R')
+			if r == 'A':
+				OutFile.write('A')
+				TEST.write('A')
 				continue
 			OutFile.write(',%s' % r)
 			TEST.write(',%s' % r)
