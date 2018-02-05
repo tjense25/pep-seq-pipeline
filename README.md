@@ -125,13 +125,15 @@ To run the pep-seq pipeline execute the run.sh script while in the pep-seq-pipel
 ```
 
 <h3>OPTIONS:</h3>
-	--arff: data already in arff format, don not convert data <br>
-	--anti: also find antitoxic motifs <br>
-	--neutral: also find neutral motifs <br>
-	--help: print usage <br>
-	-b: balance the data before running machine learning classifier <br>
-	-k [number_of_motifs]: specify the number of motifs to find <br>
-	-o [out_dir]: specify directy in results/ to save output files <br>
+<em>--arff</em>: data already in arff format, don not convert data <br>
+<em>--anti:</em>also find antitoxic motifs <br>
+<em>--neutral:</em>also find neutral motifs <br>
+<em>--help:</em>print usage <br>
+<em>-b:</em>balance the data before running machine learning classifier <br>
+<em>-k [number_of_motifs]:</em>specify the number of motifs to find <br>
+<em>-o [out_dir]:</em>specify directy in results/ to save output files <br>
+
+***
 
 <h2> OUTPUT: </h2>
 
