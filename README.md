@@ -32,7 +32,7 @@ There are 7 essential steps to our pipeline:
 
 ***
 
-<h4>1. FILTER: </h4>
+<h3>1. FILTER: </h3>
 
 Filter uses a python script to convert the original peptide library data into
 a new format that contains a nomializtion of the toxicity class. Its purpose is
@@ -52,7 +52,7 @@ two-fold
 	than one std. deviation classified antitoxic, and those in between were
 	classified as neutral.
 
-<h4>2. FORMAT:  </h4>
+<h3>2. FORMAT:  </h3>
 
 After the data has been filtered and classified. We convert the new filtered
 input data into the correct file format to be ran through a machine learning
@@ -68,7 +68,7 @@ neutral).To prevent this we can balance the data which will overrepresent data
 from the two minority classes and take a smaller random sample out of the
 neutral data. Use -b on the command line to run this balance script
 
-<h4>3. CLASSIFY: </h4>
+<h3>3. CLASSIFY: </h3>
 
 After the data has been formatted into an arff file. It is put into a Random
 Forest machine learning classifier so we can try to learn the patterns present
@@ -90,7 +90,7 @@ a j48 classifier instead of a random Forest. We recommend using random Forest be
 it helps prevent overfitting of the training set. But with extremely large datasets
 a j48 classifier will run much faster and be much more manageable.
 
-<h4>4. FIND PARTIAL MOTIFS: </h4>
+<h3>4. FIND PARTIAL MOTIFS: </h3>
 
 To find partial motifs we take the output of the Random Forest (or j48)
 classifier and traverse the tree to recreate the motifs the learner used to
@@ -108,13 +108,33 @@ the motifs and print out the toxic motifs with the highest scores. These
 represent the motifs which are most likely to be the most toxic in the proetin
 library
 
-<h4>5. CLUSTER: </h4>
+<h3>5. CLUSTER: </h3>
 
-<h4>6. FIND CONSENSUS MOTIFS: </h4>
+<h3>6. FIND CONSENSUS MOTIFS: </h3>
 
-<h5>7. TEST SIGNIFICANCE: </h5>
+<h3>7. TEST SIGNIFICANCE: </h3>
 
+***
 
+<h2> USAGE: </h2>
 
+To run the pep-seq pipeline execute the run.sh script while in the pep-seq-pipeline main directory:
 
+```bash
+./run.sh [input_file_name] [-options]
+```
+
+<h3>OPTIONS:</h3>
+	--arff: data already in arff format, don not convert data
+	--anti: also find antitoxic motifs
+	--neutral: also find neutral motifs
+	--help: print usage
+	-b: balance the data before running machine learning classifier
+	-k [number_of_motifs]: specify the number of motifs to find
+	-o [out_dir]: specify directy in results/ to save output files
+
+<h2> OUTPUT: </h2>
+
+The pep-seq pipeline either prints ouput directly to the screen or saves output files in a
+directory in the result folder if the -o option is specific as a command parameter.
  

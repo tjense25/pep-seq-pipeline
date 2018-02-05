@@ -1,4 +1,31 @@
 #!/bin/bash
+# exit if any of the commands fail
+set -e
+
+#Set clean up function to be called if error occurs and program exits
+#Removes all the temp files created in the bash script
+function cleanUp {
+	rm -f balancedtemp.csv
+	rm -f arfftemp.arff
+	rm -f foresttemp.txt
+	echo "ERROR: pep-seq pipeline script failed"
+}
+trap cleanUp ERR
+
+#Set usage 
+USAGE="
+USAGE:
+./run.sh [input_file_name] [-options]
+
+OPTIONS:
+	--arff: data already in arff format, don't convert data
+	--anti: also find antitoxic motifs
+	--neutral: also find neutral motifs
+	--help: print usage
+	-b: balance the data before running machine learning classifier
+	-k [number_of_motifs]: specify the number of motifs to find
+	-o [out_dir]: specify directy in results/ to save output files
+"
 
 #Check to see if there is at least one command line argument
 if [ $# -lt 1 ]
@@ -14,7 +41,7 @@ shift
 #Check if Input file is a valid file
 if [ ! -f $INPUT_FILE ]
 then
-	echo "Input file $1 is not valid"
+	echo "ERROR: Input file $1 is not valid"
 	echo "$USAGE"
 	exit 1
 fi
@@ -48,6 +75,11 @@ do
 			OUTDIR=$2
 			shift
 			;;
+		--help) #Print Usage message
+			echo "Help Requested."
+			echo "$USAGE"
+			exit 1
+			;;
 		*) #Default branch, print argument not valid and usage then exit
 			echo "Not a valid argument: $1"
 			echo "$USAGE"
@@ -71,7 +103,7 @@ then
 	>&2 echo "Converting Input Data to Arff Format . . ."
 	cat $INPUT_FILE | python py_scripts/convert_to_arff.py &> arfftemp.arff
 	INPUT_FILE=arfftemp.arff
-	#rm -f balancedtemp.csv
+	rm -f balancedtemp.csv
 fi
 
 #Run Weka's random forest classifiers on the arff file and store the tree output into temp.txt
@@ -89,7 +121,10 @@ rm -f foresttemp.txt
 if [ $output ]
 then
 	>&2 echo "Saving Output to results/$OUTDIR . . . "
-	mkdir results/$OUTDIR 2> /dev/null
+	if [ ! -d "results/$OUTDIR" ]
+	then
+		mkdir results/$OUTDIR
+	fi
 	mv motifs.txt results/$OUTDIR
 else
 	cat motifs.txt
