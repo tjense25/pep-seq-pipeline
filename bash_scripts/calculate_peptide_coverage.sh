@@ -15,12 +15,18 @@ function printPeptideCoverage {
 
 }
 
+if [ $# -lt 3 ] 
+then
+	echo "ERROR:
+	USAGE: ./calcualte_peptide_coverage.sh [MOTIFS_INPUT_FILE] [ORIGINAL_DATA_FILE] [TOXICITY CLASS]
+	"
+	exit 1
+fi
 
 MOTIFS_INPUT=$1
 DATA_INPUT=$2
 CLASS=$3
-
-arff=true
+arff=$4
 
 if [ $arff ]
 then
@@ -64,7 +70,7 @@ PEP_COVERAGE=$(bc -l <<< "$MOTIF_CLASS_COUNT/$CLASS_COUNT")
 #Motif accuracy: the percentage of the motifs that match the motifs that are actually toxic
 MOTIF_ACCURACY=$(bc -l <<< "$MOTIF_CLASS_COUNT/$TOTAL_MOTIF_COUNT")
 
-echo "PEPTIDE COVERAGE: $PEP_COVERAGE"
-echo "MOTIF ACCURACY: $MOTIF_ACCURACY"
+echo "# PEP. COVERAGE: $PEP_COVERAGE"
+echo "# MOT. ACCURACY: $MOTIF_ACCURACY"
 
 rm -f totalmotiftemp.txt

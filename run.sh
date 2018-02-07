@@ -8,6 +8,7 @@ function cleanUp {
 	rm -f balancedtemp.csv
 	rm -f arfftemp.arff
 	rm -f foresttemp.txt
+	rm -f motifs.txt
 	echo "ERROR: pep-seq pipeline script failed"
 }
 trap cleanUp ERR
@@ -24,7 +25,7 @@ OPTIONS:
 	--help: print usage
 	-b: balance the data before running machine learning classifier
 	-k [number_of_motifs]: specify the number of motifs to find
-	-o [out_dir]: specify directy in results/ to save output files
+	-o [out_dir]: specify directory in results/ in which to save the output files
 "
 
 #Check to see if there is at least one command line argument
@@ -126,6 +127,27 @@ else
 	java -jar dependency_jars/MotifFinder.jar foresttemp.txt -k $K -noneu -noanti &> motifs.txt
 fi
 rm -f foresttemp.txt
+
+>&2 echo "Calculating Motif Coverage of Selected Motifs . . ."
+
+echo "##############################" >> motifs.txt
+echo "####TOXIC:" >> motifs.txt
+bash_scripts/calculate_peptide_coverage.sh motifs.txt $INPUT_FILE "tox" $arff>> motifs.txt
+
+if [ $neutral ]
+then
+	echo "####NEUTRAL:" >> motifs.txt
+	bash_scripts/calculate_peptide_coverage.sh motifs.txt $INPUT_FILE "neu" $arff >> motifs.txt
+fi 
+
+if [ $anti ] 
+then
+	echo "####ANTITOXIC:" >> motifs.txt
+	bash_scripts/calculate_peptide_coverage.sh motifs.txt $INPUT_FILE "anti"  $arff >> motifs.txt
+fi
+echo "##############################" >> motifs.txt
+
+
 
 #If output is true, save the output file to the specifies directory in results. If it does not exist, create such a directory
 #If output not specified print out the motifs data to standard output
