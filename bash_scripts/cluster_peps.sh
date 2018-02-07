@@ -1,6 +1,12 @@
 #!/bin/bash
 set -e
 
+function cleanUp {
+	rm -f cluster_temp.txt
+	echo "Failed to run motif_count bash script"
+}
+trap cleanUp ERR
+
 MOTIFS_INPUT=$1
 DATA_INPUT=$2
 arff=$3
@@ -12,11 +18,16 @@ else
 	MOTIFS=$(awk '{print $1}' $MOTIFS_INPUT)
 fi
 
-rm -f motifcluster.txt
+echo "motif,toxic,neutral,antitox"
 
 for m in $MOTIFS
 do
-	echo "MOTIF: $m" >> motifcluster.txt
-	grep "^$m" $DATA_INPUT >> motifcluster.txt
-	echo "" >> motifcluster.txt
+	grep "^$m" $DATA_INPUT > cluster_temp.txt
+	TOX_COUNT=$(grep ',tox' cluster_temp.txt | wc -l)
+	NEU_COUNT=$(grep ',neu' cluster_temp.txt | wc -l)
+	ANTI_COUNT=$(grep ',anti' cluster_temp.txt | wc -l)
+	motif=$(sed 's/,//g' <<< $m)
+	echo "$motif,$TOX_COUNT,$NEU_COUNT,$ANTI_COUNT"
 done
+
+rm -f cluster_temp.txt

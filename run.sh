@@ -9,6 +9,7 @@ function cleanUp {
 	rm -f arfftemp.arff
 	rm -f foresttemp.txt
 	rm -f motifs.txt
+	rm -f motif_counts.txt
 	echo "ERROR: pep-seq pipeline script failed"
 }
 trap cleanUp ERR
@@ -109,6 +110,9 @@ fi
 
 #Run Weka's random forest classifiers on the arff file and store the tree output into temp.txt
 >&2 echo "Running Random Forest Classification Algorithm on Data . . . "
+
+#module load jdk/1.8.0-121 #(Uncomment this line if java not updated)
+
 java -cp dependency_jars/weka.jar weka.classifiers.trees.RandomForest -U -B -P 50 -I 500 -no-cv -print -t $INPUT_FILE &> foresttemp.txt
 rm -f arfftemp.arff
 
@@ -128,6 +132,8 @@ else
 fi
 rm -f foresttemp.txt
 
+#Calculate motif coverage and motif accuracy of the selected motifs and print
+#these values out in the motif file that was created
 >&2 echo "Calculating Motif Coverage of Selected Motifs . . ."
 
 echo "##############################" >> motifs.txt
@@ -147,7 +153,14 @@ then
 fi
 echo "##############################" >> motifs.txt
 
+#Calculate the counts of the motifs that were created that match what motifs
+#and calcualte which motifs are statistically significant
+>&2 echo "Calcualting motif counts and running statistical test of porportions . . . "
 
+#module load r/3/3 #(Include if R module not loaded)
+
+bash_scripts/cluster_peps.sh motifs.txt $INPUT_FILE $arff > motif_counts.csv
+#Rscript --vanilla R_scripts/porportion_test.R motif_counts.csv
 
 #If output is true, save the output file to the specifies directory in results. If it does not exist, create such a directory
 #If output not specified print out the motifs data to standard output
@@ -159,9 +172,13 @@ then
 		mkdir results/$OUTDIR
 	fi
 	mv motifs.txt results/$OUTDIR
+	mv motif_counts.csv results/$OUTDIR
 else
 	cat motifs.txt
+	echo
+	cat motif_counts.csv
 	rm -f motifs.txt
+	rm -f motif_counts.csv
 fi
 
 echo "Pep-seq pipeline executed successfully!"
