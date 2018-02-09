@@ -160,7 +160,7 @@ echo "##############################" >> motifs.txt
 #module load r/3/3 #(Include if R module not loaded)
 
 bash_scripts/cluster_peps.sh motifs.txt $INPUT_FILE $arff > motif_counts.csv
-#Rscript --vanilla R_scripts/porportion_test.R motif_counts.csv
+Rscript --vanilla R_scripts/chi_squared.R motif_counts.csv
 
 #If output is true, save the output file to the specifies directory in results. If it does not exist, create such a directory
 #If output not specified print out the motifs data to standard output

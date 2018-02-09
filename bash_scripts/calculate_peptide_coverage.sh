@@ -31,7 +31,7 @@ arff=$4
 if [ $arff ]
 then
 	#Extract motifs from the motifs output file and convert to arff motif format by adding commas after each value
-	MOTIFS=$(awk '{print $1,$2}' $MOTIFS_INPUT | python py_scripts/motif_to_arff_motif.py | grep "$CLASS" | awk '{print $1}')
+	MOTIFS=$(awk '{print $1,$2}' $MOTIFS_INPUT | python py_scripts/motif_to_arff_motif.py | grep ",$CLASS" | awk '{print $1}')
 else
 	#Extract motifs from first column of motif output file and store into the Motifs varaible
 	MOTIFS=$(grep $MOTIFS_INPUT | awk '{print $1}')

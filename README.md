@@ -110,6 +110,36 @@ library
 
 <h3>5. CLUSTER: </h3>
 
+The clustering phase of the pipeline takes the results from the motif finder
+and does meta analysis on the motifs as well as clustering the original data
+based on those motifs. The motifs are treated as regular expressions and all
+peptides that match that regex will clustered together based on that motif, and
+this list of clustered data will be used to find consensus motifs later in the
+pipeline.
+
+The metaanalysis performed at this step calculates the peptide coverage and
+motif accuracy of the motifs the motif finder found and also calcualtes chi
+squared test of independence on the counts of motifs to see if they
+statistically significantly fall into one of the classifications. This allows
+us to say that a motif is statistically toxic or antitoxic, etc. 
+
+Peptide coverage is a percent from 0 to 1, and represents what percentage of
+the peptides have at least one motif matching to them in the classified motif
+set. The closer the value is to one, the better the motifs are at capturing the
+data. Motif accuracy is what percentage of peptides matched by the classified
+motifs are actually of a matching class. There is usually a tradeoff between
+peptide coverage and motif accuracy, for instance the trivial regex '........'
+which would literally match everything would have a 1.0 peptide coverage, but
+since it matches everything it would have terrible motif accuracy- close to
+'.33'. On the other side a highly specialized toxic motif '.F.FY.RF' may have
+motif accuracy score of 1.0: every single motif that matches this regex is
+toxic. However, it will only have a peptide coverage score of 0.03: meaning
+only 3% of all toxic motifs are matched by this pattern.
+
+We want a set of toxic motifs that maximizes both of these scores, so a set of
+motifs which will match ALL peptides (have good peptide coverage), and not
+match any antitoxic or neutral peptides (have good motif accuracy).
+
 <h3>6. FIND CONSENSUS MOTIFS: </h3>
 
 <h3>7. TEST SIGNIFICANCE: </h3>
