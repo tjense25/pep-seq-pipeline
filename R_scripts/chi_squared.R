@@ -22,14 +22,7 @@ significant<- NULL
 for (i in 1:tests) {
 	p.value <- chisq.test(counts[i, ])$p.value
 	pvalues <- c(pvalues, p.value)
-	if (p.value > 0.05/tests) { #applying Bonferroni correction for multiple testing
-		stat.signif = FALSE
-	} else {
-		stat.signif = TRUE
-	}
-	significant <- c(significant, stat.signif)
 }
-
 motifcounts$pvalues <-pvalues
 motifcounts$significant<-significant
 

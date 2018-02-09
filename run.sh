@@ -37,7 +37,8 @@ then
 	exit 1
 fi
 
-INPUT_FILE=$1
+RAW_FILE=$1
+INPUT_FILE=$RAW_FILE
 shift
 
 #Check if Input file is a valid file
@@ -50,6 +51,11 @@ fi
 
 #Initialize parameter values
 K=30
+arff=false
+anti=false
+neutral=false
+balance=false
+output=false
 
 #Iterate through command line arguments and store data into variables
 while [ $# -gt 0 ]
@@ -92,7 +98,7 @@ do
 done
 
 #IF balance parameter was passed in, run python balance script on the input data
-if [ $balance ] && [ ! $arff ]
+if [ $balance = true ] && [  ! $arff = true ]
 then
 	>&2 echo "Balancing Input Data . . . "
 	cat $INPUT_FILE | python py_scripts/balance_data.py &> balancedtemp.csv
@@ -100,7 +106,7 @@ then
 fi
 
 #If passed in input file is not already an arff file, convert it to arff format
-if [ ! $arff ]
+if [ ! $arff = true ]
 then
 	>&2 echo "Converting Input Data to Arff Format . . ."
 	cat $INPUT_FILE | python py_scripts/convert_to_arff.py &> arfftemp.arff
@@ -116,15 +122,16 @@ fi
 java -cp dependency_jars/weka.jar weka.classifiers.trees.RandomForest -U -B -P 50 -I 500 -no-cv -print -t $INPUT_FILE &> foresttemp.txt
 rm -f arfftemp.arff
 
+MOTIF_FILE=motifs.txt
 #Take the output of weka's Random Forest classifier and put it into our MotifFounder Algorithm
 >&2 echo "Finding Motifs From Random Forest . . . "
-if [ $anti ] && [ $neutral ]
+if [ $anti = true ] && [ $neutral = true ]
 then
 	java -jar dependency_jars/MotifFinder.jar foresttemp.txt -k $K &> motifs.txt
-elif [ $anti ]
+elif [ $anti = true ]
 then
 	java -jar dependency_jars/MotifFinder.jar foresttemp.txt -k $K -noneu &> motifs.txt
-elif [ $neutral ]
+elif [ $neutral = true ]
 then
 	java -jar dependency_jars/MotifFinder.jar foresttemp.txt -k $K -noanti &> motifs.txt
 else
@@ -138,33 +145,33 @@ rm -f foresttemp.txt
 
 echo "##############################" >> motifs.txt
 echo "####TOXIC:" >> motifs.txt
-bash_scripts/calculate_peptide_coverage.sh motifs.txt $INPUT_FILE "tox" $arff>> motifs.txt
+bash_scripts/calculate_peptide_coverage.sh motifs.txt $RAW_FILE "tox" $arff>> motifs.txt
 
-if [ $neutral ]
+if [ $neutral = true ]
 then
 	echo "####NEUTRAL:" >> motifs.txt
-	bash_scripts/calculate_peptide_coverage.sh motifs.txt $INPUT_FILE "neu" $arff >> motifs.txt
+	bash_scripts/calculate_peptide_coverage.sh motifs.txt $RAW_FILE "neu" $arff >> motifs.txt
 fi 
 
-if [ $anti ] 
+if [ $anti = true ] 
 then
 	echo "####ANTITOXIC:" >> motifs.txt
-	bash_scripts/calculate_peptide_coverage.sh motifs.txt $INPUT_FILE "anti"  $arff >> motifs.txt
+	bash_scripts/calculate_peptide_coverage.sh motifs.txt $RAW_FILE "anti"  $arff >> motifs.txt
 fi
 echo "##############################" >> motifs.txt
 
 #Calculate the counts of the motifs that were created that match what motifs
 #and calcualte which motifs are statistically significant
->&2 echo "Calcualting motif counts and running statistical test of porportions . . . "
+>&2 echo "Calcualting motif counts and running chi-squared test of independece . . ."
 
 #module load r/3/3 #(Include if R module not loaded)
 
-bash_scripts/cluster_peps.sh motifs.txt $INPUT_FILE $arff > motif_counts.csv
+bash_scripts/cluster_peps.sh motifs.txt $RAW_FILE $arff > motif_counts.csv
 Rscript --vanilla R_scripts/chi_squared.R motif_counts.csv
 
 #If output is true, save the output file to the specifies directory in results. If it does not exist, create such a directory
 #If output not specified print out the motifs data to standard output
-if [ $output ]
+if [ $output = true ]
 then
 	>&2 echo "Saving Output to results/$OUTDIR . . . "
 	if [ ! -d "results/$OUTDIR" ]

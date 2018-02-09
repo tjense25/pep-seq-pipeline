@@ -11,7 +11,7 @@ MOTIFS_INPUT=$1
 DATA_INPUT=$2
 arff=$3
 
-if [ $arff ]
+if [ $arff = true ]
 then
 	MOTIFS=$(awk '{print $1,$2}' $MOTIFS_INPUT | python py_scripts/motif_to_arff_motif.py | awk '{print $1}')
 else
