@@ -15,10 +15,10 @@ function printPeptideCoverage {
 
 }
 
-if [ $# -lt 3 ] 
+if [ $# -lt 4 ] 
 then
 	echo "ERROR:
-	USAGE: ./calcualte_peptide_coverage.sh [MOTIFS_INPUT_FILE] [ORIGINAL_DATA_FILE] [TOXICITY CLASS]
+	USAGE: ./calcualte_peptide_coverage.sh [MOTIFS_INPUT_FILE] [ORIGINAL_DATA_FILE] [TOXICITY CLASS] [arff: true or false
 	"
 	exit 1
 fi
@@ -28,17 +28,14 @@ DATA_INPUT=$2
 CLASS=$3
 arff=$4
 
-if [ $arff ]
+if [ $arff = "true" ]
 then
 	#Extract motifs from the motifs output file and convert to arff motif format by adding commas after each value
-	MOTIFS=$(awk '{print $1,$2}' $MOTIFS_INPUT | python py_scripts/motif_to_arff_motif.py | grep ",$CLASS" | awk '{print $1}')
+	MOTIFS=$(grep "\\s$CLASS" $MOTIFS_INPUT | awk '{print $1}' | python py_scripts/motif_to_arff_motif.py)
 else
 	#Extract motifs from first column of motif output file and store into the Motifs varaible
-	MOTIFS=$(grep $MOTIFS_INPUT | awk '{print $1}')
+	MOTIFS=$(grep "\\s$CLASS" $MOTIFS_INPUT | awk '{print $1}')
 fi
-
-#Store number of motifs in the original data of the given toxicity class
-CLASS_COUNT=$(grep ",$CLASS" $DATA_INPUT | wc -l)
 
 #COUNTER=1
 for m in $MOTIFS
@@ -46,7 +43,7 @@ do
 	#add Motif to the tempMotif file in regex format 
 	if [ -f "totalmotiftemp.txt" ]
 	then
-		echo -n "$TOTALMOTIFS|(^$m)" >> totalmotiftemp.txt
+		echo -n "|(^$m)" >> totalmotiftemp.txt
 	else
 		echo -n "(^$m)" >> totalmotiftemp.txt
 	fi
@@ -63,6 +60,9 @@ TOTAL_MOTIF_COUNT=$(cat totalmotiftemp.txt | wc -l)
 #OUT OF THE PEPTIDES THAT MATCH ONE OF THE TOTAL MOTIFS
 #CALCUALTE HOW MANY ARE TOX/NEUTRAL/ANTITOX
 MOTIF_CLASS_COUNT=$(grep ",$CLASS" totalmotiftemp.txt | wc -l)
+
+#Store number of motifs in the original data of the given toxicity class
+CLASS_COUNT=$(grep ",$CLASS" $DATA_INPUT | wc -l)
 
 #Pep coverage: the percentage of peptides in the original dataset that match one of the toxic motifs found
 PEP_COVERAGE=$(bc -l <<< "$MOTIF_CLASS_COUNT/$CLASS_COUNT")

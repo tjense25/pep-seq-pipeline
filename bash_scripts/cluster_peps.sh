@@ -18,7 +18,7 @@ else
 	MOTIFS=$(awk '{print $1}' $MOTIFS_INPUT)
 fi
 
-echo "motif,toxic,neutral,antitox"
+echo "motif,toxic,neutral,anti-tox"
 
 for m in $MOTIFS
 do

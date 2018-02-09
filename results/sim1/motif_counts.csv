@@ -1,10 +1,7 @@
-motif,toxic,neutral,antitox
-C...Y..F,970,1,0
-C..VY...,970,1,0
-....Y..F,970,5,3
-H.V...G.,0,2,968
-H.V.....,0,4,968
-H.....G.,0,7,968
-........,970,999,968
-..N.....,74,90,0
-...N....,0,96,94
+motif,toxic,neutral,anti.tox,pvalues,significant
+C...Y..Ftoxic,970,0,0,0,TRUE
+C..VY...toxic,970,0,0,0,TRUE
+....Y..Ftoxic,970,0,0,0,TRUE
+H.V...G.anti-toxic,0,0,968,0,TRUE
+H.V.....anti-toxic,0,0,968,0,TRUE
+H.....G.anti-toxic,0,0,968,0,TRUE

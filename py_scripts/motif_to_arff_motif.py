@@ -16,8 +16,8 @@ def convertToArffMotif(motif):
 def main():
 	for line in sys.stdin:
 		if line.startswith("#"): return
-		motif, toxicity = line.strip().split(' ')
-		print("%s,%s" % (convertToArffMotif(motif),toxicity))
+		motif = line.strip()
+		print(convertToArffMotif(motif))
 
 if __name__ == "__main__":
 	main()

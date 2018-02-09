@@ -1,0 +1,7 @@
+motif,toxic,neutral,anti.tox,pvalues,significant
+C...Y..Ftoxic,971,0,0,0,TRUE
+...VY..Ftoxic,971,0,0,0,TRUE
+..H.Y..Ftoxic,87,0,0,1.64581143108227e-38,TRUE
+.V....G.anti-toxic,0,0,974,0,TRUE
+HV......anti-toxic,0,0,974,0,TRUE
+HV..D...anti-toxic,0,0,81,6.63967719958073e-36,TRUE
