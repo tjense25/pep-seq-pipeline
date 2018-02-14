@@ -1,5 +1,9 @@
 #!/apps/r/3.3.0/bin/Rscript
 
+library(readr)
+library(tidyr)
+library(dplyr)
+
 args = commandArgs(trailingOnly=TRUE)
 
 #Print error if user did not supply a command argument for file name
@@ -21,7 +25,12 @@ pvalues <- NULL
 significant<- NULL
 for (i in 1:tests) {
 	p.value <- chisq.test(counts[i, ])$p.value
+	signif = FALSE;
+	if (p.value < 0.05/tests) { #Bonferroni adjustment of p-values 
+		signif = TRUE;
+	}
 	pvalues <- c(pvalues, p.value)
+	significant <- c(significant, signif)
 }
 motifcounts$pvalues <-pvalues
 motifcounts$significant<-significant
