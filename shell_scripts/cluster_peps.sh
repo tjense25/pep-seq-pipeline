@@ -3,7 +3,7 @@ set -e
 
 function cleanUp {
 	rm -f cluster_temp.txt
-	echo "Failed to run motif_count bash script"
+	echo "Failed to run motif_count shell script"
 }
 trap cleanUp ERR
 
