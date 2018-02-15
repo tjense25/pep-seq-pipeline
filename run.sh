@@ -145,18 +145,18 @@ rm -f foresttemp.txt
 
 echo "##############################" >> motifs.txt
 echo "####TOXIC:" >> motifs.txt
-bash_scripts/calculate_peptide_coverage.sh motifs.txt $RAW_FILE "tox" $arff>> motifs.txt
+shell_scripts/calculate_peptide_coverage.sh motifs.txt $RAW_FILE "tox" $arff>> motifs.txt
 
 if [ $neutral = true ]
 then
 	echo "####NEUTRAL:" >> motifs.txt
-	bash_scripts/calculate_peptide_coverage.sh motifs.txt $RAW_FILE "neu" $arff >> motifs.txt
+	shell_scripts/calculate_peptide_coverage.sh motifs.txt $RAW_FILE "neu" $arff >> motifs.txt
 fi 
 
 if [ $anti = true ] 
 then
 	echo "####ANTITOXIC:" >> motifs.txt
-	bash_scripts/calculate_peptide_coverage.sh motifs.txt $RAW_FILE "anti"  $arff >> motifs.txt
+	shell_scripts/calculate_peptide_coverage.sh motifs.txt $RAW_FILE "anti"  $arff >> motifs.txt
 fi
 echo "##############################" >> motifs.txt
 
@@ -166,7 +166,7 @@ echo "##############################" >> motifs.txt
 
 #module load r/3/3 #(Include if R module not loaded)
 
-bash_scripts/cluster_peps.sh motifs.txt $RAW_FILE $arff > motif_counts.csv
+shell_scripts/cluster_peps.sh motifs.txt $RAW_FILE $arff > motif_counts.csv
 Rscript --vanilla R_scripts/chi_squared.R motif_counts.csv
 
 #If output is true, save the output file to the specifies directory in results. If it does not exist, create such a directory
