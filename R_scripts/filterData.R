@@ -52,14 +52,16 @@ mean(pepSeq$TOXSCORE)
 sd(pepSeq$TOXSCORE)
 head(pepSeq)
 
+write.csv(pepSeq, file="raw_data/filtered.csv", row.names=FALSE, quote=FALSE)
+
 ggplot(pepSeq, aes(TOXSCORE, fill=CLASS)) +
 	geom_histogram(bins=50) +
 	theme_economist()
 
-ggsave("rawDataHistogram.pdf")
+ggsave("raw_data/rawDataHistogram.pdf")
 
 ggplot(pepSeq, aes(CLASS, TOXSCORE, fill=CLASS)) +
 	geom_boxplot() +
 	theme_economist()
 
-ggsave("rawDataBoxPlot.pdf")
+ggsave("raw_data/rawDataBoxPlot.pdf")
