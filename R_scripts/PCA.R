@@ -5,9 +5,6 @@ library(ggplot2)
 library(ggthemes)
 library(readr)
 library(dplyr)
-library(tidyr)
-library(stringr)
-library(magrittr)
 
 #Code to run Principal component analysis on data, view the multi dimensional
 #data in less dimensions
@@ -19,15 +16,35 @@ if (length(args) == 0) {
 }
 
 in_file <- args[1]
-pepSeq <- read_csv(in_file)
+pepSeqData <- read_csv(in_file)
 
-pepPosTitle <- paste0("pos",1:8)
-pepPosTitle
+#remove the toxicity column of matrix and store result as matrix 
+characterMatrix <- as.matrix(select(pepSeqData, -toxClass))
 
-pepSeq <- select(pepSeq, PEPSEQ, CLASS) %>%
-	mutate(PEPSEQ = str_split(PEPSEQ, pattern="")) %>%
-	mutate(PEPSEQ = paste(PEPSEQ, collapse=",")) %>%
-	separate(PEPSEQ, pepPosTitle, sep=",")
+#get principal components from the matrix and store it in an object
+pepSeqPC <- prcomp(characterMatrix)
 
-RESIDUES <- c('A','C','D','E','F','G','H','I','K','L',
-		'M','N','P','Q','R','S','T','V','W','Y')
+#extract actual principal components and plot the first two PCs
+PCs <- as.data.frame(pepSeqPC$x)
+
+ggplot(PCs, aes(x=PC1, y=PC2, colour=pepSeqData$toxClass)) +
+	geom_point() +
+	theme_economist()
+
+ggsave("results/PCA/pcaPlot.pdf")
+
+#find out how much variance is explained by the first 10 principal components
+#and make a graphic to describe this
+
+percentVE <- 100 * pepSeqPC$sdev^2 / sum(pepSeqPC$sdev^2)
+
+percentVEdf <- data.frame(PC=1:10, PercentExplained=percentVE[1:10])
+
+ggplot(percentVEdf, aes(PC, PercentExplained, fill=PC)) +
+	geom_bar(stat="identity") +
+	xlab("Principal Component") +
+	ylab("% Variance explained") +
+	theme(legend.position="none") +
+	theme_economist()
+
+ggsave("results/PCA/varainceExplainedPCA.pdf")
