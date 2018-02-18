@@ -1,6 +1,6 @@
 #!/bin/bash
 # exit if any of the commands fail
-#set -e
+set -e
 
 #Set clean up function to be called if error occurs and program exits
 #Removes all the temp files created in the bash script
@@ -12,7 +12,7 @@ function cleanUp {
 	rm -f motif_counts.csv
 	echo "ERROR: pep-seq pipeline script failed"
 }
-#trap cleanUp ERR
+trap cleanUp ERR
 
 #Set usage 
 USAGE="
