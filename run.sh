@@ -169,6 +169,12 @@ echo "##############################" >> motifs.txt
 shell_scripts/cluster_peps.sh motifs.txt $RAW_FILE $arff > motif_counts.csv
 Rscript --vanilla R_scripts/chi_squared.R motif_counts.csv
 
+#Run motifSet T test for peps inside and outside of the motif set
+shell_scripts/group_tox_scores.sh motifs.txt $RAW_FILE $arff > motifSetPeps.tsv
+Rscript --vanilla R_scripts/motifSetTtest.R motifSetPeps.tsv
+rm -f motifSetPeps.tsv
+rm -f Rplots.pdf
+
 #If output is true, save the output file to the specifies directory in results. If it does not exist, create such a directory
 #If output not specified print out the motifs data to standard output
 if [ $output = true ]
@@ -180,6 +186,7 @@ then
 	fi
 	mv motifs.txt results/$OUTDIR
 	mv motif_counts.csv results/$OUTDIR
+	mv MotifSetBoxPlot.jpg results/$OUTDIR
 else
 	cat motifs.txt
 	echo
