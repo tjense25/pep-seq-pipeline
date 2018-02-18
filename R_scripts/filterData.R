@@ -10,7 +10,7 @@ library(magrittr)
 
 
 classify <- function(x) {
-	TOX_THRESHOLD <- -0.5 #value corresponding to there being a three times less peps in induced compared to ref
+	TOX_THRESHOLD <- -0.3 #value corresponding to there being a two times less peps in induced compared to ref
 	ANTITOX_THRESHOLD <- 0.2 #value corresponding to there being two times as many peps in induced compared to ref
 
 	sapply(x, function(x) {
@@ -46,11 +46,7 @@ pepSeq <- select(pepSeq, PEPSEQ, REF1, REF2, IND1, IND2) %>%
 		   INDSUM = IND1 + IND2) %>%
 	    mutate(TOXSCORE = log10((INDSUM + 1)/(REFSUM + 1))) %>%
 	    mutate(CLASS = classify(TOXSCORE)) %>%
-	    filter(REFSUM + INDSUM > 200)
-
-mean(pepSeq$TOXSCORE)
-sd(pepSeq$TOXSCORE)
-head(pepSeq)
+	    filter(REFSUM + INDSUM > 250)
 
 write.csv(pepSeq, file="raw_data/filtered.csv", row.names=FALSE, quote=FALSE)
 

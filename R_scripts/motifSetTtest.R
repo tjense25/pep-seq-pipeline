@@ -17,6 +17,8 @@ in_file <- args[1]
 
 peps <- read_tsv(in_file)
 
+head(peps)
+
 #store dataframe of thsoe peps that are inside the motifSet
 insideMS <- peps %>% filter(MotifSet == "INSIDE") %>% select(-MotifSet)
 

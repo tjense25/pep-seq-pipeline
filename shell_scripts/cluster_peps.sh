@@ -31,3 +31,5 @@ do
 done
 
 rm -f cluster_temp.txt
+
+exit 0

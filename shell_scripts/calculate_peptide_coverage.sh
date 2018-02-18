@@ -74,3 +74,5 @@ echo "# PEP. COVERAGE: $PEP_COVERAGE"
 echo "# MOT. ACCURACY: $MOTIF_ACCURACY"
 
 rm -f totalmotiftemp.txt
+
+exit 0

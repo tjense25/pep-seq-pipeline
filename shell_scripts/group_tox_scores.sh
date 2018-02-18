@@ -30,3 +30,5 @@ sed 's/,/\t/g' $DATA_INPUT | tail -n+2 |awk "\$1 ~ /$MOTIF_SET_REGEX/ {print \$1
 
 #Print out the motif, tox score, and OUTSIDE for all peptides outside motif set
 sed 's/,/\t/g' $DATA_INPUT | tail -n+2 |awk "\$1 !~ /$MOTIF_SET_REGEX/ {print \$1, \$8, \"OUTSIDE\";}"
+
+exit 0
