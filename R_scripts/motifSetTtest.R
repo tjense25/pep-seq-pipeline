@@ -27,8 +27,12 @@ outsideMS <- peps %>% filter(MotifSet == "OUTSIDE") %>% select(-MotifSet)
 
 t.test(insideMS$ToxScore, outsideMS$ToxScore)
 
-ggplot(peps, aes(MotifSet,ToxScore)) +
+ggplot(peps, aes(MotifSet,ToxScore, colour=CLASS)) +
 	 geom_boxplot() + 
+	 ggtitle("Relative Distribution of Peptides in Motif Set") +
+	 xlab("Motif Set") +
+	 ylab("Toxicity Score") +
+	 labs(colour = "Toxicity Class") + 
 	 theme_economist()
 
 ggsave("MotifSetBoxPlot.jpg")

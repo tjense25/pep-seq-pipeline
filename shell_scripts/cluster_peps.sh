@@ -27,7 +27,6 @@ do
 	NEU_COUNT=$(grep ',neu' cluster_temp.txt | wc -l)
 	ANTI_COUNT=$(grep ',anti' cluster_temp.txt | wc -l)
 	motif=$(sed 's/,//g' <<< $m)
-	awk "{print \$0  \",$m\"}" cluster_temp.txt >> clusteredMotifs.txt
 	echo "$motif,$TOX_COUNT,$NEU_COUNT,$ANTI_COUNT"
 done
 
