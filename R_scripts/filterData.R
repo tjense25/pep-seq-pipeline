@@ -52,12 +52,20 @@ write.csv(pepSeq, file="raw_data/filtered.csv", row.names=FALSE, quote=FALSE)
 
 ggplot(pepSeq, aes(TOXSCORE, fill=CLASS)) +
 	geom_histogram(bins=50) +
+	ggtitle("Distribution of Toxicity Scores in Filtered Data") +
+	xlab("Toxicity Score") +
+	ylab("Count") +
+	theme(plot.title = element_text(hjust = 0.5)) + 
 	theme_economist()
 
 ggsave("raw_data/rawDataHistogram.pdf")
 
 ggplot(pepSeq, aes(CLASS, TOXSCORE, fill=CLASS)) +
 	geom_boxplot() +
+	ggtitle("Distribution of Toxicity Scores in Filtered Data") +
+	xlab("Toxicity Class") +
+	ylab("Toxicity Score") +
+	theme(plot.title = element_text(hjust = 0.5)) + 
 	theme_economist()
 
 ggsave("raw_data/rawDataBoxPlot.pdf")
