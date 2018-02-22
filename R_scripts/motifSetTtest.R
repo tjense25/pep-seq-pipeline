@@ -15,7 +15,7 @@ if (length(args) == 0) {
 
 in_file <- args[1]
 
-peps <- read_tsv(in_file)
+peps <- read_csv(in_file)
 
 head(peps)
 

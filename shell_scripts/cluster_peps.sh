@@ -13,9 +13,9 @@ arff=$3
 
 if [ $arff = true ]
 then
-	MOTIFS=$(awk '{print $1,$2}' $MOTIFS_INPUT | python py_scripts/motif_to_arff_motif.py | awk '{print $1}')
+	MOTIFS=$(awk '/^[^#]/ {print $1,$2}' $MOTIFS_INPUT | python py_scripts/motif_to_arff_motif.py | awk '{print $1}')
 else
-	MOTIFS=$(awk '{print $1}' $MOTIFS_INPUT)
+	MOTIFS=$(awk '/^[^#]/ {print $1}' $MOTIFS_INPUT)
 fi
 
 echo "motif,toxic,neutral,anti-tox"
@@ -27,6 +27,7 @@ do
 	NEU_COUNT=$(grep ',neu' cluster_temp.txt | wc -l)
 	ANTI_COUNT=$(grep ',anti' cluster_temp.txt | wc -l)
 	motif=$(sed 's/,//g' <<< $m)
+	awk "{print \$0  \",$m\"}" cluster_temp.txt >> clusteredMotifs.txt
 	echo "$motif,$TOX_COUNT,$NEU_COUNT,$ANTI_COUNT"
 done
 
