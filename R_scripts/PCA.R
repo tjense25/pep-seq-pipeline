@@ -39,6 +39,8 @@ ggplot(PCs, aes(x=PC1, y=PC2, colour=pepSeqData$toxClass)) +
 	peptides. However, there are some clusters (top right, bottom right)
 	that are predominantly Toxic. This supports our hypothesis that there
 	are patterns in the sequence data that confer toxicity.") + 
+	theme(plot.title = element_text(hjust = 0.5)) + 
+	theme(plot.caption = element_text(hjust = 0.5)) + 
 	theme_economist()
 
 ggsave("results/PCA/pcaPlot.pdf")
