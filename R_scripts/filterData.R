@@ -55,6 +55,7 @@ ggplot(pepSeq, aes(TOXSCORE, fill=CLASS)) +
 	ggtitle("Distribution of Toxicity Scores in Filtered Data") +
 	xlab("Toxicity Score") +
 	ylab("Count") +
+	labs(fill = "Toxicity Class") + 
 	theme(plot.title = element_text(hjust = 0.5)) + 
 	theme_economist()
 
@@ -65,6 +66,7 @@ ggplot(pepSeq, aes(CLASS, TOXSCORE, fill=CLASS)) +
 	ggtitle("Distribution of Toxicity Scores in Filtered Data") +
 	xlab("Toxicity Class") +
 	ylab("Toxicity Score") +
+	labs(fill = "Toxicity Class") + 
 	theme(plot.title = element_text(hjust = 0.5)) + 
 	theme_economist()
 
