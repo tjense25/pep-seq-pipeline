@@ -39,35 +39,46 @@ if (length(args) == 0) {
 in_file <- args[1]
 pepSeq <- read_csv(in_file)
 
-
-pepSeq <- select(pepSeq, PEPSEQ, REF1, REF2, IND1, IND2) %>%
-	    mutate(PEPSEQ=str_sub(PEPSEQ,2,-1),
-	           REFSUM =REF1 + REF2, 
-		   INDSUM = IND1 + IND2) %>%
-	    mutate(TOXSCORE = log10((INDSUM + 1)/(REFSUM + 1))) %>%
-	    mutate(CLASS = classify(TOXSCORE)) %>%
-	    filter(REFSUM + INDSUM > 250)
-
-write.csv(pepSeq, file="raw_data/filtered.csv", row.names=FALSE, quote=FALSE)
-
 ggplot(pepSeq, aes(TOXSCORE, fill=CLASS)) +
 	geom_histogram(bins=50) +
-	ggtitle("Distribution of Toxicity Scores in Filtered Data") +
+	ggtitle("Distribution of Toxicity Scores in Simulated Data") +
 	xlab("Toxicity Score") +
 	ylab("Count") +
 	labs(fill = "Toxicity Class") + 
 	theme(plot.title = element_text(hjust = 0.5)) + 
 	theme_economist()
 
-ggsave("raw_data/rawDataHistogram.pdf")
+ggsave("simulated_data/sim9Histogram.pdf")
 
-ggplot(pepSeq, aes(CLASS, TOXSCORE, fill=CLASS)) +
-	geom_boxplot() +
-	ggtitle("Distribution of Toxicity Scores in Filtered Data") +
-	xlab("Toxicity Class") +
-	ylab("Toxicity Score") +
-	labs(fill = "Toxicity Class") + 
-	theme(plot.title = element_text(hjust = 0.5)) + 
-	theme_economist()
-
-ggsave("raw_data/rawDataBoxPlot.pdf")
+#pepSeq <- select(pepSeq, PEPSEQ, REF1, REF2, IND1, IND2) %>%
+#	    mutate(PEPSEQ=str_sub(PEPSEQ,2,-1),
+#	           REFSUM =REF1 + REF2, 
+#		   INDSUM = IND1 + IND2) %>%
+#	    mutate(TOXSCORE = log10((INDSUM + 1)/(REFSUM + 1))) %>%
+#	    mutate(CLASS = classify(TOXSCORE)) %>%
+#	    filter(REFSUM + INDSUM > 250) %>%
+#	    select(PEPSEQ,TOXSCORE,CLASS)
+#
+#write.csv(pepSeq, file="raw_data/filtered.csv", row.names=FALSE, quote=FALSE)
+#
+#ggplot(pepSeq, aes(TOXSCORE, fill=CLASS)) +
+#	geom_histogram(bins=50) +
+#	ggtitle("Distribution of Toxicity Scores in Filtered Data") +
+#	xlab("Toxicity Score") +
+#	ylab("Count") +
+#	labs(fill = "Toxicity Class") + 
+#	theme(plot.title = element_text(hjust = 0.5)) + 
+#	theme_economist()
+#
+#ggsave("raw_data/rawDataHistogram.pdf")
+#
+#ggplot(pepSeq, aes(CLASS, TOXSCORE, fill=CLASS)) +
+#	geom_boxplot() +
+#	ggtitle("Distribution of Toxicity Scores in Filtered Data") +
+#	xlab("Toxicity Class") +
+#	ylab("Toxicity Score") +
+#	labs(fill = "Toxicity Class") + 
+#	theme(plot.title = element_text(hjust = 0.5)) + 
+#	theme_economist()
+#
+#ggsave("raw_data/rawDataBoxPlot.pdf")
