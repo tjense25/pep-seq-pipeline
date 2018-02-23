@@ -20,15 +20,15 @@ done
 
 #Store the regex for all the motifs in varaible from the text file
 MOTIF_SET_REGEX="($(cat totalmotiftemp.txt))"
-rm -rf totalmotiftemp.txt
+#rm -rf totalmotiftemp.txt
 
 echo "Motif	ToxScore	MotifSet"
 
 #Print out the motif, tox score, and INSIDE for peptides in the motif set
 #sed commands changes csv to a tsv, tail gets data all data except first row
-sed 's/,/\t/g' $DATA_INPUT | tail -n+2 |awk "\$1 ~ /$MOTIF_SET_REGEX/ {print \$1, \$8, \"INSIDE\";}" | sed 's/ /\t/g'
+sed 's/,/\t/g' $DATA_INPUT | tail -n+2 |awk "\$1 ~ /$MOTIF_SET_REGEX/ {print \$1, \$2, \"INSIDE\";}" | sed 's/ /\t/g'
 
 #Print out the motif, tox score, and OUTSIDE for all peptides outside motif set
-sed 's/,/\t/g' $DATA_INPUT | tail -n+2 |awk "\$1 !~ /$MOTIF_SET_REGEX/ {print \$1, \$8, \"OUTSIDE\";}" | sed 's/ /\t/g'
+sed 's/,/\t/g' $DATA_INPUT | tail -n+2 |awk "\$1 !~ /$MOTIF_SET_REGEX/ {print \$1, \$2, \"OUTSIDE\";}" | sed 's/ /\t/g'
 
 exit 0

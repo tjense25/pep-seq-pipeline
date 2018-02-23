@@ -15,7 +15,7 @@ of magnitude, so random forest learning models should not be biased to the
 overrepresented calss'''
 
 def main():
-	REP_NUM = 4 #Number of times to repeat anti and toxic peps
+	REP_NUM = 3 #Number of times to repeat anti and toxic peps
 	NEU_NUM	= 32000 #Number of neutral motifs to keep
 	linenumber = 0
 	neutral_lines = []
@@ -26,7 +26,7 @@ def main():
 			continue
 		else:
 			columns = line.strip().split(',')
-			toxicity = columns[8];
+			toxicity = columns[2];
 			if toxicity == 'neutral' or toxicity == 'toxic':
 				#neutral_lines.append(line)
 				sys.stdout.write(line)

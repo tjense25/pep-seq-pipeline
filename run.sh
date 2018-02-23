@@ -5,11 +5,11 @@ set -e
 #Set clean up function to be called if error occurs and program exits
 #Removes all the temp files created in the bash script
 function cleanUp {
-	rm -f balancedtemp.csv
-	rm -f arfftemp.arff
-	rm -f foresttemp.txt
-	rm -f motifs.txt
-	rm -f motif_counts.csv
+	#rm -f balancedtemp.csv
+	#rm -f arfftemp.arff
+	#rm -f foresttemp.txt
+	#rm -f motifs.txt
+	#rm -f motif_counts.csv
 	echo "ERROR: pep-seq pipeline script failed"
 }
 trap cleanUp ERR
@@ -111,7 +111,7 @@ then
 	>&2 echo "Converting Input Data to Arff Format . . ."
 	cat $INPUT_FILE | python py_scripts/convert_to_arff.py &> arfftemp.arff
 	INPUT_FILE=arfftemp.arff
-	rm -f balancedtemp.csv
+	#rm -f balancedtemp.csv
 fi
 
 #Run Weka's random forest classifiers on the arff file and store the tree output into temp.txt
@@ -120,7 +120,7 @@ fi
 #module load jdk/1.8.0-121 #(Uncomment this line if java not updated)
 
 java -cp dependency_jars/weka.jar weka.classifiers.trees.RandomForest -U -B -P 50 -I 500 -no-cv -print -t $INPUT_FILE &> foresttemp.txt
-rm -f arfftemp.arff
+#rm -f arfftemp.arff
 
 MOTIF_FILE=motifs.txt
 #Take the output of weka's Random Forest classifier and put it into our MotifFounder Algorithm
@@ -137,7 +137,7 @@ then
 else
 	java -jar dependency_jars/MotifFinder.jar foresttemp.txt -k $K -noneu -noanti &> motifs.txt
 fi
-rm -f foresttemp.txt
+#rm -f foresttemp.txt
 
 #Calculate motif coverage and motif accuracy of the selected motifs and print
 #these values out in the motif file that was created
@@ -167,13 +167,13 @@ echo "##############################" >> motifs.txt
 #module load r/3/3 #(Include if R module not loaded)
 
 shell_scripts/cluster_peps.sh motifs.txt $RAW_FILE $arff > motif_counts.csv
-Rscript --vanilla R_scripts/chi_squared.R motif_counts.csv
+Rscript --vanilla R_scripts/chi_squared.R motif_counts.csv &> /dev/null
 
 #Run motifSet T test for peps inside and outside of the motif set
 shell_scripts/group_tox_scores.sh motifs.txt $RAW_FILE $arff > motifSetPeps.tsv
-Rscript --vanilla R_scripts/motifSetTtest.R motifSetPeps.tsv
-rm -f motifSetPeps.tsv
-rm -f Rplots.pdf
+Rscript --vanilla R_scripts/motifSetTtest.R motifSetPeps.tsv &> /dev/null
+#rm -f motifSetPeps.tsv
+#rm -f Rplots.pdf
 
 #If output is true, save the output file to the specifies directory in results. If it does not exist, create such a directory
 #If output not specified print out the motifs data to standard output
@@ -191,8 +191,8 @@ else
 	cat motifs.txt
 	echo
 	cat motif_counts.csv
-	rm -f motifs.txt
-	rm -f motif_counts.csv
+	#rm -f motifs.txt
+	#rm -f motif_counts.csv
 fi
 
 echo "Pep-seq pipeline executed successfully!"

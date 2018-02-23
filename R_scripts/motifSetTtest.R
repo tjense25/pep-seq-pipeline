@@ -15,7 +15,7 @@ if (length(args) == 0) {
 
 in_file <- args[1]
 
-peps <- read_csv(in_file)
+peps <- read_tsv(in_file)
 
 head(peps)
 
@@ -27,7 +27,7 @@ outsideMS <- peps %>% filter(MotifSet == "OUTSIDE") %>% select(-MotifSet)
 
 t.test(insideMS$ToxScore, outsideMS$ToxScore)
 
-ggplot(peps, aes(MotifSet,ToxScore, colour=CLASS)) +
+ggplot(peps, aes(MotifSet,ToxScore)) +
 	 geom_boxplot() + 
 	 ggtitle("Relative Distribution of Peptides in Motif Set") +
 	 xlab("Motif Set") +

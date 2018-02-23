@@ -6,10 +6,12 @@ learning algorithms. Reads a csv file in from std input and prints to stdout
 the same file but in atribute relation format. The arff has 9 total attributes:
 one for amino acid residue for each position of the peptide and one for the toxicity 
 classification (toxic, antitoxic, or neutral).'''
+
 def main():
 	sys.stdout.write('@relation pep-seq\n') 
 	residues = 'RHKDESTNQCGPAVILFMYW' #Not all residues present because some missing from our original dataset
-	res_nominal = '{R,H,D,S,N,C,G,V,I,L,F,Y}'
+	#res_nominal = '{R,H,D,S,N,C,G,V,I,L,F,Y}' #used for raw_data
+	res_nominal = '{A,C,D,E,F,G,H,I,K,L,M,N,P,Q,R,S,T,V,W,Y}' #to be used for simulated data that has all residues 
 
 	#Write out each of the positions and residues as an attribute
 	for i in range(1, 9):
@@ -21,7 +23,7 @@ def main():
 	for line in sys.stdin:
 		columns = line.strip('\n').split(',')
 		pep_sequence = columns[0];
-		toxicity = columns[8];
+		toxicity = columns[2];
 		#for each position in pep sequence output the Residue seperated by commas
 		for r in pep_sequence:
 			if r not in residues:
