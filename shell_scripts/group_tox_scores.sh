@@ -20,7 +20,7 @@ done
 
 #Store the regex for all the motifs in varaible from the text file
 MOTIF_SET_REGEX="($(cat totalmotiftemp.txt))"
-#rm -rf totalmotiftemp.txt
+rm -rf totalmotiftemp.txt
 
 echo "Motif	ToxScore	MotifSet"
 
