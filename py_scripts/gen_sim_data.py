@@ -69,7 +69,7 @@ def getPepsMatchingMotif(num_to_create, motif, residues):
 def main():
 
 	#Training Data file-- will contain 5 to 20 data points per motif
-	OutFile = open('simulated_data/simulated_data_9.arff', 'w')
+	OutFile = open('simulated_data/simulated_data_10.csv', 'w')
 	#Test data file will contain 2 peps per motif
 	#TEST  = open('simulated_data/TEST8.arff', 'w')
 
@@ -80,10 +80,10 @@ def main():
 	residues = ['A','E','K','M','P','Q','T','W','R','H','D','S','N','C','G','V','I','L','F','Y'] #Now containing all residues
 
 	#Create a list of 200  motifs (first 100 will be toxic, the last 100 will be antitoxic)
-	motifs = createMotifs(200, residues)
+	motifs = createMotifs(50, residues)
 	for i,motif in enumerate(motifs):
-		numToCreate = random.randint(5, 20)
-		if i < 160:
+		numToCreate = 40 #random.randint(5, 20)
+		if i < 40:
 			#get 10 peptides that match motif and add them to set
 			# '|' is union operator in python sets
 			toxic = toxic | getPepsMatchingMotif(numToCreate, motif, residues)
@@ -94,7 +94,7 @@ def main():
 		#OutFile.write('%% %s: %s\n' % (motif, toxicity))
 	
 	# get 2000 randomly generated neutral motifs that don't match any specific motif
-	neutral = getPepsMatchingMotif(2000, '********', residues)
+	neutral = getPepsMatchingMotif(1600, '********', residues)
 
 	OutFile.write('PEPSEQ,TOXSCORE,CLASS')
 	#TEST.write('PEPSEQ,TOXSCORE,CLASS')
