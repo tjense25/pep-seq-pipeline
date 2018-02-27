@@ -25,7 +25,7 @@ def main():
 	for line in sys.stdin:
 		columns = line.strip('\n').split(',')
 		pepSeq = columns[0];
-		toxClass = columns[8];
+		toxClass = columns[2];
 		#iterate over all 8 positions of the peptide
 		for i in range(8):
 			#then iterate over all amino acids in residues string

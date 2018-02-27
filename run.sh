@@ -172,7 +172,7 @@ Rscript --vanilla R_scripts/chi_squared.R motif_counts.csv &> /dev/null
 >&2 echo "clustering motifs based on ToxSet . . . "
 #Run motifSet T test for peps inside and outside of the motif set
 shell_scripts/group_tox_scores.sh motifs.txt $RAW_FILE "tox" > motifSetPeps.tsv
-Rscript --vanilla R_scripts/motifSetTtest.R motifSetPeps.tsv &> /dev/null
+Rscript --vanilla R_scripts/motifSetTtest.R motifSetPeps.tsv
 rm -f motifSetPeps.tsv
 rm -f Rplots.pdf
 

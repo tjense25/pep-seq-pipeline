@@ -32,12 +32,23 @@ t.test(insideMS$ToxScore, outsideMS$ToxScore)
 
 
 #plot the distribution of toxScores seperated by MotifSet group
-ggplot(peps, aes(MotifSet,ToxScore)) +
+ggplot(peps, aes(x=MotifSet,y=ToxScore)) +
+	 geom_rect(aes(xmin="INSIDE", xmax="OUTSIDE", ymin=-Inf, ymax=-0.3),
+	 	   fill="#619CFF", alpha = 0.3) +
+         geom_rect(aes(xmin="INSIDE", xmax="OUTSIDE", ymin=-0.3, ymax=0.2),
+	           fill="#00BA38", alpha = 0.3) +
+	 geom_rect(aes(xmin="INSIDE", xmax="OUTSIDE", ymin=0.2, ymax=Inf),
+	 	   fill="#F8766D", alpha = 0.3) + 
 	 geom_boxplot() + 
 	 ggtitle("Relative Distribution of Peptides in Motif Set") +
 	 xlab("Motif Set") +
 	 ylab("Toxicity Score") +
 	 labs(colour = "Toxicity Class") + 
-	 theme_economist()
+	 theme(text = element_text(size=20),
+	       plot.title = element_text(hjust = 0.5),
+	       panel.border = element_blank(),
+	       panel.grid.major = element_blank(),
+	       axis.line = element_line(colour = "black")) + 
+	 theme_bw()
 
 ggsave("MotifSetBoxPlot.jpg")

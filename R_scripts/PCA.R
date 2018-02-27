@@ -47,7 +47,12 @@ ggplot(percentVEdf, aes(PC, PercentExplained, fill=PC)) +
 	geom_bar(stat="identity") +
 	xlab("Principal Component") +
 	ylab("% Variance explained") +
-	theme(legend.position="none") +
-	theme_economist()
+	theme(text = element_text(size=20),
+	      plot.title = element_text(hjust = 0.5),
+	      panel.border = element_blank(),
+	      panel.grid.major = element_blank(),
+	      legend.position="none",
+	      axis.line = element_line(colour = "black")) + 
+	theme_bw()
 
 ggsave("results/PCA/varainceExplainedPCA.pdf")

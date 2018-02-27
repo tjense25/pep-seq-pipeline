@@ -60,8 +60,12 @@ ggplot(pepSeq, aes(TOXSCORE, fill=CLASS)) +
 	xlab("Toxicity Score") +
 	ylab("Count") +
 	labs(fill = "Toxicity Class") + 
-	theme(plot.title = element_text(hjust = 0.5)) + 
-	theme_economist()
+	theme(text = element_text(size=20),
+	      plot.title = element_text(hjust = 0.5),
+	      panel.border = element_blank(),
+	      panel.grid.major = element_blank(),
+	      axis.line = element_line(colour = "black")) + 
+	theme_bw()
 
 ggsave("raw_data/rawDataHistogram.pdf")
 
@@ -72,7 +76,11 @@ ggplot(pepSeq, aes(CLASS, TOXSCORE, fill=CLASS)) +
 	xlab("Toxicity Class") +
 	ylab("Toxicity Score") +
 	labs(fill = "Toxicity Class") + 
-	theme(plot.title = element_text(hjust = 0.5)) + 
-	theme_economist()
+	theme(text = element_text(size=20),
+	      plot.title = element_text(hjust = 0.5),
+	      panel.border = element_blank(),
+	      panel.grid.major = element_blank(),
+	      axis.line = element_line(colour = "black")) + 
+	theme_bw()
 
 ggsave("raw_data/rawDataBoxPlot.pdf")
