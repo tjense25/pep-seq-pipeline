@@ -33,13 +33,10 @@ t.test(insideMS$ToxScore, outsideMS$ToxScore)
 
 #plot the distribution of toxScores seperated by MotifSet group
 ggplot(peps, aes(x=MotifSet,y=ToxScore)) +
-	 geom_rect(aes(xmin="INSIDE", xmax="OUTSIDE", ymin=-Inf, ymax=-0.3),
-	 	   fill="#619CFF", alpha = 0.3) +
-         geom_rect(aes(xmin="INSIDE", xmax="OUTSIDE", ymin=-0.3, ymax=0.2),
-	           fill="#00BA38", alpha = 0.3) +
-	 geom_rect(aes(xmin="INSIDE", xmax="OUTSIDE", ymin=0.2, ymax=Inf),
-	 	   fill="#F8766D", alpha = 0.03) + 
 	 geom_boxplot() + 
+	 annotate("rect", xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=-.3, alpha=0.2, fill="#619CFF") + 
+	 annotate("rect", xmin=-Inf, xmax=Inf, ymin=-.3, ymax=-.2, alpha=0.2, fill="#00BA38") +
+	 annotate("rect", xmin=-Inf, xmax=Inf, ymin=.2, ymax=Inf, alpha=0.2, fill="#F8766D") +
 	 ggtitle("Pep-Seq Pipeline Output for Simulated Data") +
 	 xlab("Motif Set") +
 	 ylab("Toxicity Score") +
