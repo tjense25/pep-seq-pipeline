@@ -35,7 +35,7 @@ t.test(insideMS$ToxScore, outsideMS$ToxScore)
 ggplot(peps, aes(x=MotifSet,y=ToxScore)) +
 	 geom_boxplot() + 
 	 annotate("rect", xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=-.3, alpha=0.2, fill="#619CFF") + 
-	 annotate("rect", xmin=-Inf, xmax=Inf, ymin=-.3, ymax=-.2, alpha=0.2, fill="#00BA38") +
+	 annotate("rect", xmin=-Inf, xmax=Inf, ymin=-.3, ymax=.2, alpha=0.2, fill="#00BA38") +
 	 annotate("rect", xmin=-Inf, xmax=Inf, ymin=.2, ymax=Inf, alpha=0.2, fill="#F8766D") +
 	 ggtitle("Pep-Seq Pipeline Output for Simulated Data") +
 	 xlab("Motif Set") +
