@@ -38,17 +38,16 @@ ggplot(peps, aes(x=MotifSet,y=ToxScore)) +
          geom_rect(aes(xmin="INSIDE", xmax="OUTSIDE", ymin=-0.3, ymax=0.2),
 	           fill="#00BA38", alpha = 0.3) +
 	 geom_rect(aes(xmin="INSIDE", xmax="OUTSIDE", ymin=0.2, ymax=Inf),
-	 	   fill="#F8766D", alpha = 0.3) + 
+	 	   fill="#F8766D", alpha = 0.03) + 
 	 geom_boxplot() + 
-	 ggtitle("Relative Distribution of Peptides in Motif Set") +
+	 ggtitle("Pep-Seq Pipeline Output for Simulated Data") +
 	 xlab("Motif Set") +
 	 ylab("Toxicity Score") +
-	 labs(colour = "Toxicity Class") + 
+	 theme_bw() +
 	 theme(text = element_text(size=20),
 	       plot.title = element_text(hjust = 0.5),
 	       panel.border = element_blank(),
 	       panel.grid.major = element_blank(),
 	       axis.line = element_line(colour = "black")) + 
-	 theme_bw()
 
 ggsave("MotifSetBoxPlot.jpg")

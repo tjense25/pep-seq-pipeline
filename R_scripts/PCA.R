@@ -31,8 +31,14 @@ ggplot(PCs, aes(x=PC1, y=PC2, colour=pepSeqData$toxClass)) +
 	geom_point() +
 	labs(colour = "Toxicity Class") + 
 	ggtitle("Principal Component Analysis Plot") +
-	theme(plot.title = element_text(hjust = 0.5)) + 
-	theme_economist()
+	theme_bw() + 
+	theme(text = element_text(size=20),
+	      plot.title = element_text(hjust = 0.5),
+	      panel.border = element_blank(),
+	      panel.grid.major = element_blank(),
+	      legend.position="none",
+	      axis.line = element_line(colour = "black"))
+
 
 ggsave("results/PCA/pcaPlot.pdf")
 
@@ -47,12 +53,12 @@ ggplot(percentVEdf, aes(PC, PercentExplained, fill=PC)) +
 	geom_bar(stat="identity") +
 	xlab("Principal Component") +
 	ylab("% Variance explained") +
+	theme_bw() + 
 	theme(text = element_text(size=20),
 	      plot.title = element_text(hjust = 0.5),
 	      panel.border = element_blank(),
 	      panel.grid.major = element_blank(),
 	      legend.position="none",
-	      axis.line = element_line(colour = "black")) + 
-	theme_bw()
+	      axis.line = element_line(colour = "black"))
 
 ggsave("results/PCA/varainceExplainedPCA.pdf")
