@@ -119,7 +119,7 @@ fi
 
 #module load jdk/1.8.0-121 #(Uncomment this line if java not updated)
 
-java -Xmx2048m -cp dependency_jars/weka.jar weka.classifiers.trees.RandomForest -U -B -P 50 -I 500 -no-cv -print -t $INPUT_FILE &> temp/foresttemp.txt
+java -cp dependency_jars/weka.jar weka.classifiers.trees.RandomForest -U -B -P 50 -I 500 -no-cv -print -t $INPUT_FILE &> temp/foresttemp.txt
 rm -f temp/arfftemp.arff
 
 MOTIF_FILE=temp/motifs.txt
