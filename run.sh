@@ -5,11 +5,8 @@ set -e
 #Set clean up function to be called if error occurs and program exits
 #Removes all the temp files created in the bash script
 function cleanUp {
-	rm -f balancedtemp.csv
-	rm -f arfftemp.arff
-	rm -f foresttemp.txt
-	rm -f motifs.txt
-	rm -f motif_counts.csv
+	rm -rf temp/
+	rm -f Rplots.pdf
 	echo "ERROR: pep-seq pipeline script failed"
 }
 trap cleanUp ERR
@@ -97,21 +94,24 @@ do
 	shift
 done
 
+#make temp directory to store temporary files
+mkdir temp
+
 #IF balance parameter was passed in, run python balance script on the input data
 if [ $balance = true ] && [  ! $arff = true ]
 then
 	>&2 echo "Balancing Input Data . . . "
-	cat $INPUT_FILE | python py_scripts/balance_data.py &> balancedtemp.csv
-	INPUT_FILE=balancedtemp.csv
+	cat $INPUT_FILE | python py_scripts/balance_data.py &> temp/balancedtemp.csv
+	INPUT_FILE=temp/balancedtemp.csv
 fi
 
 #If passed in input file is not already an arff file, convert it to arff format
 if [ ! $arff = true ]
 then
 	>&2 echo "Converting Input Data to Arff Format . . ."
-	cat $INPUT_FILE | python py_scripts/convert_to_arff.py &> arfftemp.arff
-	INPUT_FILE=arfftemp.arff
-	rm -f balancedtemp.csv
+	cat $INPUT_FILE | python py_scripts/convert_to_arff.py &> temp/arfftemp.arff
+	INPUT_FILE=temp/arfftemp.arff
+	rm -f temp/balancedtemp.csv
 fi
 
 #Run Weka's random forest classifiers on the arff file and store the tree output into temp.txt
@@ -119,46 +119,46 @@ fi
 
 #module load jdk/1.8.0-121 #(Uncomment this line if java not updated)
 
-java -cp dependency_jars/weka.jar weka.classifiers.trees.RandomForest -U -B -P 50 -I 500 -no-cv -print -t $INPUT_FILE &> foresttemp.txt
-rm -f arfftemp.arff
+java -Xmx2048m -cp dependency_jars/weka.jar weka.classifiers.trees.RandomForest -U -B -P 50 -I 500 -no-cv -print -t $INPUT_FILE &> temp/foresttemp.txt
+rm -f temp/arfftemp.arff
 
-MOTIF_FILE=motifs.txt
+MOTIF_FILE=temp/motifs.txt
 #Take the output of weka's Random Forest classifier and put it into our MotifFounder Algorithm
 >&2 echo "Finding Motifs From Random Forest . . . "
 if [ $anti = true ] && [ $neutral = true ]
 then
-	java -jar dependency_jars/MotifFinder.jar foresttemp.txt -k $K &> motifs.txt
+	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt -k $K &> temp/motifs.txt
 elif [ $anti = true ]
 then
-	java -jar dependency_jars/MotifFinder.jar foresttemp.txt -k $K -noneu &> motifs.txt
+	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt -k $K -noneu &> temp/motifs.txt
 elif [ $neutral = true ]
 then
-	java -jar dependency_jars/MotifFinder.jar foresttemp.txt -k $K -noanti &> motifs.txt
+	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt -k $K -noanti &> temp/motifs.txt
 else
-	java -jar dependency_jars/MotifFinder.jar foresttemp.txt -k $K -noneu -noanti &> motifs.txt
+	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt -k $K -noneu -noanti &> temp/motifs.txt
 fi
-rm -f foresttemp.txt
+rm -f temp/foresttemp.txt
 
 #Calculate motif coverage and motif accuracy of the selected motifs and print
 #these values out in the motif file that was created
 >&2 echo "Calculating Motif Coverage of Selected Motifs . . ."
 
-echo "##############################" >> motifs.txt
-echo "####TOXIC:" >> motifs.txt
-shell_scripts/calculate_peptide_coverage.sh motifs.txt $RAW_FILE "tox" $arff>> motifs.txt
+echo "##############################" >> temp/motifs.txt
+echo "####TOXIC:" >> temp/motifs.txt
+shell_scripts/calculate_peptide_coverage.sh temp/motifs.txt $RAW_FILE "tox" $arff>> temp/motifs.txt
 
 if [ $neutral = true ]
 then
-	echo "####NEUTRAL:" >> motifs.txt
-	shell_scripts/calculate_peptide_coverage.sh motifs.txt $RAW_FILE "neu" $arff >> motifs.txt
+	echo "####NEUTRAL:" >> temp/motifs.txt
+	shell_scripts/calculate_peptide_coverage.sh temp/motifs.txt $RAW_FILE "neu" $arff >> temp/motifs.txt
 fi 
 
 if [ $anti = true ] 
 then
-	echo "####ANTITOXIC:" >> motifs.txt
-	shell_scripts/calculate_peptide_coverage.sh motifs.txt $RAW_FILE "anti"  $arff >> motifs.txt
+	echo "####ANTITOXIC:" >> temp/motifs.txt
+	shell_scripts/calculate_peptide_coverage.sh temp/motifs.txt $RAW_FILE "anti"  $arff >> temp/motifs.txt
 fi
-echo "##############################" >> motifs.txt
+echo "##############################" >> temp/motifs.txt
 
 #Calculate the counts of the motifs that were created that match what motifs
 #and calcualte which motifs are statistically significant
@@ -166,14 +166,14 @@ echo "##############################" >> motifs.txt
 
 #module load r/3/3 #(Include if R module not loaded)
 
-shell_scripts/cluster_peps.sh motifs.txt $RAW_FILE $arff > motif_counts.csv
-Rscript --vanilla R_scripts/chi_squared.R motif_counts.csv &> /dev/null
+shell_scripts/cluster_peps.sh temp/motifs.txt $RAW_FILE $arff > temp/motif_counts.csv
+Rscript --vanilla R_scripts/chi_squared.R temp/motif_counts.csv &> /dev/null
 
 >&2 echo "clustering motifs based on ToxSet . . . "
 #Run motifSet T test for peps inside and outside of the motif set
-shell_scripts/group_tox_scores.sh motifs.txt $RAW_FILE "tox" > motifSetPeps.tsv
-Rscript --vanilla R_scripts/motifSetTtest.R motifSetPeps.tsv &> /dev/null
-rm -f motifSetPeps.tsv
+shell_scripts/group_tox_scores.sh temp/motifs.txt $RAW_FILE "tox" > temp/motifSetPeps.tsv
+Rscript --vanilla R_scripts/motifSetTtest.R temp/motifSetPeps.tsv &> /dev/null
+rm -f temp/motifSetPeps.tsv
 rm -f Rplots.pdf
 
 #If output is true, save the output file to the specifies directory in results. If it does not exist, create such a directory
@@ -185,16 +185,15 @@ then
 	then
 		mkdir results/$OUTDIR
 	fi
-	mv motifs.txt results/$OUTDIR
-	mv motif_counts.csv results/$OUTDIR
+	mv temp/motifs.txt results/$OUTDIR
+	mv temp/motif_counts.csv results/$OUTDIR
 	mv MotifSetBoxPlot.jpg results/$OUTDIR
 else
-	cat motifs.txt
+	cat temp/motifs.txt
 	echo
-	cat motif_counts.csv
-	rm -f motifs.txt
-	rm -f motif_counts.csv
+	cat temp/motif_counts.csv
 fi
 
+rm -rf temp/
 echo "Pep-seq pipeline executed successfully!"
 exit 0
