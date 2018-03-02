@@ -1,0 +1,74 @@
+
+Options: -B -U -P 30 -I 500 
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 500 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -U -B -do-not-check-capabilities
+
+Time taken to build model: 46.16 seconds
+
+Time taken to test model on training data: 39.99 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances      103432               99.4194 %
+Incorrectly Classified Instances       604                0.5806 %
+Kappa statistic                          0.9912
+Mean absolute error                      0.1703
+Root mean squared error                  0.2083
+Relative absolute error                 38.9226 %
+Root relative squared error             44.5339 %
+Total Number of Instances           104036     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.997    0.006    0.989      0.997    0.993      0.989    1.000     0.999     toxic
+                 0.988    0.001    0.998      0.988    0.993      0.988    1.000     1.000     neutral
+                 1.000    0.001    0.996      1.000    0.998      0.997    1.000     1.000     anti-toxic
+Weighted Avg.    0.994    0.003    0.994      0.994    0.994      0.991    1.000     1.000     
+
+
+=== Confusion Matrix ===
+
+     a     b     c   <-- classified as
+ 36180    85     9 |     a = toxic
+   416 40678    94 |     b = neutral
+     0     0 26574 |     c = anti-toxic
+
+Time taken to perform cross-validation: 421.13 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances       81420               78.2614 %
+Incorrectly Classified Instances     22616               21.7386 %
+Kappa statistic                          0.672 
+Mean absolute error                      0.2767
+Root mean squared error                  0.3379
+Relative absolute error                 63.2215 %
+Root relative squared error             72.2415 %
+Total Number of Instances           104036     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.764    0.141    0.744      0.764    0.754      0.619    0.911     0.832     toxic
+                 0.668    0.132    0.768      0.668    0.715      0.552    0.858     0.780     neutral
+                 0.986    0.062    0.846      0.986    0.911      0.882    0.995     0.987     anti-toxic
+Weighted Avg.    0.783    0.117    0.780      0.783    0.778      0.659    0.912     0.851     
+
+
+=== Confusion Matrix ===
+
+     a     b     c   <-- classified as
+ 27698  8079   497 |     a = toxic
+  9391 27514  4283 |     b = neutral
+   140   226 26208 |     c = anti-toxic
+
