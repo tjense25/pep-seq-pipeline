@@ -1,7 +1,0 @@
-j48 model performance results
-default: F1 = .615
-Unpruned tree: F1=.639
-Do not collapse tree: F1= .615
-binary split -B: F1- .698
-binary split and unprunded: F1 - .695
-minimum instances in leaves: 1 and Binary split: F1 = .709
