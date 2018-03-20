@@ -10,8 +10,8 @@ classification (toxic, antitoxic, or neutral).'''
 def main():
 	sys.stdout.write('@relation pep-seq\n') 
 	residues = 'RHKDESTNQCGPAVILFMYW' #Not all residues present because some missing from our original dataset
-	res_nominal = '{R,H,D,S,N,C,G,V,I,L,F,Y}' #used for raw_data
-	#res_nominal = '{A,C,D,E,F,G,H,I,K,L,M,N,P,Q,R,S,T,V,W,Y}' #to be used for simulated data that has all residues 
+	#res_nominal = '{R,H,D,S,N,C,G,V,I,L,F,Y}' #used for raw_data
+	res_nominal = '{A,C,D,E,F,G,H,I,K,L,M,N,P,Q,R,S,T,V,W,Y}' #to be used for simulated data that has all residues 
 
 	#Write out each of the positions and residues as an attribute
 	for i in range(1, 9):
@@ -21,6 +21,7 @@ def main():
 	sys.stdout.write('@attribute toxicity  {toxic, neutral, anti-toxic}\n')
 	sys.stdout.write('@data\n')
 	for line in sys.stdin:
+		if line.startswith('%') or line.startswith('PEPSEQ'):  continue
 		columns = line.strip('\n').split(',')
 		pep_sequence = columns[0];
 		toxicity = columns[2];
