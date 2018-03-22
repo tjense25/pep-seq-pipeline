@@ -1,0 +1,18 @@
+1. Find a way to make the decision continue splitting: decrease the splitting
+variance?? try to make the average maximum depth 4 instead of 3. Maybe try a
+larger bagging size?
+
+2. Optimize motif selection. Find more motifs than needed and see how adding
+one motif affects the F1 score: optimize how to select the motif score
+
+3. Change the Random Forest model from a classifier to a regression model to predict
+the mean toxscore of the group 
+
+4. Graph the results from the test data (graph again after the decision tree
+receives better results)
+
+5. Finish writing manuscript and include all the new information 
+
+7. Parallelize EVERYTHING! Learn paralelization in Java, or rewrite the motif
+extraction algorithm in C++ learn how to use parallelization flags in WEKA
+
