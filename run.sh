@@ -131,7 +131,7 @@ fi
 
 #module load jdk/1.8.0-121 #(Uncomment this line if java not updated)
 
-java -cp dependency_jars/weka.jar weka.classifiers.trees.RandomForest -U -B -P 50 -I 500 -no-cv -print -t $INPUT_FILE &> temp/foresttemp.txt
+java -cp dependency_jars/weka.jar weka.classifiers.trees.RandomForest -U -B -num-slots 0 -V 1e-6 -P 100 -I 500 -no-cv -print -t $INPUT_FILE &> temp/foresttemp.txt
 rm -f temp/arfftemp.arff
 
 MOTIF_FILE=temp/motifs.txt
@@ -149,7 +149,7 @@ then
 else
 	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt -k $K -noneu -noanti &> temp/motifs.txt
 fi
-rm -f temp/foresttemp.txt
+#rm -f temp/foresttemp.txt
 
 #Calculate motif coverage and motif accuracy of the selected motifs and print
 #these values out in the motif file that was created
@@ -206,6 +206,6 @@ else
 	cat temp/motif_counts.csv
 fi
 
-rm -rf temp/
+#rm -rf temp/
 echo "Pep-seq pipeline executed successfully!"
 exit 0

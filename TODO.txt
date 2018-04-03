@@ -9,10 +9,15 @@ one motif affects the F1 score: optimize how to select the motif score
 the mean toxscore of the group 
 
 4. Graph the results from the test data (graph again after the decision tree
-receives better results)
+receives better results) (DONE)
 
-5. Finish writing manuscript and include all the new information 
+5. Finish writing manuscript and include all the new information  (DONE)
 
 7. Parallelize EVERYTHING! Learn paralelization in Java, or rewrite the motif
-extraction algorithm in C++ learn how to use parallelization flags in WEKA
+extraction algorithm in C++ learn how to use parallelization flags in WEKA 
 
+8. Run a peptide motif finding software on the clustered petpides found from
+the motif decision tree. LOOK FOR PEPTIDE CLUSTERING SOFTWARES
+
+9. update Gibb's Sampler from 365 to work for peptides and use that as the
+motif finder??
