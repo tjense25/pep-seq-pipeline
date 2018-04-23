@@ -113,7 +113,7 @@ mkdir temp
 if [ $balance = true ] && [  ! $arff = true ]
 then
 	>&2 echo "Balancing Input Data . . . "
-	cat $INPUT_FILE | python py_scripts/balance_data.py &> temp/balancedtemp.csv
+	python oversampling.py $INPUT temp/balancedtemp.csv
 	INPUT_FILE=temp/balancedtemp.csv
 fi
 
