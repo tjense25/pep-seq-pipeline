@@ -12,6 +12,7 @@ print(results)
 
 resultPlot <- ggplot(results, aes(x=NumMotifs, y=Performance, colour=Metric)) +
 	geom_line() +
+	geom_point() + 
 	theme_bw() +
 	xlab("Number of Implanted Motifs") + 
 	theme(text = element_text(size=20),
