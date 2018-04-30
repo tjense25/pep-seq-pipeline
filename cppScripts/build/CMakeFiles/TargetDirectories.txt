@@ -1,0 +1,3 @@
+/fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/build/CMakeFiles/scoreMotifs.dir
+/fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/build/CMakeFiles/edit_cache.dir
+/fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/build/CMakeFiles/rebuild_cache.dir

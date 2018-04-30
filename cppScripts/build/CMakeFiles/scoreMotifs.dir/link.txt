@@ -1,0 +1,1 @@
+/apps/gcc/6.4.0/bin/c++      CMakeFiles/scoreMotifs.dir/scoreMotifs.cpp.o CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o  -o scoreMotifs 
