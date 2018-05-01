@@ -23,6 +23,10 @@ double PepLibrary::scoreMotif(std::string motif) {
 	return total / count;
 }
 
+std::map<std::string, double> PepLibrary::getPepToToxicityMap() {
+	return this->pepToToxicityMap;
+}
+
 std::string PepLibrary::getPeptides() {
 	return this->peptides;
 }

@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/scoreMotifs.dir/scoreMotifs.cpp.o"
   "CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o"
+  "CMakeFiles/scoreMotifs.dir/MotifSet.cpp.o"
   "scoreMotifs.pdb"
   "scoreMotifs"
 )

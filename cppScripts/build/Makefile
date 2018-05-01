@@ -123,6 +123,33 @@ scoreMotifs/fast:
 	$(MAKE) -f CMakeFiles/scoreMotifs.dir/build.make CMakeFiles/scoreMotifs.dir/build
 .PHONY : scoreMotifs/fast
 
+MotifSet.o: MotifSet.cpp.o
+
+.PHONY : MotifSet.o
+
+# target to build an object file
+MotifSet.cpp.o:
+	$(MAKE) -f CMakeFiles/scoreMotifs.dir/build.make CMakeFiles/scoreMotifs.dir/MotifSet.cpp.o
+.PHONY : MotifSet.cpp.o
+
+MotifSet.i: MotifSet.cpp.i
+
+.PHONY : MotifSet.i
+
+# target to preprocess a source file
+MotifSet.cpp.i:
+	$(MAKE) -f CMakeFiles/scoreMotifs.dir/build.make CMakeFiles/scoreMotifs.dir/MotifSet.cpp.i
+.PHONY : MotifSet.cpp.i
+
+MotifSet.s: MotifSet.cpp.s
+
+.PHONY : MotifSet.s
+
+# target to generate assembly for a file
+MotifSet.cpp.s:
+	$(MAKE) -f CMakeFiles/scoreMotifs.dir/build.make CMakeFiles/scoreMotifs.dir/MotifSet.cpp.s
+.PHONY : MotifSet.cpp.s
+
 PepLibrary.o: PepLibrary.cpp.o
 
 .PHONY : PepLibrary.o
@@ -186,6 +213,9 @@ help:
 	@echo "... scoreMotifs"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... MotifSet.o"
+	@echo "... MotifSet.i"
+	@echo "... MotifSet.s"
 	@echo "... PepLibrary.o"
 	@echo "... PepLibrary.i"
 	@echo "... PepLibrary.s"

@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+/fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/MotifSet.cpp
+regex
+-
+sstream
+-
+MotifSet.h
+/fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/MotifSet.h
+
+/fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/MotifSet.h
+string
+-
+vector
+-
+map
+-
+
 /fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/PepLibrary.cpp
 fstream
 -

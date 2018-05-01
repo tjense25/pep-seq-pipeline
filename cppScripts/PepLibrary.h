@@ -1,5 +1,5 @@
-#include<string>
-#include<map>
+#include <string>
+#include <map>
 
 #ifndef PEP_LIBRARY_H
 #define PEP_LIBRARY_H
@@ -11,6 +11,7 @@ class PepLibrary
 	public:
 		PepLibrary(std::string libFileName);
 		std::string getPeptides();
+		std::map<std::string, double> getPepToToxicityMap();
 		double scoreMotif(std::string motif);
 };
 #endif
