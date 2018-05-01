@@ -34,8 +34,9 @@ OPTIONS:
 	--neutral: also find neutral motifs
 	--help: print usage
 	-b: balance the data before running machine learning classifier
-	-k [number_of_motifs]: specify the number of motifs to find
-	-o [out_dir]: specify directory in results/ in which to save the output files
+	-k: [number_of_motifs]: specify the number of motifs to find
+	-o: [out_dir]: specify directory in results/ in which to save the output files
+	-a: print ALL toxic motifs
 "
 
 #Check to see if there is at least one command line argument
@@ -65,6 +66,7 @@ anti=false
 neutral=false
 balance=false
 output=false
+all=false
 
 #Iterate through command line arguments and store data into variables
 while [ $# -gt 0 ]
@@ -92,6 +94,9 @@ do
 			OUTDIR=$2
 			shift
 			;;
+		-a) #find all toxic motifs from random forest
+			all=true
+			;;
 		--help) #Print Usage message
 			echo "Help Requested."
 			echo "$USAGE"
@@ -105,6 +110,13 @@ do
 	esac
 	shift
 done
+
+MotifFinderParam="-k $K"
+if [ $all = true ]
+then
+	MotifFinderParam="-a"
+fi 
+
 
 #make temp directory to store temporary files
 mkdir temp
@@ -139,15 +151,15 @@ MOTIF_FILE=temp/motifs.txt
 >&2 echo "Finding Motifs From Random Forest . . . "
 if [ $anti = true ] && [ $neutral = true ]
 then
-	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt -k $K &> temp/motifs.txt
+	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt $MotifFinderParam &> temp/motifs.txt
 elif [ $anti = true ]
 then
-	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt -k $K -noneu &> temp/motifs.txt
+	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt $MotifFinderParam -noneu &> temp/motifs.txt
 elif [ $neutral = true ]
 then
-	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt -k $K -noanti &> temp/motifs.txt
+	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt $MotifFinderParam -noanti &> temp/motifs.txt
 else
-	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt -k $K -noneu -noanti &> temp/motifs.txt
+	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt $MotifFinderParam -noneu -noanti &> temp/motifs.txt
 fi
 #rm -f temp/foresttemp.txt
 
