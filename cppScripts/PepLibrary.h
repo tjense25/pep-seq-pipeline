@@ -1,5 +1,6 @@
 #include <string>
 #include <map>
+#include "MotifSet.h"
 
 #ifndef PEP_LIBRARY_H
 #define PEP_LIBRARY_H
@@ -13,5 +14,6 @@ class PepLibrary
 		std::string getPeptides();
 		std::map<std::string, double> getPepToToxicityMap();
 		double scoreMotif(std::string motif);
+		MotifSet createMotifSet(std::vector<std::string> motifs);
 };
 #endif

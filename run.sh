@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#SBATCH --time=02:00:00   # walltime
+#SBATCH --time=03:00:00   # walltime
 #SBATCH --ntasks=1   # number of processor cores (i.e. tasks)
 #SBATCH --nodes=1   # number of nodes
-#SBATCH --mem-per-cpu=1G   # memory per CPU core
+#SBATCH --mem-per-cpu=32G   # memory per CPU core
 #SBATCH -J "PepseqPipeline"   # job name
 
 # LOAD MODULES, INSERT CODE, AND RUN YOUR PROGRAMS HERE
@@ -119,7 +119,7 @@ fi
 
 
 #make temp directory to store temporary files
-mkdir temp
+mkdir -p temp
 
 #IF balance parameter was passed in, run python balance script on the input data
 if [ $balance = true ] && [  ! $arff = true ]
@@ -161,28 +161,22 @@ then
 else
 	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt $MotifFinderParam -noneu -noanti &> temp/motifs.txt
 fi
-#rm -f temp/foresttemp.txt
+rm -f temp/foresttemp.txt
 
 #Calculate motif coverage and motif accuracy of the selected motifs and print
 #these values out in the motif file that was created
 >&2 echo "Calculating Motif Coverage of Selected Motifs . . ."
-
-echo "##############################" >> temp/motifs.txt
-echo "####TOXIC:" >> temp/motifs.txt
-shell_scripts/calculate_peptide_coverage.sh temp/motifs.txt $RAW_FILE "tox" $arff>> temp/motifs.txt
+./cppScripts/build/scoreMotifs $INPUT_FILE temp/motifs.txt > temp/results.txt
 
 if [ $neutral = true ]
 then
-	echo "####NEUTRAL:" >> temp/motifs.txt
 	shell_scripts/calculate_peptide_coverage.sh temp/motifs.txt $RAW_FILE "neu" $arff >> temp/motifs.txt
 fi 
 
 if [ $anti = true ] 
 then
-	echo "####ANTITOXIC:" >> temp/motifs.txt
 	shell_scripts/calculate_peptide_coverage.sh temp/motifs.txt $RAW_FILE "anti"  $arff >> temp/motifs.txt
 fi
-echo "##############################" >> temp/motifs.txt
 
 #Calculate the counts of the motifs that were created that match what motifs
 #and calcualte which motifs are statistically significant
@@ -211,13 +205,16 @@ then
 	fi
 	mv temp/motifs.txt results/$OUTDIR
 	mv temp/motif_counts.csv results/$OUTDIR
+	mv temp/results.txt motif_counts.csv results/$OUTDIR
 	mv MotifSetBoxPlot.jpg results/$OUTDIR
 else
 	cat temp/motifs.txt
 	echo
 	cat temp/motif_counts.csv
+	echo
+	cat temp/results.txt
 fi
 
-#rm -rf temp/
+rm -rf temp/
 echo "Pep-seq pipeline executed successfully!"
 exit 0

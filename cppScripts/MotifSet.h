@@ -23,6 +23,7 @@ class MotifSet
 		double getMotifSetAccuracy();
 		double getPeptideCoverage();
 		double getF1();
+		int getNumMotifs();
 		std::vector<std::string> getMotifs();
 };
 #endif

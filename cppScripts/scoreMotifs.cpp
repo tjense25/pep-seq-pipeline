@@ -18,6 +18,7 @@ std::vector<std::string> loadMotifs(std::string motifFileName) {
 
 	std::vector<std::string> motifs;
 	std::string motif;
+	getline(inFile, motif);
 	while (inFile >> motif) {
 
 		//check to see if we've reached the end of the motif list, break if we have
@@ -43,6 +44,9 @@ int main(int argc, char** argv) {
 	PepLibrary peptides(argv[1]);
 	std::vector<std::string> motifs = loadMotifs(argv[2]);
 
+	MotifSet ms = peptides.createMotifSet(motifs);
+	std::cout << "Selected " << ms.getNumMotifs() << " motifs:" << std::endl;
+	motifs = ms.getMotifs();
 	std::vector<std::pair<double, std::string>> scoredMotifs;
 	for ( auto motif : motifs) {
 		scoredMotifs.push_back(std::pair<double, std::string>(peptides.scoreMotif(motif),motif));
@@ -54,5 +58,8 @@ int main(int argc, char** argv) {
 		std::cout << myPair.second << "\t" << myPair.first << std::endl;
 	}
 
+	std::cout << "Motif Set Accuracy: " << ms.getMotifSetAccuracy() << std::endl;
+	std::cout << "Peptide Coverage: " << ms.getPeptideCoverage() << std::endl;
+	std::cout << "F1: " << ms.getF1() << std::endl;
 	return 0;
 }

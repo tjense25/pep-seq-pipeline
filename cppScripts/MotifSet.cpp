@@ -1,5 +1,6 @@
 #include <regex>
 #include <sstream>
+#include <iostream>
 #include "MotifSet.h"
 
 MotifSet::MotifSet(std::map<std::string, double> peptides, std::vector<std::string> motifs) :
@@ -28,7 +29,7 @@ double MotifSet::calculateF1(double x, double y) {
 	if (x == 0 || y == 0) {
 		return 0;
 	}
-	return 2*(x + y) / (x*y);
+	return 2*(x * y) / (x + y);
 }
 
 double MotifSet::getF1() {
@@ -64,6 +65,8 @@ bool MotifSet::addMotif(std::string motif) {
 		this->outside.erase(pep.first);
 	}
 
+	this->insideMotifs.push_back(motif);
+
 	return true;
 	
 }
@@ -71,8 +74,8 @@ bool MotifSet::addMotif(std::string motif) {
 void MotifSet::createMotifSet(std::vector<std::string> motifs) {
 	int poorMotifCount = 0;
 	for ( auto motif : motifs) {
-		if (!addMotif(motif) && ++poorMotifCount > 5) {
-			break; 
+		if ( ! addMotif(motif)) {
+			if (++poorMotifCount > 5) break;
 			//we've hit 5 bad motifs in a row	
 			//Make greedy decision to stop searching as motifSet probs not getting better
 		} else {
@@ -80,5 +83,9 @@ void MotifSet::createMotifSet(std::vector<std::string> motifs) {
 		}
 
 	}
+}
+
+int MotifSet::getNumMotifs() {
+	return this->insideMotifs.size();
 }
 

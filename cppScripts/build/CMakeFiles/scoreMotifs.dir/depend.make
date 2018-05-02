@@ -4,9 +4,11 @@
 CMakeFiles/scoreMotifs.dir/MotifSet.cpp.o: ../MotifSet.cpp
 CMakeFiles/scoreMotifs.dir/MotifSet.cpp.o: ../MotifSet.h
 
+CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o: ../MotifSet.h
 CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o: ../PepLibrary.cpp
 CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o: ../PepLibrary.h
 
+CMakeFiles/scoreMotifs.dir/scoreMotifs.cpp.o: ../MotifSet.h
 CMakeFiles/scoreMotifs.dir/scoreMotifs.cpp.o: ../PepLibrary.h
 CMakeFiles/scoreMotifs.dir/scoreMotifs.cpp.o: ../scoreMotifs.cpp
 

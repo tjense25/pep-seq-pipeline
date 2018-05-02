@@ -31,6 +31,11 @@ std::string PepLibrary::getPeptides() {
 	return this->peptides;
 }
 
+MotifSet PepLibrary::createMotifSet(std::vector<std::string> motifs) {
+	MotifSet motifSet(this->pepToToxicityMap, motifs);
+	return motifSet;
+}
+
 PepLibrary::PepLibrary(std::string libFileName) {
 	
 	std::ifstream inFile;
@@ -44,8 +49,11 @@ PepLibrary::PepLibrary(std::string libFileName) {
 
 	//Iterate through pepLibrary file and store pepSeqeunce in a string and the map
 	std::ostringstream peps;
-	std::string line;
-	getline(inFile,line);
+	std::string line = "";
+	while (line == "" || line[0] == '%') {
+		getline(inFile,line); //skip over comments at head of file
+	}
+	getline(inFile,line); //read in header
 	while (getline(inFile, line)) {
 		std::stringstream linestream(line);
 		std::string value;

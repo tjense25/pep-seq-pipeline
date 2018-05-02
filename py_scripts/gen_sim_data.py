@@ -96,7 +96,7 @@ def main():
 	# get 2000 randomly generated neutral motifs that don't match any specific motif
 	neutral = getPepsMatchingMotif(1600, '********', residues)
 
-	OutFile.write('PEPSEQ,TOXSCORE,CLASS')
+	OutFile.write('PEPSEQ,TOXSCORE,CLASS\n')
 	#TEST.write('PEPSEQ,TOXSCORE,CLASS')
 	
 	#output attribute information for the arff file.

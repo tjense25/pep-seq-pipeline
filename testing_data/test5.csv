@@ -8,7 +8,8 @@
 % HG**Y*K*: anti-toxic
 % F***T*PH: anti-toxic
 % **WT*TT*: anti-toxic
-PEPSEQ,TOXSCORE,CLASSSDLNRQPD,-0.764618,toxic
+PEPSEQ,TOXSCORE,CLASSS
+DLNRQPD,-0.764618,toxic
 WHRLDKWH,-0.712542,toxic
 NSDVYMLR,-0.409350,toxic
 SPLIRYRD,-0.519365,toxic

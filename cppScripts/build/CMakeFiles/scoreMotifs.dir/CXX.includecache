@@ -11,6 +11,8 @@ regex
 -
 sstream
 -
+iostream
+-
 MotifSet.h
 /fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/MotifSet.h
 
@@ -43,6 +45,8 @@ string
 -
 map
 -
+MotifSet.h
+/fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/MotifSet.h
 
 /fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/scoreMotifs.cpp
 utility
