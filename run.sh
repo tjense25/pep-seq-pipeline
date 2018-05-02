@@ -11,13 +11,15 @@ module load r/3/3
 module load jdk/1.8.0-121
 
 
+
+
 # exit if any of the commands fail
 set -e
 
 #Set clean up function to be called if error occurs and program exits
 #Removes all the temp files created in the bash script
 function cleanUp {
-	rm -rf temp/
+	#rm -rf temp/
 	rm -f Rplots.pdf
 	echo "ERROR: pep-seq pipeline script failed"
 }
@@ -47,8 +49,8 @@ then
 	exit 1
 fi
 
-RAW_FILE=$1
-INPUT_FILE=$RAW_FILE
+PEP_LIBRARY=$1
+INPUT_FILE=$PEP_LIBRARY
 shift
 
 #Check if Input file is a valid file
@@ -166,33 +168,34 @@ rm -f temp/foresttemp.txt
 #Calculate motif coverage and motif accuracy of the selected motifs and print
 #these values out in the motif file that was created
 >&2 echo "Calculating Motif Coverage of Selected Motifs . . ."
-./cppScripts/build/scoreMotifs $INPUT_FILE temp/motifs.txt > temp/results.txt
+echo "$1"
+./cppScripts/build/scoreMotifs $PEP_LIBRARY temp/motifs.txt > temp/results.txt
 
-if [ $neutral = true ]
-then
-	shell_scripts/calculate_peptide_coverage.sh temp/motifs.txt $RAW_FILE "neu" $arff >> temp/motifs.txt
-fi 
-
-if [ $anti = true ] 
-then
-	shell_scripts/calculate_peptide_coverage.sh temp/motifs.txt $RAW_FILE "anti"  $arff >> temp/motifs.txt
-fi
-
-#Calculate the counts of the motifs that were created that match what motifs
-#and calcualte which motifs are statistically significant
->&2 echo "Calcualting motif counts and running chi-squared test of independece . . ."
-
-#module load r/3/3 #(Include if R module not loaded)
-
-shell_scripts/cluster_peps.sh temp/motifs.txt $RAW_FILE $arff > temp/motif_counts.csv
-Rscript --vanilla R_scripts/chi_squared.R temp/motif_counts.csv &> /dev/null
-
->&2 echo "clustering motifs based on ToxSet . . . "
-#Run motifSet T test for peps inside and outside of the motif set
-shell_scripts/group_tox_scores.sh temp/motifs.txt $RAW_FILE "tox" > temp/motifSetPeps.tsv
-Rscript --vanilla R_scripts/motifSetTtest.R temp/motifSetPeps.tsv &> /dev/null
-rm -f temp/motifSetPeps.tsv
-rm -f Rplots.pdf
+#if [ $neutral = true ]
+#then
+#	shell_scripts/calculate_peptide_coverage.sh temp/motifs.txt $PEP_LIBRARY "neu" $arff >> temp/motifs.txt
+#fi 
+#
+#if [ $anti = true ] 
+#then
+#	shell_scripts/calculate_peptide_coverage.sh temp/motifs.txt $PEP_LIBRARY "anti"  $arff >> temp/motifs.txt
+#fi
+#
+##Calculate the counts of the motifs that were created that match what motifs
+##and calcualte which motifs are statistically significant
+#>&2 echo "Calcualting motif counts and running chi-squared test of independece . . ."
+#
+##module load r/3/3 #(Include if R module not loaded)
+#
+#shell_scripts/cluster_peps.sh temp/motifs.txt $PEP_LIBRARY $arff > temp/motif_counts.csv
+#Rscript --vanilla R_scripts/chi_squared.R temp/motif_counts.csv &> /dev/null
+#
+#>&2 echo "clustering motifs based on ToxSet . . . "
+##Run motifSet T test for peps inside and outside of the motif set
+#shell_scripts/group_tox_scores.sh temp/motifs.txt $PEP_LIBRARY "tox" > temp/motifSetPeps.tsv
+#Rscript --vanilla R_scripts/motifSetTtest.R temp/motifSetPeps.tsv &> /dev/null
+#rm -f temp/motifSetPeps.tsv
+#rm -f Rplots.pdf
 
 #If output is true, save the output file to the specifies directory in results. If it does not exist, create such a directory
 #If output not specified print out the motifs data to standard output
@@ -210,7 +213,7 @@ then
 else
 	cat temp/motifs.txt
 	echo
-	cat temp/motif_counts.csv
+	#cat temp/motif_counts.csv
 	echo
 	cat temp/results.txt
 fi

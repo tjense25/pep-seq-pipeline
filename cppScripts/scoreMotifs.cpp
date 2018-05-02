@@ -43,7 +43,6 @@ int main(int argc, char** argv) {
 
 	PepLibrary peptides(argv[1]);
 	std::vector<std::string> motifs = loadMotifs(argv[2]);
-
 	MotifSet ms = peptides.createMotifSet(motifs);
 	std::cout << "Selected " << ms.getNumMotifs() << " motifs:" << std::endl;
 	motifs = ms.getMotifs();

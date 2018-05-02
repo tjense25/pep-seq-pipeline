@@ -18,7 +18,8 @@
 % *Q*QA*R*: anti-toxic
 % *GAE**E*: anti-toxic
 % RDP***I*: anti-toxic
-PEPSEQ,TOXSCORE,CLASSNNIQSPIT,-0.428746,toxic
+PEPSEQ,TOXSCORE,CLASS
+NNIQSPIT,-0.428746,toxic
 ERNVEFFC,-0.747367,toxic
 VFAVEFNC,-0.579318,toxic
 GLFTLYEP,-0.751540,toxic
