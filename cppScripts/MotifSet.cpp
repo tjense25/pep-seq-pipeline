@@ -58,12 +58,10 @@ std::vector<IMotif*> MotifSet::loadMotifs(std::string motifFileName) {
 }
 
 void MotifSet::initTotalTox() {
-	int total;
-	std::cout << "total peps: " << this->outside.size() << std::endl;
+	int total = 0;
 	for ( const auto &pep : this->outside) {
 		if (pep->getToxClass() == ToxClass::TOXIC) total++;
 	}
-	std::cout << "total tox: " << total << std::endl;
 	this->totalTox = total;
 }
 
@@ -102,7 +100,6 @@ bool MotifSet::addMotif(IMotif* motif) {
 		}
 	}
 
-	std::cout << "tempToxCount: " << tempToxCount << std::endl;
 	double tempMSA = double(tempToxCount) / (this->inside.size() + matchedPeps.size());
 	double tempPC = double(tempToxCount) / (totalTox);
 	if ( getF1() > calculateF1(tempMSA, tempPC)) return false;

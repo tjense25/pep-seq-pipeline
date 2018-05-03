@@ -211,7 +211,7 @@ then
 	mv temp/results.txt motif_counts.csv results/$OUTDIR
 	mv MotifSetBoxPlot.jpg results/$OUTDIR
 else
-	cat temp/motifs.txt
+	#cat temp/motifs.txt
 	echo
 	#cat temp/motif_counts.csv
 	echo
