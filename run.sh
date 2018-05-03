@@ -135,7 +135,7 @@ fi
 if [ ! $arff = true ]
 then
 	>&2 echo "Converting Input Data to Arff Format . . ."
-	cat $INPUT_FILE | python py_scripts/convert_to_arff.py &> temp/arfftemp.arff
+	cat $INPUT_FILE | python py_scripts/convert_to_arff.py > temp/arfftemp.arff
 	INPUT_FILE=temp/arfftemp.arff
 	rm -f temp/balancedtemp.csv
 fi
@@ -145,7 +145,7 @@ fi
 
 #module load jdk/1.8.0-121 #(Uncomment this line if java not updated)
 
-java -cp dependency_jars/weka.jar weka.classifiers.trees.RandomForest -U -B -num-slots 0 -V 1e-6 -P 100 -I 500 -no-cv -print -t $INPUT_FILE &> temp/foresttemp.txt
+java -cp dependency_jars/weka.jar weka.classifiers.trees.RandomForest -U -B -num-slots 0 -V 1e-6 -P 30 -I 500 -no-cv -print -t $INPUT_FILE > temp/foresttemp.txt
 rm -f temp/arfftemp.arff
 
 MOTIF_FILE=temp/motifs.txt
@@ -153,15 +153,15 @@ MOTIF_FILE=temp/motifs.txt
 >&2 echo "Finding Motifs From Random Forest . . . "
 if [ $anti = true ] && [ $neutral = true ]
 then
-	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt $MotifFinderParam &> temp/motifs.txt
+	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt $MotifFinderParam > temp/motifs.txt
 elif [ $anti = true ]
 then
-	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt $MotifFinderParam -noneu &> temp/motifs.txt
+	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt $MotifFinderParam -noneu > temp/motifs.txt
 elif [ $neutral = true ]
 then
-	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt $MotifFinderParam -noanti &> temp/motifs.txt
+	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt $MotifFinderParam -noanti > temp/motifs.txt
 else
-	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt $MotifFinderParam -noneu -noanti &> temp/motifs.txt
+	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt $MotifFinderParam -noneu -noanti > temp/motifs.txt
 fi
 rm -f temp/foresttemp.txt
 

@@ -1,30 +1,32 @@
-#include <string>
-#include <vector>
-#include <map>
+#include "IMotif.h"
+#include "Peptide.h"
 
 #ifndef MOTIF_SET_H
 #define MOTIF_SET_H
 class MotifSet
 {
 	private:
-		std::map<std::string, double> outside;
-		std::map<std::string, double> inside;
-		std::vector<std::string> insideMotifs;
+		std::vector<Peptide*> outside;
+		std::vector<Peptide*> inside;
+		std::vector<IMotif*> insideMotifs;
 		double motifSetAccuracy;
 		double peptideCoverage;
 		int toxCount;
 		int totalTox;
-		void createMotifSet(std::vector<std::string> motifs);
-		bool addMotif(std::string motif);
+		void createMotifSet(std::vector<IMotif*> motifs);
+		bool addMotif(IMotif* motif);
 		void initTotalTox();
+		std::vector<IMotif*> loadMotifs(std::string motifFileName);
 		double calculateF1(double x, double y);
 	public:
-		MotifSet(std::map<std::string, double> peptides, std::vector<std::string> motifs);
+		MotifSet(std::string motifFileName);
+		~MotifSet();
 		double getMotifSetAccuracy();
 		double getPeptideCoverage();
 		double getF1();
 		int getNumMotifs();
-		std::vector<std::string> getMotifs();
+		std::vector<IMotif*> getMotifs();
+		std::string str();
 };
 #endif
 

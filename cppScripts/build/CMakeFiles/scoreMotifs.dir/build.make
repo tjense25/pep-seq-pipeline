@@ -81,33 +81,105 @@ CMakeFiles/scoreMotifs.dir/scoreMotifs.cpp.o.provides: CMakeFiles/scoreMotifs.di
 CMakeFiles/scoreMotifs.dir/scoreMotifs.cpp.o.provides.build: CMakeFiles/scoreMotifs.dir/scoreMotifs.cpp.o
 
 
-CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o: CMakeFiles/scoreMotifs.dir/flags.make
-CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o: ../PepLibrary.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o"
-	/apps/gcc/6.4.0/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o -c /fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/PepLibrary.cpp
+CMakeFiles/scoreMotifs.dir/Peptide.cpp.o: CMakeFiles/scoreMotifs.dir/flags.make
+CMakeFiles/scoreMotifs.dir/Peptide.cpp.o: ../Peptide.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/scoreMotifs.dir/Peptide.cpp.o"
+	/apps/gcc/6.4.0/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scoreMotifs.dir/Peptide.cpp.o -c /fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/Peptide.cpp
 
-CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.i"
-	/apps/gcc/6.4.0/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/PepLibrary.cpp > CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.i
+CMakeFiles/scoreMotifs.dir/Peptide.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/scoreMotifs.dir/Peptide.cpp.i"
+	/apps/gcc/6.4.0/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/Peptide.cpp > CMakeFiles/scoreMotifs.dir/Peptide.cpp.i
 
-CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.s"
-	/apps/gcc/6.4.0/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/PepLibrary.cpp -o CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.s
+CMakeFiles/scoreMotifs.dir/Peptide.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scoreMotifs.dir/Peptide.cpp.s"
+	/apps/gcc/6.4.0/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/Peptide.cpp -o CMakeFiles/scoreMotifs.dir/Peptide.cpp.s
 
-CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o.requires:
+CMakeFiles/scoreMotifs.dir/Peptide.cpp.o.requires:
 
-.PHONY : CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o.requires
+.PHONY : CMakeFiles/scoreMotifs.dir/Peptide.cpp.o.requires
 
-CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o.provides: CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o.requires
-	$(MAKE) -f CMakeFiles/scoreMotifs.dir/build.make CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o.provides.build
-.PHONY : CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o.provides
+CMakeFiles/scoreMotifs.dir/Peptide.cpp.o.provides: CMakeFiles/scoreMotifs.dir/Peptide.cpp.o.requires
+	$(MAKE) -f CMakeFiles/scoreMotifs.dir/build.make CMakeFiles/scoreMotifs.dir/Peptide.cpp.o.provides.build
+.PHONY : CMakeFiles/scoreMotifs.dir/Peptide.cpp.o.provides
 
-CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o.provides.build: CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o
+CMakeFiles/scoreMotifs.dir/Peptide.cpp.o.provides.build: CMakeFiles/scoreMotifs.dir/Peptide.cpp.o
+
+
+CMakeFiles/scoreMotifs.dir/IMotif.cpp.o: CMakeFiles/scoreMotifs.dir/flags.make
+CMakeFiles/scoreMotifs.dir/IMotif.cpp.o: ../IMotif.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/scoreMotifs.dir/IMotif.cpp.o"
+	/apps/gcc/6.4.0/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scoreMotifs.dir/IMotif.cpp.o -c /fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/IMotif.cpp
+
+CMakeFiles/scoreMotifs.dir/IMotif.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/scoreMotifs.dir/IMotif.cpp.i"
+	/apps/gcc/6.4.0/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/IMotif.cpp > CMakeFiles/scoreMotifs.dir/IMotif.cpp.i
+
+CMakeFiles/scoreMotifs.dir/IMotif.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scoreMotifs.dir/IMotif.cpp.s"
+	/apps/gcc/6.4.0/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/IMotif.cpp -o CMakeFiles/scoreMotifs.dir/IMotif.cpp.s
+
+CMakeFiles/scoreMotifs.dir/IMotif.cpp.o.requires:
+
+.PHONY : CMakeFiles/scoreMotifs.dir/IMotif.cpp.o.requires
+
+CMakeFiles/scoreMotifs.dir/IMotif.cpp.o.provides: CMakeFiles/scoreMotifs.dir/IMotif.cpp.o.requires
+	$(MAKE) -f CMakeFiles/scoreMotifs.dir/build.make CMakeFiles/scoreMotifs.dir/IMotif.cpp.o.provides.build
+.PHONY : CMakeFiles/scoreMotifs.dir/IMotif.cpp.o.provides
+
+CMakeFiles/scoreMotifs.dir/IMotif.cpp.o.provides.build: CMakeFiles/scoreMotifs.dir/IMotif.cpp.o
+
+
+CMakeFiles/scoreMotifs.dir/Motif.cpp.o: CMakeFiles/scoreMotifs.dir/flags.make
+CMakeFiles/scoreMotifs.dir/Motif.cpp.o: ../Motif.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/scoreMotifs.dir/Motif.cpp.o"
+	/apps/gcc/6.4.0/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scoreMotifs.dir/Motif.cpp.o -c /fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/Motif.cpp
+
+CMakeFiles/scoreMotifs.dir/Motif.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/scoreMotifs.dir/Motif.cpp.i"
+	/apps/gcc/6.4.0/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/Motif.cpp > CMakeFiles/scoreMotifs.dir/Motif.cpp.i
+
+CMakeFiles/scoreMotifs.dir/Motif.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scoreMotifs.dir/Motif.cpp.s"
+	/apps/gcc/6.4.0/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/Motif.cpp -o CMakeFiles/scoreMotifs.dir/Motif.cpp.s
+
+CMakeFiles/scoreMotifs.dir/Motif.cpp.o.requires:
+
+.PHONY : CMakeFiles/scoreMotifs.dir/Motif.cpp.o.requires
+
+CMakeFiles/scoreMotifs.dir/Motif.cpp.o.provides: CMakeFiles/scoreMotifs.dir/Motif.cpp.o.requires
+	$(MAKE) -f CMakeFiles/scoreMotifs.dir/build.make CMakeFiles/scoreMotifs.dir/Motif.cpp.o.provides.build
+.PHONY : CMakeFiles/scoreMotifs.dir/Motif.cpp.o.provides
+
+CMakeFiles/scoreMotifs.dir/Motif.cpp.o.provides.build: CMakeFiles/scoreMotifs.dir/Motif.cpp.o
+
+
+CMakeFiles/scoreMotifs.dir/MotifProxy.cpp.o: CMakeFiles/scoreMotifs.dir/flags.make
+CMakeFiles/scoreMotifs.dir/MotifProxy.cpp.o: ../MotifProxy.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/scoreMotifs.dir/MotifProxy.cpp.o"
+	/apps/gcc/6.4.0/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scoreMotifs.dir/MotifProxy.cpp.o -c /fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/MotifProxy.cpp
+
+CMakeFiles/scoreMotifs.dir/MotifProxy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/scoreMotifs.dir/MotifProxy.cpp.i"
+	/apps/gcc/6.4.0/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/MotifProxy.cpp > CMakeFiles/scoreMotifs.dir/MotifProxy.cpp.i
+
+CMakeFiles/scoreMotifs.dir/MotifProxy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scoreMotifs.dir/MotifProxy.cpp.s"
+	/apps/gcc/6.4.0/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/MotifProxy.cpp -o CMakeFiles/scoreMotifs.dir/MotifProxy.cpp.s
+
+CMakeFiles/scoreMotifs.dir/MotifProxy.cpp.o.requires:
+
+.PHONY : CMakeFiles/scoreMotifs.dir/MotifProxy.cpp.o.requires
+
+CMakeFiles/scoreMotifs.dir/MotifProxy.cpp.o.provides: CMakeFiles/scoreMotifs.dir/MotifProxy.cpp.o.requires
+	$(MAKE) -f CMakeFiles/scoreMotifs.dir/build.make CMakeFiles/scoreMotifs.dir/MotifProxy.cpp.o.provides.build
+.PHONY : CMakeFiles/scoreMotifs.dir/MotifProxy.cpp.o.provides
+
+CMakeFiles/scoreMotifs.dir/MotifProxy.cpp.o.provides.build: CMakeFiles/scoreMotifs.dir/MotifProxy.cpp.o
 
 
 CMakeFiles/scoreMotifs.dir/MotifSet.cpp.o: CMakeFiles/scoreMotifs.dir/flags.make
 CMakeFiles/scoreMotifs.dir/MotifSet.cpp.o: ../MotifSet.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/scoreMotifs.dir/MotifSet.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/scoreMotifs.dir/MotifSet.cpp.o"
 	/apps/gcc/6.4.0/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scoreMotifs.dir/MotifSet.cpp.o -c /fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/MotifSet.cpp
 
 CMakeFiles/scoreMotifs.dir/MotifSet.cpp.i: cmake_force
@@ -129,21 +201,53 @@ CMakeFiles/scoreMotifs.dir/MotifSet.cpp.o.provides: CMakeFiles/scoreMotifs.dir/M
 CMakeFiles/scoreMotifs.dir/MotifSet.cpp.o.provides.build: CMakeFiles/scoreMotifs.dir/MotifSet.cpp.o
 
 
+CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o: CMakeFiles/scoreMotifs.dir/flags.make
+CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o: ../PepLibrary.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o"
+	/apps/gcc/6.4.0/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o -c /fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/PepLibrary.cpp
+
+CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.i"
+	/apps/gcc/6.4.0/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/PepLibrary.cpp > CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.i
+
+CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.s"
+	/apps/gcc/6.4.0/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/PepLibrary.cpp -o CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.s
+
+CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o.requires:
+
+.PHONY : CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o.requires
+
+CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o.provides: CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o.requires
+	$(MAKE) -f CMakeFiles/scoreMotifs.dir/build.make CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o.provides.build
+.PHONY : CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o.provides
+
+CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o.provides.build: CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o
+
+
 # Object files for target scoreMotifs
 scoreMotifs_OBJECTS = \
 "CMakeFiles/scoreMotifs.dir/scoreMotifs.cpp.o" \
-"CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o" \
-"CMakeFiles/scoreMotifs.dir/MotifSet.cpp.o"
+"CMakeFiles/scoreMotifs.dir/Peptide.cpp.o" \
+"CMakeFiles/scoreMotifs.dir/IMotif.cpp.o" \
+"CMakeFiles/scoreMotifs.dir/Motif.cpp.o" \
+"CMakeFiles/scoreMotifs.dir/MotifProxy.cpp.o" \
+"CMakeFiles/scoreMotifs.dir/MotifSet.cpp.o" \
+"CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o"
 
 # External object files for target scoreMotifs
 scoreMotifs_EXTERNAL_OBJECTS =
 
 scoreMotifs: CMakeFiles/scoreMotifs.dir/scoreMotifs.cpp.o
-scoreMotifs: CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o
+scoreMotifs: CMakeFiles/scoreMotifs.dir/Peptide.cpp.o
+scoreMotifs: CMakeFiles/scoreMotifs.dir/IMotif.cpp.o
+scoreMotifs: CMakeFiles/scoreMotifs.dir/Motif.cpp.o
+scoreMotifs: CMakeFiles/scoreMotifs.dir/MotifProxy.cpp.o
 scoreMotifs: CMakeFiles/scoreMotifs.dir/MotifSet.cpp.o
+scoreMotifs: CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o
 scoreMotifs: CMakeFiles/scoreMotifs.dir/build.make
 scoreMotifs: CMakeFiles/scoreMotifs.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable scoreMotifs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable scoreMotifs"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/scoreMotifs.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -152,8 +256,12 @@ CMakeFiles/scoreMotifs.dir/build: scoreMotifs
 .PHONY : CMakeFiles/scoreMotifs.dir/build
 
 CMakeFiles/scoreMotifs.dir/requires: CMakeFiles/scoreMotifs.dir/scoreMotifs.cpp.o.requires
-CMakeFiles/scoreMotifs.dir/requires: CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o.requires
+CMakeFiles/scoreMotifs.dir/requires: CMakeFiles/scoreMotifs.dir/Peptide.cpp.o.requires
+CMakeFiles/scoreMotifs.dir/requires: CMakeFiles/scoreMotifs.dir/IMotif.cpp.o.requires
+CMakeFiles/scoreMotifs.dir/requires: CMakeFiles/scoreMotifs.dir/Motif.cpp.o.requires
+CMakeFiles/scoreMotifs.dir/requires: CMakeFiles/scoreMotifs.dir/MotifProxy.cpp.o.requires
 CMakeFiles/scoreMotifs.dir/requires: CMakeFiles/scoreMotifs.dir/MotifSet.cpp.o.requires
+CMakeFiles/scoreMotifs.dir/requires: CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.o.requires
 
 .PHONY : CMakeFiles/scoreMotifs.dir/requires
 

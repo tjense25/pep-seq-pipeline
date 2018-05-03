@@ -1,42 +1,48 @@
 #include <fstream>
-#include <regex>
-#include <sstream>
-#include <map>
 #include <iostream>
+#include <algorithm>
 #include <boost/lexical_cast.hpp>
 #include "PepLibrary.h"
+#include "MotifSet.h"
 
+PepLibrary* PepLibrary::SINGLETON = NULL;
 
-double PepLibrary::scoreMotif(std::string motif) { 
-	std::regex re (motif);
+PepLibrary::PepLibrary() {}
 
-	double total = 0;
-	int count = 0;
-
-	for ( const auto &myPair : this->pepToToxicityMap) {
-		if (std::regex_match(myPair.first, re) ) {
-			total += myPair.second;
-			count++;
-		}
+PepLibrary::~PepLibrary() {
+	for ( auto pep : peptides) {
+		delete pep;
+		pep = NULL;
 	}
-
-	return total / count;
+	peptides.clear();
 }
 
-std::map<std::string, double> PepLibrary::getPepToToxicityMap() {
-	return this->pepToToxicityMap;
+PepLibrary::PepLibrary(PepLibrary const& that) {}
+
+PepLibrary& PepLibrary::operator=(PepLibrary const& that) {}
+
+PepLibrary* PepLibrary::getInstance() {
+	if (! SINGLETON) {
+		SINGLETON = new PepLibrary();
+	}
+	return SINGLETON;
 }
 
-std::string PepLibrary::getPeptides() {
+void PepLibrary::destroyInstance() {
+	delete SINGLETON;
+	SINGLETON = NULL;
+}
+
+std::vector<Peptide*> PepLibrary::getPeptides() {
 	return this->peptides;
 }
 
-MotifSet PepLibrary::createMotifSet(std::vector<std::string> motifs) {
-	MotifSet motifSet(this->pepToToxicityMap, motifs);
+MotifSet PepLibrary::createMotifSet(std::string motifFileName) {
+	MotifSet motifSet(motifFileName);
 	return motifSet;
 }
 
-PepLibrary::PepLibrary(std::string libFileName) {
+void PepLibrary::loadPepLibrary(std::string libFileName) {
 	
 	std::ifstream inFile;
 	inFile.open(libFileName);	
@@ -48,7 +54,6 @@ PepLibrary::PepLibrary(std::string libFileName) {
 	}
 
 	//Iterate through pepLibrary file and store pepSeqeunce in a string and the map
-	std::ostringstream peps;
 	std::string line = "";
 	while (line == "" || line[0] == '%') {
 		getline(inFile,line); //skip over comments at head of file
@@ -56,18 +61,24 @@ PepLibrary::PepLibrary(std::string libFileName) {
 	getline(inFile,line); //read in header
 	while (getline(inFile, line)) {
 		std::stringstream linestream(line);
+		std::string sequence;
 		std::string value;
 		double toxScore;
-		std::string pepseq;
+		std::string toxClass;
 
-		getline(linestream,value,',');
-		pepseq = value;
+		getline(linestream,sequence,',');
 
 		getline(linestream,value,',');
 		toxScore = boost::lexical_cast<double>(value);
 
-		this->pepToToxicityMap.emplace(pepseq, toxScore);	
+		getline(linestream,toxClass,',');
+
+		this->peptides.push_back(new Peptide(sequence, toxScore, toxClass));
 	}
 
-	this->peptides = peps.str();
+	std::sort(peptides.begin(), peptides.end(), 
+			[](Peptide* a, Peptide* b) -> bool {
+				return a->getSequence() != b->getSequence() ? a->getToxScore() > b->getToxScore() : a->getSequence() < b->getSequence();
+			});
+
 }

@@ -123,6 +123,87 @@ scoreMotifs/fast:
 	$(MAKE) -f CMakeFiles/scoreMotifs.dir/build.make CMakeFiles/scoreMotifs.dir/build
 .PHONY : scoreMotifs/fast
 
+IMotif.o: IMotif.cpp.o
+
+.PHONY : IMotif.o
+
+# target to build an object file
+IMotif.cpp.o:
+	$(MAKE) -f CMakeFiles/scoreMotifs.dir/build.make CMakeFiles/scoreMotifs.dir/IMotif.cpp.o
+.PHONY : IMotif.cpp.o
+
+IMotif.i: IMotif.cpp.i
+
+.PHONY : IMotif.i
+
+# target to preprocess a source file
+IMotif.cpp.i:
+	$(MAKE) -f CMakeFiles/scoreMotifs.dir/build.make CMakeFiles/scoreMotifs.dir/IMotif.cpp.i
+.PHONY : IMotif.cpp.i
+
+IMotif.s: IMotif.cpp.s
+
+.PHONY : IMotif.s
+
+# target to generate assembly for a file
+IMotif.cpp.s:
+	$(MAKE) -f CMakeFiles/scoreMotifs.dir/build.make CMakeFiles/scoreMotifs.dir/IMotif.cpp.s
+.PHONY : IMotif.cpp.s
+
+Motif.o: Motif.cpp.o
+
+.PHONY : Motif.o
+
+# target to build an object file
+Motif.cpp.o:
+	$(MAKE) -f CMakeFiles/scoreMotifs.dir/build.make CMakeFiles/scoreMotifs.dir/Motif.cpp.o
+.PHONY : Motif.cpp.o
+
+Motif.i: Motif.cpp.i
+
+.PHONY : Motif.i
+
+# target to preprocess a source file
+Motif.cpp.i:
+	$(MAKE) -f CMakeFiles/scoreMotifs.dir/build.make CMakeFiles/scoreMotifs.dir/Motif.cpp.i
+.PHONY : Motif.cpp.i
+
+Motif.s: Motif.cpp.s
+
+.PHONY : Motif.s
+
+# target to generate assembly for a file
+Motif.cpp.s:
+	$(MAKE) -f CMakeFiles/scoreMotifs.dir/build.make CMakeFiles/scoreMotifs.dir/Motif.cpp.s
+.PHONY : Motif.cpp.s
+
+MotifProxy.o: MotifProxy.cpp.o
+
+.PHONY : MotifProxy.o
+
+# target to build an object file
+MotifProxy.cpp.o:
+	$(MAKE) -f CMakeFiles/scoreMotifs.dir/build.make CMakeFiles/scoreMotifs.dir/MotifProxy.cpp.o
+.PHONY : MotifProxy.cpp.o
+
+MotifProxy.i: MotifProxy.cpp.i
+
+.PHONY : MotifProxy.i
+
+# target to preprocess a source file
+MotifProxy.cpp.i:
+	$(MAKE) -f CMakeFiles/scoreMotifs.dir/build.make CMakeFiles/scoreMotifs.dir/MotifProxy.cpp.i
+.PHONY : MotifProxy.cpp.i
+
+MotifProxy.s: MotifProxy.cpp.s
+
+.PHONY : MotifProxy.s
+
+# target to generate assembly for a file
+MotifProxy.cpp.s:
+	$(MAKE) -f CMakeFiles/scoreMotifs.dir/build.make CMakeFiles/scoreMotifs.dir/MotifProxy.cpp.s
+.PHONY : MotifProxy.cpp.s
+
 MotifSet.o: MotifSet.cpp.o
 
 .PHONY : MotifSet.o
@@ -177,6 +258,33 @@ PepLibrary.cpp.s:
 	$(MAKE) -f CMakeFiles/scoreMotifs.dir/build.make CMakeFiles/scoreMotifs.dir/PepLibrary.cpp.s
 .PHONY : PepLibrary.cpp.s
 
+Peptide.o: Peptide.cpp.o
+
+.PHONY : Peptide.o
+
+# target to build an object file
+Peptide.cpp.o:
+	$(MAKE) -f CMakeFiles/scoreMotifs.dir/build.make CMakeFiles/scoreMotifs.dir/Peptide.cpp.o
+.PHONY : Peptide.cpp.o
+
+Peptide.i: Peptide.cpp.i
+
+.PHONY : Peptide.i
+
+# target to preprocess a source file
+Peptide.cpp.i:
+	$(MAKE) -f CMakeFiles/scoreMotifs.dir/build.make CMakeFiles/scoreMotifs.dir/Peptide.cpp.i
+.PHONY : Peptide.cpp.i
+
+Peptide.s: Peptide.cpp.s
+
+.PHONY : Peptide.s
+
+# target to generate assembly for a file
+Peptide.cpp.s:
+	$(MAKE) -f CMakeFiles/scoreMotifs.dir/build.make CMakeFiles/scoreMotifs.dir/Peptide.cpp.s
+.PHONY : Peptide.cpp.s
+
 scoreMotifs.o: scoreMotifs.cpp.o
 
 .PHONY : scoreMotifs.o
@@ -213,12 +321,24 @@ help:
 	@echo "... scoreMotifs"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... IMotif.o"
+	@echo "... IMotif.i"
+	@echo "... IMotif.s"
+	@echo "... Motif.o"
+	@echo "... Motif.i"
+	@echo "... Motif.s"
+	@echo "... MotifProxy.o"
+	@echo "... MotifProxy.i"
+	@echo "... MotifProxy.s"
 	@echo "... MotifSet.o"
 	@echo "... MotifSet.i"
 	@echo "... MotifSet.s"
 	@echo "... PepLibrary.o"
 	@echo "... PepLibrary.i"
 	@echo "... PepLibrary.s"
+	@echo "... Peptide.o"
+	@echo "... Peptide.i"
+	@echo "... Peptide.s"
 	@echo "... scoreMotifs.o"
 	@echo "... scoreMotifs.i"
 	@echo "... scoreMotifs.s"
