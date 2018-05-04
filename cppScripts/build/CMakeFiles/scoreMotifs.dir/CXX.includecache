@@ -19,6 +19,8 @@ vector
 -
 Peptide.h
 /fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/Peptide.h
+ToxClass.h
+/fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/ToxClass.h
 
 /fslhome/tjense25/fsl_groups/fslg_genome/pep_seq/pep-seq-pipeline/cppScripts/Motif.cpp
 Motif.h

@@ -1,0 +1,4 @@
+Selected 556 Motifs:
+Motif Set Accuracy: 0.612174
+Peptide Coverage: 0.869242
+F1: 0.718403

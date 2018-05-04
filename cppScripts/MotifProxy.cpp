@@ -1,6 +1,6 @@
 #include "MotifProxy.h"
 
-MotifProxy::IMotif(std::string motif, std::string toxicity, int instances, int missclassified, double motifScore);
+MotifProxy::MotifProxy(std::string motif, std::string toxicity, int instances, int missclassified, double motifScore) :
 	IMotif::IMotif(motif, toxicity, instances, missclassified, motifScore), 
 	subject{NULL} {}
 
@@ -10,7 +10,14 @@ MotifProxy::~MotifProxy() {
 }
 
 void MotifProxy::loadMotif() {
-	subject = new Motif(IMotif::getMotif(), IMotif::getMotifScore());
+	IMotif* obj = this;
+	std::string toxicity;
+	switch(getToxClass()) {
+		case ToxClass::TOXIC: toxicity="toxic"; break;
+		case ToxClass::NEUTRAL: toxicity="neutral"; break;
+		case ToxClass::ANTITOXIC: toxicity="anti-toxic"; break;
+	}
+	subject = new Motif(getMotif(), toxicity, getNumInstances(), getNumMissclassified(), getMotifScore());
 }
 	
 double MotifProxy::getAverageToxScore() {
@@ -48,7 +55,7 @@ std::vector<Peptide*> MotifProxy::getMatchedPeps() {
 	return subject->getMatchedPeps();
 }
 
-std::string str() {
+std::string MotifProxy::str() {
 	if (! subject) loadMotif();
 	return subject->str();
 }

@@ -17,6 +17,7 @@ class Motif : public IMotif {
 
 	public:
 		Motif(std::string motif, std::string toxicity, int instances, int missclassified, double motifScore);
+		static std::string getHeader();
 		std::string str();
 		double getAverageToxScore();
 		double getAverageRank();

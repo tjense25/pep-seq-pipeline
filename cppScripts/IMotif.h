@@ -8,7 +8,7 @@
 class IMotif {
 	private:
 		std::string motif;
-		ToxClass toxScore;
+		ToxClass toxClass;
 		int instances;
 		int missclassified;
 		double motifScore;
@@ -17,7 +17,7 @@ class IMotif {
 		IMotif(std::string motif, std::string toxicity, int instances, int missclassified, double motifScore);
 		std::string getMotif();
 		double getMotifScore();
-		ToxClass getToxicityClass();
+		ToxClass getToxClass();
 		int getNumInstances();
 		int getNumMissclassified();
 		void setMotifScore(double motifScore);

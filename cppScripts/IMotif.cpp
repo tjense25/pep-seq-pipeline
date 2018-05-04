@@ -7,7 +7,7 @@ IMotif::IMotif(std::string motif, std::string toxicity, int instances, int missc
 		if (toxicity == "toxic")
 			this->toxClass = ToxClass::TOXIC;
 		else if (toxicity == "nuetral")
-			this->toxClass = ToxClass::NUETRAL;
+			this->toxClass = ToxClass::NEUTRAL;
 		else
 			this->toxClass = ToxClass::ANTITOXIC;
 	}
@@ -25,7 +25,7 @@ int IMotif::getNumInstances() {
 }
 
 int IMotif::getNumMissclassified() {
-	return this->misclassified;
+	return this->missclassified;
 }
 
 double IMotif::getMotifScore() {
@@ -39,7 +39,6 @@ void IMotif::setMotifScore(double motifScore) {
 std::string IMotif::str() {
 	std::ostringstream os;
 	os << this->motif << "," 
-	   << this->ToxClass::ClassNames[toxClass] << ","
 	   << this->instances << "," 
 	   << this->missclassified << ","
 	   << this->motifScore << "," << std::endl;

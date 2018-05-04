@@ -34,7 +34,10 @@ std::vector<IMotif*> MotifSet::loadMotifs(std::string motifFileName) {
 
 	std::vector<IMotif*> motifs;
 	std::string motifSeq;
+	std::string toxicity;
 	std::string value;
+	int instances;
+	int missclassified;
 	double motifScore;
 	getline(inFile, value); //read in header
 	while (inFile >> value) {
@@ -44,14 +47,21 @@ std::vector<IMotif*> MotifSet::loadMotifs(std::string motifFileName) {
 		motifSeq = value;
 
 		//skip over the next two columns as we only need the actual motif
+		inFile >> toxicity;
+
+		//getnumber of RF instances
 		inFile >> value;
+		instances = boost::lexical_cast<int>(value);
+
+		//get NUmber of missclassified
 		inFile >> value;
-		
+		missclassified = boost::lexical_cast<int>(value);
+
 		//store MotifScore
 		inFile >> value;
 		motifScore = boost::lexical_cast<double>(value);
 
-		motifs.push_back(new MotifProxy(motifSeq, motifScore));
+		motifs.push_back(new MotifProxy(motifSeq, toxicity, instances, missclassified, motifScore));
 	}
 
 	return motifs;
@@ -157,6 +167,7 @@ int MotifSet::getNumMotifs() {
 
 std::string MotifSet::str() {
 	std::ostringstream os;
+	os << Motif::getHeader() << std::endl;
 	os << "Selected " << insideMotifs.size() << " Motifs:" << std::endl;
 	for ( auto motif : insideMotifs) {
 		os << motif->str() << std::endl;

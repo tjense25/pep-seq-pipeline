@@ -19,7 +19,7 @@ set -e
 #Set clean up function to be called if error occurs and program exits
 #Removes all the temp files created in the bash script
 function cleanUp {
-	#rm -rf temp/
+	rm -rf temp/
 	rm -f Rplots.pdf
 	echo "ERROR: pep-seq pipeline script failed"
 }
@@ -164,6 +164,8 @@ else
 	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt $MotifFinderParam -noneu -noanti > temp/RFmotifs.txt
 fi
 rm -f temp/foresttemp.txt
+
+mv temp/RFmotifs.txt ./
 
 #Calculate motif coverage and motif accuracy of the selected motifs and print
 #these values out in the motif file that was created

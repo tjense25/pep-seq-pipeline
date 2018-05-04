@@ -16,7 +16,6 @@ Motif::Motif(std::string motif, std::string toxicity, int instances, int misscla
 		
 }
 
-
 bool Motif::addPeptide(Peptide* pep) {
 	if (!std::regex_match(pep->getSequence(), re)) return false;
 
@@ -59,14 +58,21 @@ std::vector<Peptide*> Motif::getMatchedPeps() {
 	return this->matchedPeps;
 }
 
+std::string Motif::getHeader() {
+	return "MotifSeq,NumRFInstances,NumMissclassified,TotalPeptideCount,ToxicCount,NeutralCount,AntitoxicCount,AverageToxScore,AverageRank,MotifScore";
+}
+
 std::string Motif::str() {
-	ostringstream os (IMotif::str());
-	os << this->toxCount << ","
+	std::ostringstream os;
+	os << getMotif() << ","
+	   << getNumInstances() << ","
+	   << getNumMissclassified() << ","
+	   << this->totalCount << ","
+	   << this->toxCount << ","
 	   << this->neuCount << ","
 	   << this->antiCount << ","
-	   << this->totalCount << ","
 	   << this->averageToxScore << ","
 	   << this->averageRank << ","
-	   << this->motifScore << std::endl;
+	   << getMotifScore();
 	return os.str();
 }
