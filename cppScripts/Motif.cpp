@@ -1,8 +1,9 @@
 #include "Motif.h"
 #include "PepLibrary.h"
 
-Motif::Motif(std::string motif, double motifScore) : 
-	IMotif::IMotif(motif, motifScore), re(motif), averageToxScore{0}, averageRank{0}, totalCount{0},
+Motif::Motif(std::string motif, std::string toxicity, int instances, int missclassified, double motifScore) : 
+	IMotif::IMotif(motif, toxicity, instances, missclassified, motifScore),
+	 re(motif), averageToxScore{0}, averageRank{0}, totalCount{0},
 	toxCount{0}, neuCount{0}, antiCount{0} {
 
 	std::vector<Peptide*> peps = PepLibrary::getInstance()->getPeptides();
@@ -56,4 +57,16 @@ int Motif::getAntiCount() {
 
 std::vector<Peptide*> Motif::getMatchedPeps() {
 	return this->matchedPeps;
+}
+
+std::string Motif::str() {
+	ostringstream os (IMotif::str());
+	os << this->toxCount << ","
+	   << this->neuCount << ","
+	   << this->antiCount << ","
+	   << this->totalCount << ","
+	   << this->averageToxScore << ","
+	   << this->averageRank << ","
+	   << this->motifScore << std::endl;
+	return os.str();
 }

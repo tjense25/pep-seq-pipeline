@@ -12,8 +12,9 @@ class MotifProxy : public IMotif {
 		void loadMotif();
 
 	public:
-		MotifProxy(std::string motif, double motifScore);
+		MotifProxy(std::string motif, std::string toxicity, int instances, int missclassified, double motifScore);
 		~MotifProxy();
+		std::string str();
 		double getAverageToxScore();
 		double getAverageRank();
 		int getTotalCount();

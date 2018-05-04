@@ -126,7 +126,7 @@ mkdir -p temp
 #IF balance parameter was passed in, run python balance script on the input data
 if [ $balance = true ] && [  ! $arff = true ]
 then
-	>&2 echo "Balancing Input Data . . . "
+	>&2 echo "Balancing input data . . . "
 	python oversampling.py $INPUT temp/balancedtemp.csv
 	INPUT_FILE=temp/balancedtemp.csv
 fi
@@ -134,14 +134,14 @@ fi
 #If passed in input file is not already an arff file, convert it to arff format
 if [ ! $arff = true ]
 then
-	>&2 echo "Converting Input Data to Arff Format . . ."
+	>&2 echo "Converting input data to an arff file . . ."
 	cat $INPUT_FILE | python py_scripts/convert_to_arff.py > temp/arfftemp.arff
 	INPUT_FILE=temp/arfftemp.arff
 	rm -f temp/balancedtemp.csv
 fi
 
 #Run Weka's random forest classifiers on the arff file and store the tree output into temp.txt
->&2 echo "Running Random Forest Classification Algorithm on Data . . . "
+>&2 echo "Running Random Forest classification on data . . . "
 
 #module load jdk/1.8.0-121 #(Uncomment this line if java not updated)
 
@@ -150,74 +150,53 @@ rm -f temp/arfftemp.arff
 
 MOTIF_FILE=temp/motifs.txt
 #Take the output of weka's Random Forest classifier and put it into our MotifFounder Algorithm
->&2 echo "Finding Motifs From Random Forest . . . "
+>&2 echo "Extracting motifs from Random Forest . . . "
 if [ $anti = true ] && [ $neutral = true ]
 then
-	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt $MotifFinderParam > temp/motifs.txt
+	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt $MotifFinderParam > temp/RFmotifs.txt
 elif [ $anti = true ]
 then
-	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt $MotifFinderParam -noneu > temp/motifs.txt
+	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt $MotifFinderParam -noneu > temp/RFmotifs.txt
 elif [ $neutral = true ]
 then
-	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt $MotifFinderParam -noanti > temp/motifs.txt
+	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt $MotifFinderParam -noanti > temp/RFmotifs.txt
 else
-	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt $MotifFinderParam -noneu -noanti > temp/motifs.txt
+	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt $MotifFinderParam -noneu -noanti > temp/RFmotifs.txt
 fi
 rm -f temp/foresttemp.txt
 
 #Calculate motif coverage and motif accuracy of the selected motifs and print
 #these values out in the motif file that was created
->&2 echo "Calculating Motif Coverage of Selected Motifs . . ."
+>&2 echo "Creating Motif Set from extracted motifs . . ."
 echo "$1"
-./cppScripts/build/scoreMotifs $PEP_LIBRARY temp/motifs.txt > temp/results.txt
+./cppScripts/build/scoreMotifs $PEP_LIBRARY temp/RFmotifs.txt > temp/motifs.csv 2> temp/statistics.txt
+mv clusteredPeps.csv temp/
+rm -f temp/RFmotifs.txt
 
-#if [ $neutral = true ]
-#then
-#	shell_scripts/calculate_peptide_coverage.sh temp/motifs.txt $PEP_LIBRARY "neu" $arff >> temp/motifs.txt
-#fi 
-#
-#if [ $anti = true ] 
-#then
-#	shell_scripts/calculate_peptide_coverage.sh temp/motifs.txt $PEP_LIBRARY "anti"  $arff >> temp/motifs.txt
-#fi
-#
-##Calculate the counts of the motifs that were created that match what motifs
-##and calcualte which motifs are statistically significant
-#>&2 echo "Calcualting motif counts and running chi-squared test of independece . . ."
-#
+>&2 echo "Testing significance of individual motifs . . ."
 ##module load r/3/3 #(Include if R module not loaded)
-#
-#shell_scripts/cluster_peps.sh temp/motifs.txt $PEP_LIBRARY $arff > temp/motif_counts.csv
-#Rscript --vanilla R_scripts/chi_squared.R temp/motif_counts.csv &> /dev/null
-#
-#>&2 echo "clustering motifs based on ToxSet . . . "
+Rscript --vanilla R_scripts/fishers_exact.R temp/motifs.csv &> /dev/null
+
+>&2 echo "Calculating statistics on the Motif Set . . .  "
 ##Run motifSet T test for peps inside and outside of the motif set
-#shell_scripts/group_tox_scores.sh temp/motifs.txt $PEP_LIBRARY "tox" > temp/motifSetPeps.tsv
-#Rscript --vanilla R_scripts/motifSetTtest.R temp/motifSetPeps.tsv &> /dev/null
-#rm -f temp/motifSetPeps.tsv
-#rm -f Rplots.pdf
+Rscript --vanilla R_scripts/motifSetTtest.R temp/clusteredPeps.csv >> temp/statistics.txt 2> /dev/null
+rm -f temp/clusteredPeps.csv
 
 #If output is true, save the output file to the specifies directory in results. If it does not exist, create such a directory
 #If output not specified print out the motifs data to standard output
 if [ $output = true ]
 then
-	>&2 echo "Saving Output to results/$OUTDIR . . . "
-	if [ ! -d "results/$OUTDIR" ]
-	then
-		mkdir results/$OUTDIR
-	fi
-	mv temp/motifs.txt results/$OUTDIR
-	mv temp/motif_counts.csv results/$OUTDIR
-	mv temp/results.txt motif_counts.csv results/$OUTDIR
+	>&2 echo "Saving output to results/$OUTDIR . . . "
+	mkdir -p results/$OUTDIR
+	mv temp/motifs.csv results/$OUTDIR
+	mv temp/statistics.txt results/$OUTDIR
 	mv MotifSetBoxPlot.jpg results/$OUTDIR
 else
-	#cat temp/motifs.txt
+	cat temp/motifs.csv
 	echo
-	#cat temp/motif_counts.csv
-	echo
-	cat temp/results.txt
+	cat temp/statistics.txt
 fi
 
 rm -rf temp/
-echo "Pep-seq pipeline executed successfully!"
+>&2 echo "Pep-seq pipeline executed successfully!"
 exit 0

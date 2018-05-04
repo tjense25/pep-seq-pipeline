@@ -16,7 +16,8 @@ class Motif : public IMotif {
 		bool addPeptide(Peptide* pep);
 
 	public:
-		Motif(std::string motif, double motifScore);
+		Motif(std::string motif, std::string toxicity, int instances, int missclassified, double motifScore);
+		std::string str();
 		double getAverageToxScore();
 		double getAverageRank();
 		int getTotalCount();

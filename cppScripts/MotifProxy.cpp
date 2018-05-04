@@ -1,8 +1,8 @@
 #include "MotifProxy.h"
 
-MotifProxy::MotifProxy(std::string motif, double motifScore) :
-	IMotif::IMotif(motif, motifScore), subject{NULL} 
-		{}
+MotifProxy::IMotif(std::string motif, std::string toxicity, int instances, int missclassified, double motifScore);
+	IMotif::IMotif(motif, toxicity, instances, missclassified, motifScore), 
+	subject{NULL} {}
 
 MotifProxy::~MotifProxy() {
 	delete subject;
@@ -46,4 +46,9 @@ int MotifProxy::getAntiCount() {
 std::vector<Peptide*> MotifProxy::getMatchedPeps() {
 	if (! subject) loadMotif();
 	return subject->getMatchedPeps();
+}
+
+std::string str() {
+	if (! subject) loadMotif();
+	return subject->str();
 }

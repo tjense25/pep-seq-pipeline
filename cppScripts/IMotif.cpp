@@ -1,11 +1,31 @@
 #include <sstream>
 #include "IMotif.h"
 
-IMotif::IMotif(std::string motif, double motifScore) :
-	motif{motif}, motifScore{motifScore} {}
+IMotif::IMotif(std::string motif, std::string toxicity, int instances, int missclassified, double motifScore) :
+	motif{motif}, motifScore{motifScore}, instances{instances},
+	missclassified{missclassified} {
+		if (toxicity == "toxic")
+			this->toxClass = ToxClass::TOXIC;
+		else if (toxicity == "nuetral")
+			this->toxClass = ToxClass::NUETRAL;
+		else
+			this->toxClass = ToxClass::ANTITOXIC;
+	}
 
 std::string IMotif::getMotif() {
 	return this->motif;
+}
+
+ToxClass IMotif::getToxClass() {
+	return this->toxClass;
+}
+
+int IMotif::getNumInstances() {
+	return this->instances;
+}
+
+int IMotif::getNumMissclassified() {
+	return this->misclassified;
 }
 
 double IMotif::getMotifScore() {
@@ -18,7 +38,11 @@ void IMotif::setMotifScore(double motifScore) {
 
 std::string IMotif::str() {
 	std::ostringstream os;
-	os << this->motif << "\t" << this->motifScore << std::endl;
+	os << this->motif << "," 
+	   << this->ToxClass::ClassNames[toxClass] << ","
+	   << this->instances << "," 
+	   << this->missclassified << ","
+	   << this->motifScore << "," << std::endl;
 	return os.str();
 }
 

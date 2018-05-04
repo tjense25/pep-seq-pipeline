@@ -1,20 +1,27 @@
 #include <string>
 #include <vector>
 #include "Peptide.h"
+#include "ToxClass.h"
 
 #ifndef I_MOTIF_H
 #define I_MOTIF_H
 class IMotif {
 	private:
 		std::string motif;
+		ToxClass toxScore;
+		int instances;
+		int missclassified;
 		double motifScore;
 
 	public:
-		IMotif(std::string motif, double motifScore);
+		IMotif(std::string motif, std::string toxicity, int instances, int missclassified, double motifScore);
 		std::string getMotif();
 		double getMotifScore();
+		ToxClass getToxicityClass();
+		int getNumInstances();
+		int getNumMissclassified();
 		void setMotifScore(double motifScore);
-		std::string str();
+		virtual std::string str();
 		virtual double getAverageToxScore() = 0;
 		virtual double getAverageRank() = 0;
 		virtual int getTotalCount() = 0;
