@@ -13,4 +13,6 @@ int main(int argc, char** argv) {
 	peptides->loadPepLibrary(argv[1]);
 	MotifSet ms = peptides->createMotifSet(argv[2]);
 	std::cout << ms.str() << std::endl;
+	std::cerr << ms.results() << std::endl;
+	ms.savePepsToFile("clusteredPeps.csv");
 }

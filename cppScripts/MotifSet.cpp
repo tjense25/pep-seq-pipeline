@@ -64,6 +64,7 @@ std::vector<IMotif*> MotifSet::loadMotifs(std::string motifFileName) {
 		motifs.push_back(new MotifProxy(motifSeq, toxicity, instances, missclassified, motifScore));
 	}
 
+	inFile.close();
 	return motifs;
 }
 
@@ -168,14 +169,36 @@ int MotifSet::getNumMotifs() {
 std::string MotifSet::str() {
 	std::ostringstream os;
 	os << Motif::getHeader() << std::endl;
-	os << "Selected " << insideMotifs.size() << " Motifs:" << std::endl;
 	for ( auto motif : insideMotifs) {
 		os << motif->str() << std::endl;
 	}	
+	return os.str();
+}
+
+std::string MotifSet::results() {
+	std::ostringstream os;
+	os << "Motif Set Results:" << std::endl << std::endl;
+	os << "Selected " << insideMotifs.size() << " Motifs:" << std::endl;
 	os << "Motif Set Accuracy: " << this->motifSetAccuracy << std::endl;
 	os << "Peptide Coverage: " << this->peptideCoverage << std::endl;
 	os << "F1: " << this->getF1() << std::endl;
 	return os.str();
-	
+}
+
+void MotifSet::savePepsToFile(std::string pepFileName) {
+	std::ofstream pepFile;
+	pepFile.open(pepFileName);
+
+	pepFile << "PepSeq,ToxScore,MotifSet" << std::endl;
+
+	for (auto pep : inside) {
+		pepFile << pep->str() << ",INSIDE" << std::endl;
+	}
+
+	for (auto pep : outside) {
+		pepFile << pep->str() << ",OUTSIDE" << std::endl;
+	}
+		
+	pepFile.close();
 }
 

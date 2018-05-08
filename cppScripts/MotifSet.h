@@ -27,6 +27,8 @@ class MotifSet
 		int getNumMotifs();
 		std::vector<IMotif*> getMotifs();
 		std::string str();
+		std::string results();
+		void savePepsToFile(std::string pepFileName);
 };
 #endif
 

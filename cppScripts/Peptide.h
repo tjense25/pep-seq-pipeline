@@ -13,5 +13,6 @@ class Peptide {
 		std::string getSequence();
 		ToxClass getToxClass();
 		double getToxScore();
+		std::string str();
 };
 #endif

@@ -1,3 +1,4 @@
+#include <sstream>
 #include "Peptide.h"
 
 
@@ -21,4 +22,10 @@ ToxClass Peptide::getToxClass() {
 
 double Peptide::getToxScore() {
 	return this->toxScore;
+}
+
+std::string Peptide::str() {
+	std::ostringstream os;
+	os << this->sequence << "," << this->toxScore;
+	return os.str();
 }

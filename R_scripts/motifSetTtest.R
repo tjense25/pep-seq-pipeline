@@ -16,9 +16,7 @@ if (length(args) == 0) {
 
 #Read in motifSetData as a dataframe
 in_file <- args[1]
-peps <- read_tsv(in_file)
-
-head(peps)
+peps <- read_csv(in_file)
 
 #store dataframe of thsoe peps that are inside the motifSet
 insideMS <- peps %>% filter(MotifSet == "INSIDE") %>% select(-MotifSet)
@@ -30,9 +28,8 @@ outsideMS <- peps %>% filter(MotifSet == "OUTSIDE") %>% select(-MotifSet)
 #in and outside motifset
 t.test(insideMS$ToxScore, outsideMS$ToxScore)
 
-
 #plot the distribution of toxScores seperated by MotifSet group
-ggplot(peps, aes(x=MotifSet,y=ToxScore)) +
+boxPlot <- ggplot(peps, aes(x=MotifSet,y=ToxScore)) +
 	 geom_boxplot() + 
 	 annotate("rect", xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=-.3, alpha=0.2, fill="#619CFF") + 
 	 annotate("rect", xmin=-Inf, xmax=Inf, ymin=-.3, ymax=.2, alpha=0.2, fill="#00BA38") +
@@ -45,6 +42,7 @@ ggplot(peps, aes(x=MotifSet,y=ToxScore)) +
 	       plot.title = element_text(hjust = 0.5),
 	       panel.border = element_blank(),
 	       panel.grid.major = element_blank(),
-	       axis.line = element_line(colour = "black")) + 
+	       axis.line = element_line(colour = "black"))
 
-ggsave("MotifSetBoxPlot.jpg")
+ggsave(plot=boxPlot, file="temp/motifSetBoxPlot.png")
+

@@ -164,8 +164,9 @@ else
 	java -jar dependency_jars/MotifFinder.jar temp/foresttemp.txt $MotifFinderParam -noneu -noanti > temp/RFmotifs.txt
 fi
 rm -f temp/foresttemp.txt
-
-mv temp/RFmotifs.txt ./
+sed 's/[()]//g' temp/RFmotifs.txt > temp/rfmotifs.txt
+sed 's/\//\t/g' temp/rfmotifs.txt > temp/RFmotifs.txt
+rm -rf temp/rfmotifs.txt
 
 #Calculate motif coverage and motif accuracy of the selected motifs and print
 #these values out in the motif file that was created
@@ -177,7 +178,7 @@ rm -f temp/RFmotifs.txt
 
 >&2 echo "Testing significance of individual motifs . . ."
 ##module load r/3/3 #(Include if R module not loaded)
-Rscript --vanilla R_scripts/fishers_exact.R temp/motifs.csv &> /dev/null
+Rscript --vanilla R_scripts/chi_squared.R temp/motifs.csv &> /dev/null
 
 >&2 echo "Calculating statistics on the Motif Set . . .  "
 ##Run motifSet T test for peps inside and outside of the motif set
