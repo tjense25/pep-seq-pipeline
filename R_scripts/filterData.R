@@ -40,6 +40,8 @@ if (length(args) == 0) {
 #Read in pepseq data as a dataframe
 in_file <- args[1]
 pepSeq <- read_csv(in_file)
+originalSize <- nrow(pepSeq)
+print(originalSize)
 
 pepSeq <- select(pepSeq, PEPSEQ, REF1, REF2, IND1, IND2) %>% #select PepSeq columns and ref and ind counts
 	    mutate(PEPSEQ=str_sub(PEPSEQ,2,-1), 	#remove first G from pepseq
@@ -47,8 +49,12 @@ pepSeq <- select(pepSeq, PEPSEQ, REF1, REF2, IND1, IND2) %>% #select PepSeq colu
 		   INDSUM = IND1 + IND2) %>%
 	    mutate(TOXSCORE = log10((INDSUM + 1)/(REFSUM + 1))) %>% #calculate toxScore
 	    mutate(CLASS = classify(TOXSCORE)) %>%      #create new column for toxClass factor from toxicity score
-	    filter(REFSUM + INDSUM > 250) %>%		#filter to contain only large bacteria samples
+	    filter(REFSUM + INDSUM > 200) %>%		#filter to contain only large bacteria samples
 	    select(PEPSEQ,TOXSCORE,CLASS)	
+
+filteredSize <- nrow(pepSeq)
+print(filteredSize)
+print(filteredSize / originalSize)
 
 #output new data frame to a file as a csv
 write.csv(pepSeq, file="raw_data/filtered.csv", row.names=FALSE, quote=FALSE)

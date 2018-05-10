@@ -1,0 +1,19 @@
+Motif Set Results:
+
+Selected 518 Motifs:
+Motif Set Accuracy: 0.629661
+Peptide Coverage: 0.866621
+F1: 0.729378
+
+
+	Welch Two Sample t-test
+
+data:  insideMS$ToxScore and outsideMS$ToxScore
+t = -183.31, df = 92736, p-value < 2.2e-16
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.3662403 -0.3584914
+sample estimates:
+ mean of x  mean of y 
+-0.4021899 -0.0398240 
+

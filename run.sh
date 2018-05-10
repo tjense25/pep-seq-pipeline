@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#SBATCH --time=03:00:00   # walltime
+#SBATCH --time=01:00:00   # walltime
 #SBATCH --ntasks=1   # number of processor cores (i.e. tasks)
 #SBATCH --nodes=1   # number of nodes
-#SBATCH --mem-per-cpu=32G   # memory per CPU core
+#SBATCH --mem-per-cpu=64G   # memory per CPU core
 #SBATCH -J "PepseqPipeline"   # job name
 
 # LOAD MODULES, INSERT CODE, AND RUN YOUR PROGRAMS HERE
@@ -145,7 +145,7 @@ fi
 
 #module load jdk/1.8.0-121 #(Uncomment this line if java not updated)
 
-java -cp dependency_jars/weka.jar weka.classifiers.trees.RandomForest -U -B -num-slots 0 -V 1e-6 -P 30 -I 500 -no-cv -print -t $INPUT_FILE > temp/foresttemp.txt
+java -Xmx32g -cp dependency_jars/weka.jar weka.classifiers.trees.RandomForest -U -B -V 1e-6 -P 30 -I 500 -no-cv -print -t $INPUT_FILE > temp/foresttemp.txt
 rm -f temp/arfftemp.arff
 
 MOTIF_FILE=temp/motifs.txt
@@ -193,7 +193,7 @@ then
 	mkdir -p results/$OUTDIR
 	mv temp/motifs.csv results/$OUTDIR
 	mv temp/statistics.txt results/$OUTDIR
-	mv MotifSetBoxPlot.jpg results/$OUTDIR
+	mv temp/motifSetBoxPlot.png results/$OUTDIR
 else
 	cat temp/motifs.csv
 	echo
