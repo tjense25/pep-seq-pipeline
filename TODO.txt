@@ -21,3 +21,9 @@ the motif decision tree. LOOK FOR PEPTIDE CLUSTERING SOFTWARES
 
 9. update Gibb's Sampler from 365 to work for peptides and use that as the
 motif finder??
+
+10. Compare motifs to known AMPs and see if any match.
+
+11. Learn how to use auto encoder, train it on our data.
+
+12. Look at peptide binding and folding, see if it offers new insights.
