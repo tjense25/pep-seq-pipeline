@@ -9,27 +9,4 @@ Obtained from CAMP3
 
 
 
-Before, we were running on the assumption that there would be peptides 
-  *for which there was a PDB file* and 
-  *for which there was not already a story*
 
-How those assumptions have not been met:
-
-  There are no 8-mers in the database that are truly just 8-mers that we could try against proteins. That I have found yet.
-    I want to talk with Kristi more about where we got our list of known AMP's etc. and look at those files
-        If we don't have anything to work with, I'm not sure how meaningful this is going to be.
-  
-  Many of the peptides do not interact with proteins, they interact with cell walls.
-
-  It would take a LOT of time to try even the few peptides for which PDB files exist against the most important proteins.
-
-  There is a small likelihood that the peptide even interacts with one of those proteins.
-      Lots of time investment with little promise of reward
-
-  Among the peptides that have already been resolved, generally the authors have already done other biological assays to tell the story of 
-  the peptide. And some of those stories are pretty neat.
-
-  We might be better off compiling those stories and trying to catch a general mode of action to particular motifs -- more of a metaanalysis
-
-Problems with abandoning Autodoc for the time being:
-  No eye candy
