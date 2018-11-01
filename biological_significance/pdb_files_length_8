@@ -8,14 +8,14 @@ Obtained from CAMP3
   This is only an 8-mer because it was a fragment-based approach to resolving a larger protein (
 
 
-
+I want to ask Kristi how she got those known AMP sequences!
 
 Before, we were running on the assumption that there would be peptides *for which there was a PDB file* and *for which there was not already a story*
 
 How those assumptions have not been met:
 
   There are no 8-mers in the database that are truly just 8-mers that we could try against proteins.
-
+  
   Lots of the peptides don't interact with proteins, they interact with cell walls.
 
   It would take a LOT of time to try even the few peptides that there are against the most important proteins.
