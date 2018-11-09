@@ -1,14 +1,15 @@
-KYGDVPLY,.Y.....Y,DRAMP
-KYGDVPLY,......LY,DRAMP
-KYGDVPLY,.Y....L.,DRAMP
+sequence, motif, database, mode of action, source
+KYGDVPLY,.Y.....Y,DRAMP, unknown, http://dramp.cpu-bioinfor.org/browse/All_Information.php?id=DRAMP18248&dataset=General
+KYGDVPLY,......LY,DRAMP, '', ''
+KYGDVPLY,.Y....L.,DRAMP, '', ''
 YDFWKAVP,Y.F.....,BAGEL4
 VTVCITFC,......FC,BAGEL4
 EIGVYGLP,.I..Y...,BAGEL4
-FFHLHFHY,F......Y,DRAMP
-FFHLHFHY,.F.....Y,DRAMP
-FFHLHFHY,.....F.Y,DRAMP
-FFHLHFHY,F....F.Y,DRAMP
-FFHLHFHY,FF.....Y,DRAMP
+FFHLHFHY,F......Y,DRAMP, unknown, http://dramp.cpu-bioinfor.org/browse/All_Information.php?id=DRAMP04238&dataset=General
+FFHLHFHY,.F.....Y,DRAMP, '', ''
+FFHLHFHY,.....F.Y,DRAMP, '', ''
+FFHLHFHY,F....F.Y,DRAMP, '', ''
+FFHLHFHY,FF.....Y,DRAMP, '', ''
 ITACITFC,......FC,BAGEL4
 TVPVPSFC,......FC,BAGEL4
 TVPVPSFC,...V..F.,BAGEL4
