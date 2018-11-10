@@ -2,24 +2,24 @@ sequence, motif, database, mode of action, source
 KYGDVPLY,.Y.....Y,DRAMP, unknown, http://dramp.cpu-bioinfor.org/browse/All_Information.php?id=DRAMP18248&dataset=General
 KYGDVPLY,......LY,DRAMP, '', ''
 KYGDVPLY,.Y....L.,DRAMP, '', ''
-YDFWKAVP,Y.F.....,BAGEL4
-VTVCITFC,......FC,BAGEL4
-EIGVYGLP,.I..Y...,BAGEL4
-FFHLHFHY,F......Y,DRAMP, unknown, http://dramp.cpu-bioinfor.org/browse/All_Information.php?id=DRAMP04238&dataset=General
-FFHLHFHY,.F.....Y,DRAMP, '', ''
+YDFWKAVP,Y.F.....,BAGEL4, no results found, no results found
+VTVCITFC,......FC,BAGEL4, no results found, no results found
+EIGVYGLP,.I..Y...,BAGEL4, no results found, no results found
+FFHLHFHY,F......Y,DRAMP, unknown, http://dramp.cpu-bioinfor.org/browse/All_Information.php?id=DRAMP04238&dataset=General https://www.ncbi.nlm.nih.gov/pubmed/?term=12569105
+FFHLHFHY,.F.....Y,DRAMP, '', (worth looking at the article some more)
 FFHLHFHY,.....F.Y,DRAMP, '', ''
 FFHLHFHY,F....F.Y,DRAMP, '', ''
 FFHLHFHY,FF.....Y,DRAMP, '', ''
-ITACITFC,......FC,BAGEL4
-TVPVPSFC,......FC,BAGEL4
-TVPVPSFC,...V..F.,BAGEL4
-YTANPRYP,Y.....Y.,BAGEL4
-LTACITFC,......FC,BAGEL4
-YYQQKPVA,YY......,MilkAMP
-VTVCVSFC,......FC,BAGEL4
-VTVCVSFC,....V.F.,BAGEL4
-RYPAVGYT,.Y....Y.,InverPep
-VPPGFTPF,....F..F,DADP
+ITACITFC,......FC,BAGEL4, no results found, no results found
+TVPVPSFC,......FC,BAGEL4, no results found, no results found
+TVPVPSFC,...V..F.,BAGEL4, '', ''
+YTANPRYP,Y.....Y.,BAGEL4, no results found, no results found
+LTACITFC,......FC,BAGEL4, no results found, no results found
+YYQQKPVA,YY......,MilkAMP, need to find the article in physical copy, http://milkampdb.org/CAK0010
+VTVCVSFC,......FC,BAGEL4, fix BAGEL4, fix BAGEL4
+VTVCVSFC,....V.F.,BAGEL4, fix BAGEL4, fix BAGEL4
+RYPAVGYT,.Y....Y.,InverPep, unknown, http://ciencias.medellin.unal.edu.co/gruposdeinvestigacion/prospeccionydisenobiomoleculas/InverPep/public/Peptido/see/741 https://www.uniprot.org/uniprot/B3EWR9
+VPPGFTPF,....F..F,DADP, look at this one more (May target bradykinin receptors), https://www.uniprot.org/uniprot/P86630
 VPPGFTPF,V......F,DADP
 VPPGFTPF,V...F..F,DADP
 VRPYLVAF,...Y...F,CAMPR3
