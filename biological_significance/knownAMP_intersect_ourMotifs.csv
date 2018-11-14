@@ -1,65 +1,65 @@
-sequence, motif, database, mode of action, source
-KYGDVPLY,.Y.....Y,DRAMP, unknown, http://dramp.cpu-bioinfor.org/browse/All_Information.php?id=DRAMP18248&dataset=General
-KYGDVPLY,......LY,DRAMP, '', ''
-KYGDVPLY,.Y....L.,DRAMP, '', ''
-YDFWKAVP,Y.F.....,BAGEL4, protein tyrosine kinase (c-erbB-214) inhibitor, Hymenamide_K: https://ac-els-cdn-com.erl.lib.byu.edu/S0040402001850067/1-s2.0-S0040402001850067-main.pdf?_tid=f751eda1-385d-4e68-8403-6478eb8a0fd6&acdnat=1542237917_2440b7805e16e6a852c9185f811ed269
-VTVCITFC,......FC,BAGEL4, no results found, no results found
-EIGVYGLP,.I..Y...,BAGEL4, no results found, no results found
-FFHLHFHY,F......Y,DRAMP, unknown, http://dramp.cpu-bioinfor.org/browse/All_Information.php?id=DRAMP04238&dataset=General https://www.ncbi.nlm.nih.gov/pubmed/?term=12569105
-FFHLHFHY,.F.....Y,DRAMP, '', (worth looking at the article some more)
-FFHLHFHY,.....F.Y,DRAMP, '', ''
-FFHLHFHY,F....F.Y,DRAMP, '', ''
-FFHLHFHY,FF.....Y,DRAMP, '', ''
-ITACITFC,......FC,BAGEL4, this one is going to take digging, https://pubs.acs.org/doi/pdf/10.1021/jo00275a036
-TVPVPSFC,......FC,BAGEL4, no results found, no results found
-TVPVPSFC,...V..F.,BAGEL4, '', ''
-YTANPRYP,Y.....Y.,BAGEL4, no results found, no results found
-LTACITFC,......FC,BAGEL4, no results found, no results found
-YYQQKPVA,YY......,MilkAMP, need to find the article in physical copy, http://milkampdb.org/CAK0010
-VTVCVSFC,......FC,BAGEL4, fix BAGEL4, fix BAGEL4
-VTVCVSFC,....V.F.,BAGEL4, fix BAGEL4, fix BAGEL4
-RYPAVGYT,.Y....Y.,InverPep, unknown, http://ciencias.medellin.unal.edu.co/gruposdeinvestigacion/prospeccionydisenobiomoleculas/InverPep/public/Peptido/see/741 https://www.uniprot.org/uniprot/B3EWR9
-VPPGFTPF,....F..F,DADP, look at this one more (May target bradykinin receptors), https://www.uniprot.org/uniprot/P86630
-VPPGFTPF,V......F,DADP,,
-VPPGFTPF,V...F..F,DADP,,
-VRPYLVAF,...Y...F,CAMPR3,,
-VRPYLVAF,V......F,CAMPR3,,
-VRPYLVAF,...Y.V.F,CAMPR3,,
-WKLFDDGV,...F...V,CAMPR3,,
-WKLFDDGV,..LF....,CAMPR3,,
-CKIALPYT,C...L...,DADP,,
-FWQKMSFA,F.....F.,APD,,
-FFFLSRIF,F......F,DADP,,
-FFFLSRIF,..F....F,DADP,,
-FFFLSRIF,...L...F,DADP,,
-FFFLSRIF,.F.....F,DADP,,
-FFFLSRIF,FFF.....,DADP,,
-LYCNPSLC,LY......,BAGEL4,,
-LYCNPSLC,.Y....L.,BAGEL4,,
-LYCNPSLC,.YC....C,BAGEL4,,
-APPGFTPF,....F..F,DADP,,
-RPPGFSPF,....F..F,DRAMP,,
-IPPQFMRF,....F..F,DADP,,
-IPPQFMRF,I...F...,DADP,,
-IPPQFMRF,I......F,DADP,,
-VCFCICVP,.C.C.C..,BAGEL4,,
-VCFCICVP,VC.C....,BAGEL4,,
-VCFCICVP,.CFC....,BAGEL4,,
-VCFCICVP,...C.CV.,BAGEL4,,
-VCFCICVP,..FC.C..,BAGEL4,,
-VCFCICVP,V..C.C..,BAGEL4,,
-GFTPFRIY,.F.....Y,DADP,,
-GFTPFRIY,....F..Y,DADP,,
-ITACLTFC,......FC,BAGEL4,,
-YDFWKVYP,Y.....Y.,BAGEL4,,
-YDFWKVYP,Y.F.....,BAGEL4,,
-RPPGFTPF,....F..F,DRAMP,,
-CTFCCTLC,C..CC...,BAGEL4,,
-CTFCCTLC,C..C...C,BAGEL4,,
-CTFCCTLC,C.F.C...,BAGEL4,,
-CTFCCTLC,...CC..C,BAGEL4,,
-CTFCCTLC,C...C..C,BAGEL4,,
-CTFCCTLC,C.FC....,BAGEL4,,
-CTFCCTLC,C..C..L.,BAGEL4,,
-CTFCCTLC,C..C....,BAGEL4,,
-CTFCCTLC,..F...L.,BAGEL4,,
+sequence, motif, database, mode of action, name, source
+KYGDVPLY,.Y.....Y,DRAMP, unknown,, http://dramp.cpu-bioinfor.org/browse/All_Information.php?id=DRAMP18248&dataset=General
+KYGDVPLY,......LY,DRAMP, '',, ''
+KYGDVPLY,.Y....L.,DRAMP, '',, ''
+YDFWKAVP,Y.F.....,BAGEL4, protein tyrosine kinase (c-erbB-214) inhibitor, Hymenamide_K, https://ac-els-cdn-com.erl.lib.byu.edu/S0040402001850067/1-s2.0-S0040402001850067-main.pdf?_tid=f751eda1-385d-4e68-8403-6478eb8a0fd6&acdnat=1542237917_2440b7805e16e6a852c9185f811ed269
+VTVCITFC,......FC,BAGEL4, no results found,, no results found
+EIGVYGLP,.I..Y...,BAGEL4, no results found,, no results found
+FFHLHFHY,F......Y,DRAMP, unknown,, http://dramp.cpu-bioinfor.org/browse/All_Information.php?id=DRAMP04238&dataset=General https://www.ncbi.nlm.nih.gov/pubmed/?term=12569105
+FFHLHFHY,.F.....Y,DRAMP, '',, (worth looking at the article some more)
+FFHLHFHY,.....F.Y,DRAMP, '',, ''
+FFHLHFHY,F....F.Y,DRAMP, '',, ''
+FFHLHFHY,FF.....Y,DRAMP, '',, ''
+ITACITFC,......FC,BAGEL4, this one is going to take digging,, https://pubs.acs.org/doi/pdf/10.1021/jo00275a036
+TVPVPSFC,......FC,BAGEL4, no results found,, no results found
+TVPVPSFC,...V..F.,BAGEL4, '',, ''
+YTANPRYP,Y.....Y.,BAGEL4, no results found,, no results found
+LTACITFC,......FC,BAGEL4, no results found,, no results found
+YYQQKPVA,YY......,MilkAMP, need to find the article in physical copy,, http://milkampdb.org/CAK0010
+VTVCVSFC,......FC,BAGEL4, fix BAGEL4,, fix BAGEL4
+VTVCVSFC,....V.F.,BAGEL4, fix BAGEL4,, fix BAGEL4
+RYPAVGYT,.Y....Y.,InverPep, unknown,, http://ciencias.medellin.unal.edu.co/gruposdeinvestigacion/prospeccionydisenobiomoleculas/InverPep/public/Peptido/see/741 https://www.uniprot.org/uniprot/B3EWR9
+VPPGFTPF,....F..F,DADP, look at this one more (May target bradykinin receptors),, https://www.uniprot.org/uniprot/P86630
+VPPGFTPF,V......F,DADP,,,
+VPPGFTPF,V...F..F,DADP,,,
+VRPYLVAF,...Y...F,CAMPR3,,,
+VRPYLVAF,V......F,CAMPR3,,,
+VRPYLVAF,...Y.V.F,CAMPR3,,,
+WKLFDDGV,...F...V,CAMPR3,,,
+WKLFDDGV,..LF....,CAMPR3,,,
+CKIALPYT,C...L...,DADP,,,
+FWQKMSFA,F.....F.,APD,,,
+FFFLSRIF,F......F,DADP,,,
+FFFLSRIF,..F....F,DADP,,,
+FFFLSRIF,...L...F,DADP,,,
+FFFLSRIF,.F.....F,DADP,,,
+FFFLSRIF,FFF.....,DADP,,,
+LYCNPSLC,LY......,BAGEL4,,,
+LYCNPSLC,.Y....L.,BAGEL4,,,
+LYCNPSLC,.YC....C,BAGEL4,,,
+APPGFTPF,....F..F,DADP,,,
+RPPGFSPF,....F..F,DRAMP,,,
+IPPQFMRF,....F..F,DADP,,,
+IPPQFMRF,I...F...,DADP,,,
+IPPQFMRF,I......F,DADP,,,
+VCFCICVP,.C.C.C..,BAGEL4,,,
+VCFCICVP,VC.C....,BAGEL4,,,
+VCFCICVP,.CFC....,BAGEL4,,,
+VCFCICVP,...C.CV.,BAGEL4,,,
+VCFCICVP,..FC.C..,BAGEL4,,,
+VCFCICVP,V..C.C..,BAGEL4,,,
+GFTPFRIY,.F.....Y,DADP,,,
+GFTPFRIY,....F..Y,DADP,,,
+ITACLTFC,......FC,BAGEL4,,,
+YDFWKVYP,Y.....Y.,BAGEL4,,,
+YDFWKVYP,Y.F.....,BAGEL4,,,
+RPPGFTPF,....F..F,DRAMP,,,
+CTFCCTLC,C..CC...,BAGEL4,,,
+CTFCCTLC,C..C...C,BAGEL4,,,
+CTFCCTLC,C.F.C...,BAGEL4,,,
+CTFCCTLC,...CC..C,BAGEL4,,,
+CTFCCTLC,C...C..C,BAGEL4,,,
+CTFCCTLC,C.FC....,BAGEL4,,,
+CTFCCTLC,C..C..L.,BAGEL4,,,
+CTFCCTLC,C..C....,BAGEL4,,,
+CTFCCTLC,..F...L.,BAGEL4,,,
