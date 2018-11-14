@@ -2,7 +2,7 @@ sequence, motif, database, mode of action, source
 KYGDVPLY,.Y.....Y,DRAMP, unknown, http://dramp.cpu-bioinfor.org/browse/All_Information.php?id=DRAMP18248&dataset=General
 KYGDVPLY,......LY,DRAMP, '', ''
 KYGDVPLY,.Y....L.,DRAMP, '', ''
-YDFWKAVP,Y.F.....,BAGEL4, no results found, no results found
+YDFWKAVP,Y.F.....,BAGEL4, protein tyrosine kinase inhibitor, https://ac-els-cdn-com.erl.lib.byu.edu/S0040402001850067/1-s2.0-S0040402001850067-main.pdf?_tid=f751eda1-385d-4e68-8403-6478eb8a0fd6&acdnat=1542237917_2440b7805e16e6a852c9185f811ed269
 VTVCITFC,......FC,BAGEL4, no results found, no results found
 EIGVYGLP,.I..Y...,BAGEL4, no results found, no results found
 FFHLHFHY,F......Y,DRAMP, unknown, http://dramp.cpu-bioinfor.org/browse/All_Information.php?id=DRAMP04238&dataset=General https://www.ncbi.nlm.nih.gov/pubmed/?term=12569105
@@ -10,7 +10,7 @@ FFHLHFHY,.F.....Y,DRAMP, '', (worth looking at the article some more)
 FFHLHFHY,.....F.Y,DRAMP, '', ''
 FFHLHFHY,F....F.Y,DRAMP, '', ''
 FFHLHFHY,FF.....Y,DRAMP, '', ''
-ITACITFC,......FC,BAGEL4, look into this further, https://pubs.acs.org/doi/pdf/10.1021/jo00275a036
+ITACITFC,......FC,BAGEL4, this one is going to take digging, https://pubs.acs.org/doi/pdf/10.1021/jo00275a036
 TVPVPSFC,......FC,BAGEL4, no results found, no results found
 TVPVPSFC,...V..F.,BAGEL4, '', ''
 YTANPRYP,Y.....Y.,BAGEL4, no results found, no results found
