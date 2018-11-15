@@ -54,12 +54,13 @@ ITACLTFC,......FC,BAGEL4,unknown,Patellamide_G,https://pubs-acs-org.erl.lib.byu.
 YDFWKVYP,Y.....Y.,BAGEL4,protein kinase inhibitor,Hymenamide_J,https://www.sciencedirect.com/science/article/pii/S0040402001850067?via%3Dihub
 YDFWKVYP,Y.F.....,BAGEL4,'','',''
 RPPGFTPF,....F..F,DRAMP,,,
-CTFCCTLC,C..CC...,BAGEL4,,,
-CTFCCTLC,C..C...C,BAGEL4,,,
-CTFCCTLC,C.F.C...,BAGEL4,,,
-CTFCCTLC,...CC..C,BAGEL4,,,
-CTFCCTLC,C...C..C,BAGEL4,,,
-CTFCCTLC,C.FC....,BAGEL4,,,
-CTFCCTLC,C..C..L.,BAGEL4,,,
-CTFCCTLC,C..C....,BAGEL4,,,
-CTFCCTLC,..F...L.,BAGEL4,,,
+CTFCCTLC,C..CC...,BAGEL4,unknown - Ulithiacyclamide is a potent Macrophage Scavenger Receptor (in humans?),Preulithiacyclamide OR Ulithiacyclamide_B_(Ulithiacyclamide_E)_(Ulithiacyclamide_F)_(Ulithiacyclamide_G)
+, https://www-tandfonline-com.erl.lib.byu.edu/doi/abs/10.1080/10575639708048313#aHR0cHM6Ly93d3ctdGFuZGZvbmxpbmUtY29tLmVybC5saWIuYnl1LmVkdS9kb2kvcGRmLzEwLjEwODAvMTA1NzU2Mzk3MDgwNDgzMTM/bmVlZEFjY2Vzcz10cnVlQEBAMA== 
+CTFCCTLC,C..C...C,BAGEL4,'','',''
+CTFCCTLC,C.F.C...,BAGEL4,'','',''
+CTFCCTLC,...CC..C,BAGEL4,'','',''
+CTFCCTLC,C...C..C,BAGEL4,'','',''
+CTFCCTLC,C.FC....,BAGEL4,'','',''
+CTFCCTLC,C..C..L.,BAGEL4,'','',''
+CTFCCTLC,C..C....,BAGEL4,'','',''
+CTFCCTLC,..F...L.,BAGEL4,'','',''
