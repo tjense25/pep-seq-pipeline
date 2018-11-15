@@ -36,18 +36,18 @@ FFFLSRIF,.F.....F,DADP,,,
 FFFLSRIF,FFF.....,DADP,,,
 LYCNPSLC,LY......,BAGEL4, possible kinase inhibitor (in humans): connection to Alzheimers, Kororamide, https://pubs-acs-org.erl.lib.byu.edu/doi/pdf/10.1021/np990353f https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213646/ https://www.sciencedirect.com/science/article/pii/S0040402015012090?via%3Dihub
 LYCNPSLC,.Y....L.,BAGEL4,'','',''
-LYCNPSLC,.YC....C,BAGEL4,,,
+LYCNPSLC,.YC....C,BAGEL4,'','',''
 APPGFTPF,....F..F,DADP,,,
 RPPGFSPF,....F..F,DRAMP,,,
 IPPQFMRF,....F..F,DADP,,,
 IPPQFMRF,I...F...,DADP,,,
 IPPQFMRF,I......F,DADP,,,
-VCFCICVP,.C.C.C..,BAGEL4,,,
-VCFCICVP,VC.C....,BAGEL4,,,
-VCFCICVP,.CFC....,BAGEL4,,,
-VCFCICVP,...C.CV.,BAGEL4,,,
-VCFCICVP,..FC.C..,BAGEL4,,,
-VCFCICVP,V..C.C..,BAGEL4,,,
+VCFCICVP,.C.C.C..,BAGEL4, weakly cytotoxic to colon tumor cells,unknown,Tawicyclamide_A_(Tawicyclamide_B),https://pubs.acs.org/doi/abs/10.1021/jo00043a017
+VCFCICVP,VC.C....,BAGEL4,'','',''
+VCFCICVP,.CFC....,BAGEL4,'','',''
+VCFCICVP,...C.CV.,BAGEL4,'','',''
+VCFCICVP,..FC.C..,BAGEL4,'','',''
+VCFCICVP,V..C.C..,BAGEL4,'','',''
 GFTPFRIY,.F.....Y,DADP,,,
 GFTPFRIY,....F..Y,DADP,,,
 ITACLTFC,......FC,BAGEL4,,,
