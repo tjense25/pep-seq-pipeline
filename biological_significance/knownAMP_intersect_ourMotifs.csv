@@ -3,7 +3,7 @@ KYGDVPLY,.Y.....Y,DRAMP, unknown,, http://dramp.cpu-bioinfor.org/browse/All_Info
 KYGDVPLY,......LY,DRAMP, '',, ''
 KYGDVPLY,.Y....L.,DRAMP, '',, ''
 YDFWKAVP,Y.F.....,BAGEL4, protein tyrosine kinase (c-erbB-214) inhibitor, Hymenamide_K, https://ac-els-cdn-com.erl.lib.byu.edu/S0040402001850067/1-s2.0-S0040402001850067-main.pdf?_tid=f751eda1-385d-4e68-8403-6478eb8a0fd6&acdnat=1542237917_2440b7805e16e6a852c9185f811ed269
-VTVCITFC,......FC,BAGEL4, unkown,Patellamide_E, https://pubs-acs-org.erl.lib.byu.edu/doi/pdf/10.1021/np50081a016
+VTVCITFC,......FC,BAGEL4, unknown,Patellamide_E, https://pubs-acs-org.erl.lib.byu.edu/doi/pdf/10.1021/np50081a016
 EIGVYGLP,.I..Y...,BAGEL4, unknown,Microphycin_AL828, https://www.sciencedirect.com/science/article/pii/S0040402008009216?via%3Dihub
 FFHLHFHY,F......Y,DRAMP, unknown,, http://dramp.cpu-bioinfor.org/browse/All_Information.php?id=DRAMP04238&dataset=General https://www.ncbi.nlm.nih.gov/pubmed/?term=12569105
 FFHLHFHY,.F.....Y,DRAMP, '',, (worth looking at the article some more)
@@ -13,10 +13,10 @@ FFHLHFHY,FF.....Y,DRAMP, '',, ''
 ITACITFC,......FC,BAGEL4, unknown,Patellamide_D,https://pubs.acs.org/doi/abs/10.1021/jo00275a036
 TVPVPSFC,......FC,BAGEL4, unknown,Patellin_5, no results found
 TVPVPSFC,...V..F.,BAGEL4, '',, ''
-YTANPRYP,Y.....Y.,BAGEL4, unkown,Cyclonellin, https://pubs.acs.org/doi/abs/10.1021/np030336x http://iopscience.iop.org/article/10.1088/1755-1315/116/1/012084/pdf
-LTACITFC,......FC,BAGEL4, no results found,, no results found
+YTANPRYP,Y.....Y.,BAGEL4, unknown,Cyclonellin, https://pubs.acs.org/doi/abs/10.1021/np030336x http://iopscience.iop.org/article/10.1088/1755-1315/116/1/012084/pdf
+LTACITFC,......FC,BAGEL4, unknown,Prepatellamide_B_formate,https://onlinelibrary-wiley-com.erl.lib.byu.edu/doi/pdf/10.1002/bscb.19860950911
 YYQQKPVA,YY......,MilkAMP, need to find the article in physical copy,, http://milkampdb.org/CAK0010
-VTVCVSFC,......FC,BAGEL4, fix BAGEL4,, fix BAGEL4
+VTVCVSFC,......FC,BAGEL4, unknown,Patellamide_F, https://pubs-acs-org.erl.lib.byu.edu/doi/pdf/10.1021/np50118a020
 VTVCVSFC,....V.F.,BAGEL4, fix BAGEL4,, fix BAGEL4
 RYPAVGYT,.Y....Y.,InverPep, unknown,, http://ciencias.medellin.unal.edu.co/gruposdeinvestigacion/prospeccionydisenobiomoleculas/InverPep/public/Peptido/see/741 https://www.uniprot.org/uniprot/B3EWR9
 VPPGFTPF,....F..F,DADP, look at this one more (May target bradykinin receptors),, https://www.uniprot.org/uniprot/P86630
