@@ -34,7 +34,8 @@ FFFLSRIF,..F....F,DADP,,,
 FFFLSRIF,...L...F,DADP,,,
 FFFLSRIF,.F.....F,DADP,,,
 FFFLSRIF,FFF.....,DADP,,,
-LYCNPSLC,.Y....L.,BAGEL4,'',''
+LYCNPSLC,LY......,BAGEL4, possible kinase inhibitor (in humans): connection to Alzheimers, Kororamide, https://pubs-acs-org.erl.lib.byu.edu/doi/pdf/10.1021/np990353f https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213646/ https://www.sciencedirect.com/science/article/pii/S0040402015012090?via%3Dihub
+LYCNPSLC,.Y....L.,BAGEL4,'','',''
 LYCNPSLC,.YC....C,BAGEL4,,,
 APPGFTPF,....F..F,DADP,,,
 RPPGFSPF,....F..F,DRAMP,,,
