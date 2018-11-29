@@ -19,9 +19,9 @@ YYQQKPVA,YY......,MilkAMP, need to find the article in physical copy,, http://mi
 VTVCVSFC,......FC,BAGEL4, unknown,Patellamide_F, https://pubs-acs-org.erl.lib.byu.edu/doi/pdf/10.1021/np50118a020
 VTVCVSFC,....V.F.,BAGEL4, '' ,'', ''
 RYPAVGYT,.Y....Y.,InverPep, unknown,, http://ciencias.medellin.unal.edu.co/gruposdeinvestigacion/prospeccionydisenobiomoleculas/InverPep/public/Peptido/see/741 https://www.uniprot.org/uniprot/B3EWR9
-VPPGFTPF,....F..F,DADP, look at this one more (May target bradykinin receptors),, https://www.uniprot.org/uniprot/P86630
-VPPGFTPF,V......F,DADP,,,
-VPPGFTPF,V...F..F,DADP,,,
+VPPGFTPF,....F..F,DADP, bradykinin activity (may not be antimictrobial?), many names, appears in the bioactive sequence of 12 peptides, https://www.uniprot.org/uniprot/P86630
+VPPGFTPF,V......F,DADP,'','',''
+VPPGFTPF,V...F..F,DADP,'','',''
 VRPYLVAF,...Y...F,CAMPR3,,,
 VRPYLVAF,V......F,CAMPR3,,,
 VRPYLVAF,...Y.V.F,CAMPR3,,,
@@ -29,11 +29,11 @@ WKLFDDGV,...F...V,CAMPR3,,,
 WKLFDDGV,..LF....,CAMPR3,,,
 CKIALPYT,C...L...,DADP,,,
 FWQKMSFA,F.....F.,APD,,,
-FFFLSRIF,F......F,DADP,,,
-FFFLSRIF,..F....F,DADP,,,
-FFFLSRIF,...L...F,DADP,,,
-FFFLSRIF,.F.....F,DADP,,,
-FFFLSRIF,FFF.....,DADP,,,
+FFFLSRIF,F......F,DADP, permeabalization of bacterial membranes , Temporin-SHf, Has a lot of potential: http://www.jbc.org/content/285/22/16880.full.pdf
+FFFLSRIF,..F....F,DADP, '','',''
+FFFLSRIF,...L...F,DADP,'','',''
+FFFLSRIF,.F.....F,DADP,'','',''
+FFFLSRIF,FFF.....,DADP,'','',''
 LYCNPSLC,LY......,BAGEL4, possible kinase inhibitor (in humans): connection to Alzheimers, Kororamide, https://pubs-acs-org.erl.lib.byu.edu/doi/pdf/10.1021/np990353f https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213646/ https://www.sciencedirect.com/science/article/pii/S0040402015012090?via%3Dihub
 LYCNPSLC,.Y....L.,BAGEL4,'','',''
 LYCNPSLC,.YC....C,BAGEL4,'','',''
