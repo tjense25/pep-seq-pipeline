@@ -1,4 +1,9 @@
 
+# Analysis of Dallon's Data
+The data here are based on figure 23 on page 53 of Emma Dallon's masters thesis.
+
+In the experiment described by this figure, different "vectors" (small loops of DNA) containing different short peptides were inserted into E. coli strands, whose growth was then measured. The changes in growth a
+
 | Sequence Name | Number of Motif Matches |
 | ---- | ---- |
 | A3:NonToxic   | 2                       |
