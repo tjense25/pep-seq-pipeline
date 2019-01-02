@@ -38,7 +38,6 @@ Page Author: Kristi
 
 ### motifFinder.py
 A python script that takes an input file of motifs, and searches for those motifs in another input file of peptide sequences.
-
 Page Author: Brian
 
 If you have any questions about any of the pages, feel free to contact the page author:
