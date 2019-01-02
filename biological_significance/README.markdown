@@ -22,17 +22,18 @@ Page Author: Brian
 
 *Dallon's thesis is called: "Exploration of Antimicrobial Activity in Natural Peptides and High-Throughput Discovery of Synthetic Peptides"
 
+### [dallon_intersect_our_motifs.csv](../biological_significance/dallon_intersect_our_motifs.csv)
+
+This file contains the data that is summarized in dallon_analysis.csv and was produced usuing [motifFinder.py](../biological_significance/motifFinder.py)
+
+Page Author: Brian
+
 ### [dallons_peptides.csv](../biological_significance/dallons_peptides.csv)
 
 This file contains peptides that Emma Dallon studied in depth in her master's thesis. The data was obtained by examinig the thesis document.
 
 Page Author: Brian
 
-### [dallon_intersect_our_motifs.csv](../biological_significance/dallon_intersect_our_motifs.csv)
-
-This file contains the data that is summarized in dallon_analysis.csv and was produced usuing [motifFinder.py](../biological_significance/motifFinder.py)
-
-Page Author: Brian
 
 ### [KnownAMP.csv](../biological_significance/knownAMP.csv)
 
@@ -46,17 +47,25 @@ This file contains a table of the known AMPs that matched the motifs generated b
 
 Page Author: Brian
 
+### [motifFinder.py](../biological_significance/motifFinder.py)
+
+A python script that takes an input file of motifs, and searches for those motifs in another input file of peptide sequences.
+
+Page Author: Brian
+
 ### [motifs.csv](../biological_significance/motifs.csv)
 
 the file of motifs used to generate knownAMP_Intersect_Our_Motifs adn Dallon_Analysis
 
 Page Author: Kristi
 
-### [motifFinder.py](../biological_significance/motifFinder.py)
+### [notes.txt](../biological_significance/notes.txt)
 
-A python script that takes an input file of motifs, and searches for those motifs in another input file of peptide sequences.
+A space where Brian has kept track of random things he has learned that might someday be useful for this project.
 
-Page Author: Brian
+### [pdb_files_length_8.txt](../biological_significance/pdb_files_length_8.txt)
+
+A list with links to PDB entries for peptides of length 8. We gathered this information thinking we could somehow use it to perform an autodoc molecular dynamics analysis on other PDB entries of known proteins in E. coli. We have, for the time being, given up on this idea. However, *it would be interesting to see if these peptides contain our motifs!*
 
 ### Please direct qestions about specific pages to the page author:
 
