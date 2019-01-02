@@ -7,7 +7,9 @@ Our main approach in establishing biological significance was to search the lite
 ## Contents:
 
 ### Essential Genes:
-This is a list of genes proposed to be the most critical to maintaining homeostasis (normal cell function) in E. coli
+This is a published list of genes proposed to be the most critical to maintaining homeostasis (normal cell function) in E. coli. We are not currently using it as part of the analysis, but it might be handy in the future.
+
+source: [https://mbio.asm.org/content/9/1/e02096-17]
 
 Page Author: Brian
 
