@@ -1,5 +1,5 @@
 File was produced at 2019-01-02 13:32:49.151183 using motifFinder.py
-command used: python motifFinder.py motifs.csv dallons_peptides.csv dallon_out.csv
+command used: python motifFinder.py motifs.csv dallons_peptides.csv dallon_intersect_our_motifs.csv
 #**start of data**:
 Peptide,Motif,Database
 SHFFYGVF,......VF,B2-dallon
