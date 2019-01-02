@@ -12,4 +12,7 @@ This is a list of the peptides from Emma Dallon's masters thesis* that matched t
 
 *Dallon's thesis is called: "Exploration of Antimicrobial Activity in Natural Peptides and High-Throughput Discovery of Synthetic Peptides"
 
-### 
+### KnownAMP.csv
+This file contains the sequences of known antimicrobial peptides, and the antimicrobial peptide databases from which they came
+
+
