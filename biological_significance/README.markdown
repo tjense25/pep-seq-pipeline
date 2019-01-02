@@ -11,7 +11,7 @@ This is a list of genes proposed to be the most critical to maintaining homeosta
 
 Page Author: Brian
 
-### dallon_Analysis.csv
+### [dallon_Analysis.csv](../pep-seq-pipeline/biological_significance)
 A summary of the number of our motifs that matched the peptide sequences from Emma Dallon's master's thesis* (data available in dallons_peptides.csv, which was obtained from the text of her master's thesis)
 
 Page Author: Brian
