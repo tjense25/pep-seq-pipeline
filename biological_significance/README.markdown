@@ -6,7 +6,7 @@ Our main approach in establishing biological significance was to search the lite
 
 ## Contents:
 
-### [Essential Genes](../biological_significance/essential_genes.txt)
+### [Essential_Genes](../biological_significance/Essential_Genes.txt)
 
 This is a published list of genes proposed to be the most critical to maintaining homeostasis (normal cell function) in E. coli. We are not currently using it as part of the analysis, but it might be handy in the future.
 
