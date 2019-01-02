@@ -1,5 +1,5 @@
 # Biological Significance
-==========
+====
 This folder contains several files that document the biological significance of the output from the pip-seq-pipline.
 
 Our main approach in establishing biological significance was to search the literature for publications that confirmed the toxic nature of the motifs (see "knownAMP_Intersect_Our_Motifs")
