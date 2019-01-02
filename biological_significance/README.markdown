@@ -18,7 +18,7 @@ Page Author: Brian
 
 *Dallon's thesis is called: "Exploration of Antimicrobial Activity in Natural Peptides and High-Throughput Discovery of Synthetic Peptides"
 
-### [dallons_peptides.csv](../biological_significance/dallons_peptides.markdown)
+### [dallons_peptides.csv](../biological_significance/dallons_peptides.csv)
 This file contains peptides that Emma Dallon studied in depth in her master's thesis. The data was obtained by examinig the thesis document.
 
 Page Author: Brian
