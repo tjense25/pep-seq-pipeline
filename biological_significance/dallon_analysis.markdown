@@ -52,7 +52,25 @@ Bellow you will find a graphical representation of how that empirical p-value wa
 
 ![alt text](https://github.com/tjense25/pep-seq-pipeline/blob/master/biological_significance/NullDistribution_CanonicalAndNot.png "Permutation Test Null Distribution")
 
-The sample size for this experiment was relatively small, so I decided to repeat it again, expanding the canonical peptides used from the 6 most toxic peptides, to the 20 most toxic peptides
+The sample size for this experiment was relatively small, so I decided to repeat it again, expanding the canonical peptides used from the 6 most toxic peptides, to the 44 most toxic peptides
+
+(most_toxic_intersect_our_motifs.csv)
+
+| Sequence Name | Number of Motif Matches |
+| ---- | ---- |
+| A3:NonToxic   | 2                       |
+| B1            | 3                       |
+| B2            | 6                       |
+| B3            | 3                       |
+| B4            | 4                       |
+| B5            | 4                       |
+| B6            | 2                       |
+| C1            | 8                       |
+| C2            | 0                       |
+| C3            | 1                       |
+| C4            | 3                       |
+| C5            | 0                       |
+| total         | 34                      |
 
 ## Conclusions:
 
