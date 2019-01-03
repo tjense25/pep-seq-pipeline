@@ -1,3 +1,15 @@
+Things I'd still like to do:
+- find the average phobicity score and charge of our motifs
+- Filter out highly charged and hydrophobic motifs to see what is left
+- think about the false positive rate when you have over 100,000 peptides being examined. We need a pretty high p-value.
+- how could we get a p-value from this?
+
+Figure 22 on page 50 of Emma Dallon's thesis indicates a strong positive correlation between two relationships: positive charge and toxicity, as well as hydrophobicity and toxicity.
+
+If our motifs are just identifying hydrophobicity and charge, then we would expect that our accuracy in predicting toxicity would be no better than an algorithm that just picked out the most hydrophobic and charged peptides.
+
+**Perhaps we could introduce a filter that removes the hydorphobic and positively charged peptides to help us identify motifs that are based on novel mechanisms.**
+
 Notes:
 
 Protein Kinases comprise about 2% of the human genome (518 genes)
