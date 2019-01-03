@@ -9,7 +9,8 @@ The experiment examined over 100,000 different peptides. However, only a few wer
 A3 was a non-toxic peptide.
 
 B1-B6 were the 6 most toxic peptides. They followed the trend of high positive charge and hydrophobicity.
-C1-C5
+C1 was a "canonical" peptide, meaning it followed the trend of highpositve charge and hydrophobicity.
+C2-C5 were "non-canonical" peptides.
 
 *I added numbers to the letters (i.e. C**1**) left to right, top to bottom*
 
@@ -28,3 +29,8 @@ C1-C5
 | C4            | 3                       |
 | C5            | 0                       |
 | total         | 34                      |
+
+
+#### Conclusions:
+
+
