@@ -44,7 +44,7 @@ I summarized the number of motifs that matched each peptide bellow:
 
 Note the number of motifs that matched canonical toxic peptides (B1-C1) was greater, on average, by **3.286** than non-canonical toxic peptides (C2-C5).
 
-I wanted to quantify the probability of such an outcome occuring according to chance. Given the irregularity of the data, espeically the possible lack of statistical normality and the small sample size, a perumutation test seemed like the best option. The code to perform this test can be found [ADD LINK]().
+I wanted to quantify the probability of such an outcome occuring according to chance. Given the irregularity of the data, espeically the possible lack of statistical normality and the small sample size, a perumutation test seemed like the best option. The code to perform this test can be found [here](../biological_significance/permutationTest.R).
 
 The test reported an empirical **p-value of 0.03336**, sufficient evidence to **reject the null hypothesis that the two populations have an equal likelihood of matching a motif**.
 
