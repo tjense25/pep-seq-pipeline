@@ -10,6 +10,8 @@ The experiment examined over 100,000 different peptides. However, only a few wer
 
 ## data:
 
+I scraped [this data] from Figure 23 of Emma Dallon's master's thesis.
+
 A3 was a non-toxic peptide.
 
 B1-B6 were the 6 most toxic peptides. They followed the trend of high positive charge and hydrophobicity.
@@ -19,6 +21,8 @@ C1 was a "canonical" peptide, meaning it followed the trend of high positve char
 C2-C5 were "non-canonical" peptides.
 
 *I added numbers to the letters (i.e. C**1**) left to right, top to bottom*
+
+I then 
 
 | Sequence Name | Number of Motif Matches |
 | ---- | ---- |
