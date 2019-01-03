@@ -33,6 +33,6 @@ C2-C5 were "non-canonical" peptides.
 
 #### Conclusions:
 
-![alt text](https://github.com/tjense25/pep-seq-pipeline/biological_significance/PermutationTestDallonData.png "Permutation Test Null Distribution")
+![alt text](https://github.com/tjense25/pep-seq-pipeline/blob/master/biological_significance/PermutationTestDallonData.png "Permutation Test Null Distribution")
 
 
