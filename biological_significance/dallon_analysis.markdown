@@ -2,7 +2,16 @@
 # Analysis of Dallon's Data
 The data here are based on Figure 23 on page 53 of Emma Dallon's masters thesis.
 
-In the experiment described by this figure, different "vectors" (small loops of DNA) containing different short peptides were inserted into E. coli strands, whose growth was then measured. The changes in growth a
+In the experiment described by this figure, different "vectors" (small loops of DNA) containing different short peptides were inserted into E. coli strands, whose growth was then measured. Peptides/vectors which caused a decrease in growth rate were labeled as toxic. The majority of toxic peptides had a high positive charge and were hydrophobic (see Figure 22 on page 50).
+
+The experiment examined over 100,000 different peptides. However, only a few were examined in detail. The data here represent some of those peptides that were looked at most in detail.
+
+A3 was a non-toxic peptide.
+
+B1-B6 were the 6 most toxic peptides. They followed the trend of high positive charge and hydrophobicity.
+C1-C5
+
+*I added numbers to the letters (i.e. C**1**) left to right, top to bottom*
 
 | Sequence Name | Number of Motif Matches |
 | ---- | ---- |
