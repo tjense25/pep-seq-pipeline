@@ -52,8 +52,12 @@ Bellow you will find a graphical representation of how that empirical p-value wa
 
 ![alt text](https://github.com/tjense25/pep-seq-pipeline/blob/master/biological_significance/NullDistribution_CanonicalAndNot.png "Permutation Test Null Distribution")
 
+The sample size for this experiment was relatively small, so I decided to repeat it again, expanding the canonical peptides used from the 6 most toxic peptides, to the 20 most toxic peptides
+
 ## Conclusions:
 
 It makes a lot of sense that the motifs tend ot match "canonical" peptides--the twenty most toxic peptides are canonical. Furthermore, the majority of toxic peptides were canonical. This would certainly bias the random forest to develop toxic motifs with canonical properties. *If we could get ahold of a list of non-canonical toxic peptides, and train on that, perhaps we would get a more interesting result.*
+
+This suggests that, with the given dataset, PepSeq tends to favor the biologically less interesting canonical motifs. However, it does not do so exclusively. There were motifs that matched the non-canonical peptides. *It would be extremely interesting to filter out the motifs that add charge and hydrophobicity to the peptide in order to identify putative non-canonical motifs.* 
 
 
