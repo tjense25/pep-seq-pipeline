@@ -33,4 +33,6 @@ C2-C5 were "non-canonical" peptides.
 
 #### Conclusions:
 
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
 
