@@ -10,7 +10,7 @@ The experiment examined over 100,000 different peptides. However, only a few wer
 
 ## data:
 
-I scraped [this data] from Figure 23 of Emma Dallon's master's thesis.
+I scraped [this data](../biological_significance/dallons_peptides.csv) from Figure 23 of Emma Dallon's master's thesis. Bellow are some annotations for the data:
 
 A3 was a non-toxic peptide.
 
@@ -22,7 +22,7 @@ C2-C5 were "non-canonical" peptides.
 
 *I added numbers to the letters (i.e. C**1**) left to right, top to bottom*
 
-I then 
+I then used the [motifFinder.py](../biological_significance/motifFinder.py) script to identify which motifs matched these peptides. Output from that step can be found in [dallon_intersect_our_motifs.csv]() The sequence motifs are not particularly pertinent to what I did next--rather, I was itnerested in the number of motifs that matched each peptide. 
 
 | Sequence Name | Number of Motif Matches |
 | ---- | ---- |
