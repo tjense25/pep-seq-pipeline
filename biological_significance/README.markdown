@@ -24,7 +24,7 @@ Page Author: Brian
 
 ### [dallon_intersect_our_motifs.csv](../biological_significance/dallon_intersect_our_motifs.csv)
 
-This file contains the data that is summarized in [dallon_analysis.markdown](../biological_significance/dallon_analysis.markdown) and was produced usuing [motifFinder.py](../biological_significance/motifFinder.py)
+This file contains the data that is summarized in [dallon_analysis.markdown](../biological_significance/dallon_analysis.markdown) and was produced usuing [motifFinder.py](../biological_significance/motifFinder.py). It shows the motifs from the PepSeq pipeline that matched the peptides available in [dallons_peptides.csv](../biological_significance/dallons_peptides.csv)
 
 Page Author: Brian
 
