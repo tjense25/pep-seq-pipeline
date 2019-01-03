@@ -50,7 +50,7 @@ The test reported an empirical p-value of 0.03336, sufficient evidence to reject
 
 Bellow you will find a graphical representation of how that empirical p-value was obtained. The permutation test generated a pseudo-distribution for the null hypothesis by changing the assignment of what was considered canonical and non-canonical. This process was repeated 100,000 times to produce the distribution bellow. Bars in red represent the percent of differences that were as-or-more extreme than the actual difference observed in the data.
 
-![alt text](https://github.com/tjense25/pep-seq-pipeline/blob/master/biological_significance/PermutationTestDallonData.png "Permutation Test Null Distribution")
+![alt text](https://github.com/tjense25/pep-seq-pipeline/blob/master/biological_significance/NullDistribution_CanonicalAndNot.png "Permutation Test Null Distribution")
 
 ## Conclusions:
 
