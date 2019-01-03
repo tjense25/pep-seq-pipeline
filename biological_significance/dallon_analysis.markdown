@@ -2,7 +2,7 @@
 # Analysis of Dallon's Data
 The data here are based on Figure 23 on page 53 of Emma Dallon's masters thesis.
 
-In the experiment described by this figure, different "vectors" (small loops of DNA) containing different short peptides were inserted into E. coli strands, whose growth was then measured. Peptides/vectors which caused a decrease in growth rate were labeled as toxic. The majority of toxic peptides had a high positive charge and were hydrophobic (see Figure 22 on page 50).
+In the experiment described by this figure, different "vectors" (small loops of DNA) containing different short peptides were inserted into E. coli strands, whose growth was then measured. Peptides/vectors which caused a decrease in growth rate were labeled as toxic. The majority of toxic peptides had a high positive charge and were hydrophobic (see Figure 22 on page 50). Peptides with these qualities are known as "canonical".
 
 The experiment examined over 100,000 different peptides. However, only a few were examined in detail. The data here represent some of those peptides that were looked at most in detail.
 
@@ -36,5 +36,7 @@ C2-C5 were "non-canonical" peptides.
 #### Conclusions:
 
 ![alt text](https://github.com/tjense25/pep-seq-pipeline/blob/master/biological_significance/PermutationTestDallonData.png "Permutation Test Null Distribution")
+
+It makes a lot of sense that the motifs tend ot match "canonical" peptides--the twenty most toxic peptides are canonical. Furthermore, the majority of toxic peptides were canonical. *If we could get ahold of a list of non-canonical toxic peptides, and train on that, perhaps we would get a more interesting result.
 
 
