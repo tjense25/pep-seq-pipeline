@@ -56,7 +56,6 @@ The sample size for this experiment was relatively small, so I decided to repeat
 
 | Sequence Name | Number of Motif Matches |
 | ---- | ---- |
-
 | 1             | 3                       |
 | 2             | 6                       |
 | 3             | 3                       |
