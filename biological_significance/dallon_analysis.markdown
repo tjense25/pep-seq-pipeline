@@ -33,7 +33,7 @@ I summarized the number of motifs that matched each peptide bellow:
 | B2            | 6                       |
 | B3            | 3                       |
 | B4            | 4                       |
-| B5            | 4                       |
+| B5            | 5                       |
 | B6            | 2                       |
 | C1            | 8                       |
 | C2            | 0                       |
