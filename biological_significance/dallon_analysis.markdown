@@ -114,10 +114,11 @@ As before, I generated a figure to demonstrate how the p-value was obtained:
 
 ![alt text](https://github.com/tjense25/pep-seq-pipeline/blob/master/biological_significance/dallon_analysis_number_2.png "Second Permutation Test Null Distribution")
 
+A larger sample size of non canonical toxic peptides would be preferable, but **the data seem to indicate that the motifs found by the pipeline tend to be associated with canonical properties in the matching peptide.**
 
 ## Conclusions:
 
-It makes a lot of sense that the motifs tend ot match "canonical" peptides--the twenty most toxic peptides are canonical. Furthermore, the majority of toxic peptides were canonical. This would certainly bias the random forest to develop toxic motifs with canonical properties. *If we could get ahold of a list of non-canonical toxic peptides, and train on that, perhaps we would get a more interesting result.*
+It makes a lot of sense that the motifs tend ot match "canonical" peptides--the majority of the most toxic peptides are canonical. Furthermore, the majority of toxic peptides were canonical. This would certainly bias the random forest to develop toxic motifs with canonical properties. *If we could get ahold of a list of non-canonical toxic peptides, and train the random forest on that, perhaps we would get a more interesting result.*
 
 This suggests that, with the given dataset, PepSeq tends to favor the biologically less interesting canonical motifs. However, it does not do so exclusively. There were motifs that matched the non-canonical peptides. *It would be extremely interesting to filter out the motifs that add charge and hydrophobicity to the peptide in order to identify putative non-canonical motifs.* 
 
