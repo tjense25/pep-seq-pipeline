@@ -16,7 +16,7 @@ Page Author: Brian
 
 ### [dallon_analysis.markdown](../biological_significance/dallon_analysis.markdown)
 
-A summary of the number of our motifs that matched the peptide sequences from Figure 23 (page 53) and Table 6 (page 49) of Emma Dallon's master's thesis* (data available in this directory. See: [dallons_peptides.csv](../biological_significance/dallons_peptides.csv), which was obtained from the text of her master's thesis, and [dallon_intersect_our_motifs.csv](../biological_significance/dallon_intersect_our_motifs.csv))
+A summary of the number of our motifs that matched the peptide sequences from Figure 23 (page 53) and Table 6 (page 49) of Emma Dallon's master's thesis* (all data used are listed in the file and are available in this directory).
 
 Page Author: Brian
 
