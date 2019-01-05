@@ -52,7 +52,11 @@ Bellow you will find a graphical representation of how that empirical p-value wa
 
 ![alt text](https://github.com/tjense25/pep-seq-pipeline/blob/master/biological_significance/dallon_analysis_round_1.png "Permutation Test Null Distribution")
 
-The sample size for this experiment was relatively small, so I decided to repeat it again, expanding the canonical peptides used from the 6 most toxic peptides, to the 44 most toxic peptides. One of these peptides (#18) was clearly non-canonical, and in the analysis was grouped as such. Peptide #33 had high hydrophobicity, but a negative charge, making it neither clearly canonical or non-canonical, so it was excluded from the analysis.
+The sample size for this experiment was relatively small, so I decided to repeat it again, expanding the canonical peptides used from the 6 most toxic peptides, to the 44 most toxic peptides. 
+
+One of these peptides (#18) was clearly non-canonical, and in the analysis was grouped as such. Peptide #33 had high hydrophobicity, but a negative charge, making it neither clearly canonical or non-canonical, so it was excluded from the analysis.
+
+I used the [motifFinder.py](../biological_significance/motifFinder.py) script on , which produced [the following output file](../biological_significance/most_toxic_intersect_our_motifs.csv). I then summarized that data bellow:
 
 | Sequence Name | Number of Motif Matches |
 | ---- | ---- |
