@@ -40,7 +40,7 @@ This file contains the data that is summarized in [dallon_analysis.markdown](../
 
 Page Author: Brian
 
-### [dallons_peptides.csv](../biological_significance/dallons_peptides.csv)
+### [dallons_in_depth_peptides.csv](../biological_significance/dallons_in_depth_peptides.csv)
 
 This file contains peptides that Emma Dallon studied in depth in her master's thesis. The data was obtained by examinig the thesis document.
 
