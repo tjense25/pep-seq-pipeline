@@ -14,11 +14,7 @@ source: https://mbio.asm.org/content/9/1/e02096-17
 
 Page Author: Brian
 
-### [PermutationTestDallonData.png](../biological_significance/PermutationTestDallonData.png)
 
-A figure used in [dallon_analysis.markdown](../biological_significance/dallon_analysis.markdown)
-
-Page Author: Brian
 
 ### [dallon_analysis.markdown](../biological_significance/dallon_analysis.markdown)
 
@@ -27,6 +23,12 @@ A summary of the number of our motifs that matched the peptide sequences from Fi
 Page Author: Brian
 
 *Dallon's thesis is called: "Exploration of Antimicrobial Activity in Natural Peptides and High-Throughput Discovery of Synthetic Peptides"
+
+### [PermutationTestDallonDat.png](../biological_significance/PermutationTestDallonData.png)
+
+A figure used in [dallon_analysis.markdown](../biological_significance/dallon_analysis.markdown)
+
+Page Author: Brian
 
 ### [dallon_intersect_our_motifs.csv](../biological_significance/dallon_intersect_our_motifs.csv)
 
