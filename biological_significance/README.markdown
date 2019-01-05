@@ -87,11 +87,27 @@ Page Author: Kristi
 
 A space where Brian has kept track of random things he has learned that might someday be useful for this project.
 
+Page Author: Brian
+
 ### [pdb_files_length_8.txt](../biological_significance/pdb_files_length_8.txt)
 
 A list with links to PDB entries for peptides of length 8. We gathered this information thinking we could somehow use it to perform an autodoc molecular dynamics analysis on other PDB entries of known proteins in E. coli. We have, for the time being, given up on this idea. However, *it would be interesting to see if these peptides contain our motifs!*
 
+Page Author: Brian
+
+### [permutationTest.R](../biological_significance/permutationTest.R)\
+
+Page Author: Brian
+
+### [permutationTest2.R](../biological_significance/permutationTest2.R)
+
+An R script used in [dallon_analysis.markdown](../biological_significance/dallon_analysis.markdown). The script performs a permutation test on the number of motifs that matched canonical and non canonical toxic peptides.
+
+Page Author: Brian
+
 ### Please direct qestions about specific pages to the page author:
+
+An R script used in [dallon_analysis.markdown](../biological_significance/dallon_analysis.markdown). The script performs a permutation test on the number of motifs that matched canonical and non canonical toxic peptides.
 
 Brian: bcbrown365@gmail.com
 
