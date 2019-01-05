@@ -1,6 +1,3 @@
-File was produced at 2019-01-03 01:21:29.567540 using motifFinder.py
-command used: python motifFinder.py motifs.csv most_toxic.csv most_toxic_intersect_our_motifs.csv
-#**start of data**:
 Peptide,Motif,Database
 YYRIICVF,......VF,5
 YYRIICVF,.Y.....F,5
