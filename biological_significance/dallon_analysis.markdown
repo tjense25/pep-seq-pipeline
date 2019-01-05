@@ -88,7 +88,7 @@ The sample size for this experiment was relatively small, so I decided to repeat
 | 30            | 5                       |
 | 31            | 9                       |
 | 32            | 3                       |
-| 33 *negative charge* | 3                       |
+| 33 *negative charge* | 3                |
 | 34            | 11                      |
 | 35            | 0                       |
 | 36            | 1                       |
@@ -100,7 +100,10 @@ The sample size for this experiment was relatively small, so I decided to repeat
 | 42            | 2                       |
 | 43            | 7                       |
 | 44            | 7                       |
-| total         |                       |
+| total         | 174                     |
+
+I ran a [modified version of the code above](../biological_significance/permutationTest2.R) that incorperated this new data.
+
 
 ## Conclusions:
 
