@@ -106,8 +106,9 @@ I used the [motifFinder.py](../biological_significance/motifFinder.py) script on
 | 44            | 7                       |
 | total         | 174                     |
 
-I ran a [modified version of the code above](../biological_significance/permutationTest2.R) that incorperated this new data.
+I ran a [modified version of the same R script](../biological_significance/permutationTest2.R) I used before, incorperating this new data. 
 
+The test reported an empirical **p-value of 0.0144**, which was again sufficient evidence to **reject the null hypothesis that the two populations have an equal likelihood of matching a motif**.
 
 ## Conclusions:
 
