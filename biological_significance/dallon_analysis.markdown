@@ -118,8 +118,8 @@ A larger sample size of non canonical toxic peptides would be preferable, but **
 
 ## Conclusions:
 
-It makes a lot of sense that the motifs tend ot match "canonical" peptides--the majority of the most toxic peptides are canonical. Furthermore, the majority of toxic peptides were canonical. This would certainly bias the random forest to develop toxic motifs with canonical properties. *If we could get ahold of a list of non-canonical toxic peptides, and train the random forest on that, perhaps we would get a more interesting result.*
+It makes sense that the motifs tend ot match "canonical" peptides, as the majority of toxic peptides (which were used to train the random forest) were canonical.*If we could get ahold of a list of non-canonical toxic peptides to train on, perhaps we would get a more inteesting result.*
 
-This suggests that, with the given dataset, PepSeq tends to favor the biologically less interesting canonical motifs. However, it does not do so exclusively. There were motifs that matched the non-canonical peptides. *It would be extremely interesting to filter out the motifs that add charge and hydrophobicity to the peptide in order to identify putative non-canonical motifs.* 
+While these data suggest that the current implementation of PepSeq tends to *favor* canonical motifs, PepSeq does not do so exclusively. There were motifs that matched the non-canonical peptides. *It would be extremely interesting to filter out the motifs that add charge and hydrophobicity to the peptide in order to identify putative non-canonical motifs.* The tests outlined here could be repeated in order to validate that the filtered motifs tend to match non-canonical peptides. 
 
 
