@@ -65,7 +65,7 @@ This file contains data from Table 6 on page 49 of Emma's thesis.
 
 Page Author: Brian
 
-### [most_toxic_intersect_our_motifs](../biological_significance/most_toxic_intersect_our_motifs)
+### [most_toxic_intersect_our_motifs.csv](../biological_significance/most_toxic_intersect_our_motifs.csv)
 
 This file contains the output from [motifFinder.py](../biological_significance/motifFinder.py) on [most_toxic.csv](../biological_significance/most_toxic.csv). The data are summarized in the second table in [dallon_analysis.markdown](../biological_significance/dallon_analysis.markdown).
 
