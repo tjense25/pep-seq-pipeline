@@ -52,25 +52,56 @@ Bellow you will find a graphical representation of how that empirical p-value wa
 
 ![alt text](https://github.com/tjense25/pep-seq-pipeline/blob/master/biological_significance/NullDistribution_CanonicalAndNot.png "Permutation Test Null Distribution")
 
-The sample size for this experiment was relatively small, so I decided to repeat it again, expanding the canonical peptides used from the 6 most toxic peptides, to the 44 most toxic peptides
-
-(most_toxic_intersect_our_motifs.csv)
+The sample size for this experiment was relatively small, so I decided to repeat it again, expanding the canonical peptides used from the 6 most toxic peptides, to the 44 most toxic peptides. One of these peptides (#18) was clearly non-canonical, and in the analysis was grouped as such. Peptide #33 had high hydrophobicity, but a negative charge, making it neither clearly canonical or non-canonical, so it was excluded from the analysis.
 
 | Sequence Name | Number of Motif Matches |
 | ---- | ---- |
-| A3:NonToxic   | 2                       |
-| B1            | 3                       |
-| B2            | 6                       |
-| B3            | 3                       |
-| B4            | 4                       |
-| B5            | 4                       |
-| B6            | 2                       |
-| C1            | 8                       |
-| C2            | 0                       |
-| C3            | 1                       |
-| C4            | 3                       |
-| C5            | 0                       |
-| total         | 34                      |
+
+| 1             | 3                       |
+| 2             | 6                       |
+| 3             | 3                       |
+| 4             | 4                       |
+| 5             | 5                       |
+| 6             | 2                       |
+| 7             | 3                       |
+| 8             | 6                       |
+| 9             | 6                       |
+| 10            | 7                       |
+| 11            | 3                       |
+| 12            | 1                       |
+| 13            | 5                       |
+| 14            | 2                       |
+| 15            | 6                       |
+| 16            | 6                       |
+| 17            | 0                       |
+| 18 *nonCanonical*  | 0                       |
+| 19            | 2                       |
+| 20            | 8                       |
+| 21            | 7                       |
+| 22            | 2                       |
+| 23            | 3                       |
+| 24            | 8                       |
+| 25            | 1                       |
+| 26            | 3                       |
+| 27            | 6                       |
+| 28            | 8                       |
+| 29            | 7                       |
+| 30            | 5                       |
+| 31            | 9                       |
+| 32            | 3                       |
+| 33 *negative charge* | 3                       |
+| 34            | 11                      |
+| 35            | 0                       |
+| 36            | 1                       |
+| 37            | 4                       |
+| 38            | 0                       |
+| 39            | 0                       |
+| 40            | 2                       |
+| 41            | 0                       |
+| 42            | 2                       |
+| 43            | 7                       |
+| 44            | 7                       |
+| total         |                       |
 
 ## Conclusions:
 
