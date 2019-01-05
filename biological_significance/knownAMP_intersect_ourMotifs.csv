@@ -48,8 +48,8 @@ VCFCICVP,.CFC....,BAGEL4,'','',''
 VCFCICVP,...C.CV.,BAGEL4,'','',''
 VCFCICVP,..FC.C..,BAGEL4,'','',''
 VCFCICVP,V..C.C..,BAGEL4,'','',''
-GFTPFRIY,.F.....Y,DADP,,,
-GFTPFRIY,....F..Y,DADP,,,
+GFTPFRIY,.F.....Y,DADP, unknown ,Des-Arg,Pro,Pro-[Thr6]-phyllokinin, no direct research articles though the phyllokinins have activity in animal tissue
+GFTPFRIY,....F..Y,DADP,'',,
 ITACLTFC,......FC,BAGEL4,unknown,Patellamide_G,https://pubs-acs-org.erl.lib.byu.edu/doi/pdf/10.1021/np9802872
 YDFWKVYP,Y.....Y.,BAGEL4,protein kinase inhibitor,Hymenamide_J,https://www.sciencedirect.com/science/article/pii/S0040402001850067?via%3Dihub
 YDFWKVYP,Y.F.....,BAGEL4,'','',''
