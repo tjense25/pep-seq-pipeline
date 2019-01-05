@@ -46,11 +46,11 @@ Note the number of motifs that matched canonical toxic peptides (B1-C1) was grea
 
 I wanted to quantify the probability of such an outcome occuring according to chance. Given the irregularity of the data, espeically the possible lack of statistical normality and the small sample size, a perumutation test seemed like the best option. The code to perform this test can be found [here](../biological_significance/permutationTest.R).
 
-The test reported an empirical **p-value of 0.03336**, sufficient evidence to **reject the null hypothesis that the two populations have an equal likelihood of matching a motif**. This may indicate that the pipeline tends to find motifs that give canonical attributes (positive charge and hydrophobicity) to the peptide.
+The test reported an empirical **p-value of 0.03247**, sufficient evidence to **reject the null hypothesis that the two populations have an equal likelihood of matching a motif**. This may indicate that the pipeline tends to find motifs that give canonical attributes (positive charge and hydrophobicity) to the peptide.
 
 Bellow you will find a graphical representation of how that empirical p-value was obtained. The permutation test generated a pseudo-distribution for the null hypothesis by changing the assignment of what was considered canonical and non-canonical. This process was repeated 100,000 times to produce the distribution bellow. Bars in red represent the percent of differences that were as-or-more extreme than the actual difference observed in the data.
 
-![alt text](https://github.com/tjense25/pep-seq-pipeline/blob/master/biological_significance/NullDistribution_CanonicalAndNot.png "Permutation Test Null Distribution")
+![alt text](https://github.com/tjense25/pep-seq-pipeline/blob/master/biological_significance/dallon_analysis_round_1.png "Permutation Test Null Distribution")
 
 The sample size for this experiment was relatively small, so I decided to repeat it again, expanding the canonical peptides used from the 6 most toxic peptides, to the 44 most toxic peptides. One of these peptides (#18) was clearly non-canonical, and in the analysis was grouped as such. Peptide #33 had high hydrophobicity, but a negative charge, making it neither clearly canonical or non-canonical, so it was excluded from the analysis.
 
