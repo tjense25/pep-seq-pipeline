@@ -8,7 +8,7 @@ In the experiment described by these figures, different "vectors" (small loops o
 
 ## data and methods:
 
-The experiment examined over 100,000 different peptides. However, only a few were examined in detail, and data regarding that analysis was presented in figure 23 on page 50. I scraped [this data](../biological_significance/dallons_peptides.csv) from that figure. Bellow are some annotations for the data:
+The experiment examined over 100,000 different peptides. However, only a few were examined in detail, and data regarding that analysis was presented in figure 23 on page 50. I scraped [this data](../biological_significance/dallons_in_depth_peptides.csv) from that figure. Bellow are some annotations for the data:
 
 A3 was a non-toxic peptide.
 
