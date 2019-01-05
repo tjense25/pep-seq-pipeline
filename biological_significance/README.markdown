@@ -24,7 +24,7 @@ Page Author: Brian
 
 *Dallon's thesis is called: "Exploration of Antimicrobial Activity in Natural Peptides and High-Throughput Discovery of Synthetic Peptides"
 
-### [PermutationTestDallonDat.png](../biological_significance/PermutationTestDallonData.png)
+### [dallon_analysis_number_2.png](../biological_significance/dallon_analysis_number_2.png)
 
 A figure used in [dallon_analysis.markdown](../biological_significance/dallon_analysis.markdown)
 
