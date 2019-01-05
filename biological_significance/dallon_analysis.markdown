@@ -48,7 +48,7 @@ The test reported an empirical **p-value of 0.03247**, sufficient evidence to **
 
 Bellow you will find a graphical representation of how that empirical p-value was obtained. The permutation test generated a pseudo-distribution for the null hypothesis by changing the assignment of what was considered canonical and non-canonical. This process was repeated 100,000 times to produce the distribution bellow. Bars in red represent the percent of differences that were as-or-more extreme than the actual difference observed in the data.
 
-![alt text](https://github.com/tjense25/pep-seq-pipeline/blob/master/biological_significance/dallon_analysis_round_1.png "Permutation Test Null Distribution")
+![alt text](https://github.com/tjense25/pep-seq-pipeline/blob/master/biological_significance/dallon_analysis_round_1.png "First Permutation Test Null Distribution")
 
 The sample size for this experiment was relatively small, so I decided to repeat it again, expanding the canonical peptides used from the 6 most toxic peptides, to the 44 most toxic peptides. The [sequences of these peptides](../biological_significance/most_toxic.csv) were obtained from table 6 on page 49 of Emma's thesis.
 
@@ -109,6 +109,11 @@ Note that the mean number of matches in the canonical peptides from this table w
 I ran a [modified version of the same R script](../biological_significance/permutationTest2.R) I used before, incorperating this new data. 
 
 The test reported an empirical **p-value of 0.0144**, which was again sufficient evidence to **reject the null hypothesis that the two populations have an equal likelihood of matching a motif**.
+
+As before, I generated a figure to demonstrate how the p-value was obtained:
+
+![alt text](https://github.com/tjense25/pep-seq-pipeline/blob/master/biological_significance/dallon_analysis_number_2.png "Second Permutation Test Null Distribution")
+
 
 ## Conclusions:
 
