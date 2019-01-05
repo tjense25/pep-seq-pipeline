@@ -95,7 +95,9 @@ A list with links to PDB entries for peptides of length 8. We gathered this info
 
 Page Author: Brian
 
-### [permutationTest.R](../biological_significance/permutationTest.R)\
+### [permutationTest.R](../biological_significance/permutationTest.R)
+
+An R script used in [dallon_analysis.markdown](../biological_significance/dallon_analysis.markdown). The script performs a permutation test on the number of motifs that matched canonical and non canonical toxic peptides.
 
 Page Author: Brian
 
