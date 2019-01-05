@@ -2,15 +2,13 @@
 # Analysis of Dallon's Data
 ## Introduction:
 
-The data here are based on Figure 23 on page 53 of Emma Dallon's masters thesis.
+This file presents my (Brian's) analysis of several of the figures in Emma Dallon's master's thesis.
 
-In the experiment described by this figure, different "vectors" (small loops of DNA) containing different short peptides were inserted into E. coli strands, whose growth was then measured. Peptides/vectors which caused a decrease in growth rate were labeled as toxic. The majority of toxic peptides had a high positive charge and were hydrophobic (see Figure 22 on page 50). Peptides with these qualities are known as "canonical".
-
-The experiment examined over 100,000 different peptides. However, only a few were examined in detail. The data here represent some of those peptides that were looked at most in detail.
+In the experiment described by these figures, different "vectors" (small loops of DNA) containing different short peptides were inserted into E. coli strands, whose growth was then measured. Peptides/vectors which caused a decrease in growth rate were labeled as toxic. The majority of toxic peptides had a high positive charge and were hydrophobic (see Figure 22 on page 50). Peptides with these qualities are known as "canonical".
 
 ## data and methods:
 
-I scraped [this data](../biological_significance/dallons_peptides.csv) from Figure 23 of Emma Dallon's master's thesis. Bellow are some annotations for the data:
+The experiment examined over 100,000 different peptides. However, only a few were examined in detail, and data regarding that analysis was presented in figure 23 on page 50. I scraped [this data](../biological_significance/dallons_peptides.csv) from that figure. Bellow are some annotations for the data:
 
 A3 was a non-toxic peptide.
 
@@ -22,7 +20,7 @@ C2-C5 were "non-canonical" peptides.
 
 *I added numbers to the letters (i.e. C**1**) left to right, top to bottom*
 
-I then used the [motifFinder.py](../biological_significance/motifFinder.py) script to identify which motifs matched these peptides. Output from that step can be found in [dallon_intersect_our_motifs.csv](dallon_intersect_our_motifs.csv). The actual motifs are not particularly pertinent to what I did next--rather, I was interested in the number of motifs that matched each peptide. 
+I then used the [motifFinder.py](../biological_significance/motifFinder.py) script on the data I obtained from figure 23 to identify which motifs matched the peptides represented there. Output from that step can be found in [dallon_intersect_our_motifs.csv](dallon_intersect_our_motifs.csv). The actual motifs are not particularly pertinent to what I did next--rather, I was interested in the number of motifs that matched each peptide. 
 
 I summarized the number of motifs that matched each peptide bellow:
 
