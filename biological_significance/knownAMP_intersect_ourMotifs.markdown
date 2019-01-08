@@ -22,7 +22,7 @@ RYPAVGYT,.Y....Y.,InverPep, unknown,, http://ciencias.medellin.unal.edu.co/grupo
 VPPGFTPF,....F..F,DADP, bradykinin activity (may not be antimictrobial?), many names, appears in the bioactive sequence of 12 peptides https://www.uniprot.org/uniprot/P86630
 VPPGFTPF,V......F,DADP,'','',''
 VPPGFTPF,V...F..F,DADP,'','',''
-VRPYLVAF,...Y...F,CAMPR3,,,
+VRPYLVAF,...Y...F,CAMPR3, antifungal, pleurostrin , https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978105001816
 VRPYLVAF,V......F,CAMPR3,,,
 VRPYLVAF,...Y.V.F,CAMPR3,,,
 WKLFDDGV,...F...V,CAMPR3,,,
