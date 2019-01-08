@@ -23,9 +23,9 @@ VPPGFTPF,....F..F,DADP, bradykinin activity (may not be antimictrobial?), many n
 VPPGFTPF,V......F,DADP,'','',''
 VPPGFTPF,V...F..F,DADP,'','',''
 VRPYLVAF,...Y...F,CAMPR3, antifungal - THE STUDY HAS COOL PICTURES, pleurostrin , https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978105001816
-VRPYLVAF,V......F,CAMPR3,,,
-VRPYLVAF,...Y.V.F,CAMPR3,,,
-WKLFDDGV,...F...V,CAMPR3,,,
+VRPYLVAF,V......F,CAMPR3,'' ,'',''
+VRPYLVAF,...Y.V.F,CAMPR3,'','',''
+WKLFDDGV,...F...V,CAMPR3, antibacterial and antifungal -- possibly the best one yet, Cr‐ACP1, https://onlinelibrary-wiley-com.erl.lib.byu.edu/doi/full/10.1002/jcb.23343 http://www.camp.bicnirrh.res.in/seqDisp.php?id=CAMPSQ2471
 WKLFDDGV,..LF....,CAMPR3,,,
 CKIALPYT,C...L...,DADP, unkown, part of Spinulosain-B2 and Nigroain-H, no articles directly about either of these peptides (though there are studies about the peptide families)
 FWQKMSFA,F.....F.,APD,,,
