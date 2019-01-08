@@ -4,6 +4,17 @@ This document is a write up of the most important discoveries from the knownAMP_
 
 ### Most important Peptides/motifs:
 
+#### Temporin-SHF
+
+http://www.jbc.org/content/285/22/16880.full.pdf
+
+#### 	pleurostrin
+
+https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978105001816
+
+#### Cr‐ACP1
+
+https://onlinelibrary-wiley-com.erl.lib.byu.edu/doi/full/10.1002/jcb.23343 http://www.camp.bicnirrh.res.in/seqDisp.php?id=CAMPSQ2471
 
 ### General summary:
 
