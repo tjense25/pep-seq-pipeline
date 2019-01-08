@@ -37,11 +37,11 @@ FFFLSRIF,FFF.....,DADP,'','',''
 LYCNPSLC,LY......,BAGEL4, possible kinase inhibitor (in humans): connection to Alzheimers, Kororamide, https://pubs-acs-org.erl.lib.byu.edu/doi/pdf/10.1021/np990353f https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213646/ https://www.sciencedirect.com/science/article/pii/S0040402015012090?via%3Dihub
 LYCNPSLC,.Y....L.,BAGEL4,'','',''
 LYCNPSLC,.YC....C,BAGEL4,'','',''
-APPGFTPF,....F..F,DADP,,,
-RPPGFSPF,....F..F,DRAMP,,,
-IPPQFMRF,....F..F,DADP,,,
-IPPQFMRF,I...F...,DADP,,,
-IPPQFMRF,I......F,DADP,,,
+APPGFTPF,....F..F,DADP, bradykinin,Des-Arg-[Ala1,Thr6]-bradykinin, ??
+RPPGFSPF,....F..F,DRAMP, bradykinin with high affinity to B1 receptors,Des-Arg-bradykinin,https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0041010110003600
+IPPQFMRF,....F..F,DADP, unkown,IF-8, comes from a larger peptide (length 58) but the bioactive reagion is of length 8.
+IPPQFMRF,I...F...,DADP,'','',''
+IPPQFMRF,I......F,DADP,'','',''
 VCFCICVP,.C.C.C..,BAGEL4, weakly cytotoxic to colon tumor cells,Tawicyclamide_A_(Tawicyclamide_B),https://pubs.acs.org/doi/abs/10.1021/jo00043a017
 VCFCICVP,VC.C....,BAGEL4,'','',''
 VCFCICVP,.CFC....,BAGEL4,'','',''
