@@ -4,7 +4,8 @@ This document is a write up of the most important discoveries from the knownAMP_
 
 ### Most important Peptides/motifs:
 
-#### Temporin-SHF
+#### Temporin-SHF : 
+
 
 http://www.jbc.org/content/285/22/16880.full.pdf
 
