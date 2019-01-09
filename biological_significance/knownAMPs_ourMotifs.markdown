@@ -6,12 +6,12 @@ This document is a write up of the most important discoveries from the knownAMP_
 
 #### Temporin-SHF : FFFLSRIF
 
-###### Number of matching motifs: 
- Temporin-SHF targets the membranes of bacteria. It likely acts as a detergent, preferentially disrupting bacterial membranes likely by the ["carpet method"](https://www.researchgate.net/figure/A-model-of-a-carpet-like-mechanism-for-membrane-disruption-In-this-model-the-peptides_fig2_23981203).
+##### Number of matching motifs: 
+Temporin-SHF targets the membranes of bacteria. It likely acts as a detergent, preferentially disrupting bacterial membranes likely by the ["carpet method"](https://www.researchgate.net/figure/A-model-of-a-carpet-like-mechanism-for-membrane-disruption-In-this-model-the-peptides_fig2_23981203).
 
-###### Mode of action:
-###### canonical: 
-###### eye candy: 
+##### Mode of action:
+##### canonical: 
+##### eye candy: 
 
 
 The peptide is **highly canonical**; it has a net charge of +2, and, at 50% phenylalanine, has a high level of hydrophobicity.
