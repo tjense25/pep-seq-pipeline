@@ -23,13 +23,13 @@ http://www.jbc.org/content/285/22/16880.full.pdf
 
 **Number of matching motifs:** 3
 
-**Mode of action:**
+**Mode of action:** The mode of action isn't explicitely given in the study. However, the authors report results from an assay in which ribosomal activity was reduced in response to pleurostrin. This finding is consistent with [other antifungal peptides](https://www.degruyter.com/view/j/bchm.2003.384.issue-5/bc.2003.090/bc.2003.090.xml), which also decrease the speed of ribosomal activity. This may indicate that pleurostrin interacts with ribosomes to decrease cell proliferation.
 
-**canonical:**
+**canonical:** *no data given in the study*.
 
-**eye candy:**
+**eye candy:** Figure 4 shows side-by-side the effect of pleurostrin on strains of fungi that cause harm to crops. 
 
-**biological proof**
+**biological proof**  One assay was used to determine antifungal activity, while a second assay was used to determine the peptides effect on ribosomal efficiency. This peptide is a little interesting because it is an *antifungal* peptide isolated *from a fungus!*
 
 https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978105001816
 
