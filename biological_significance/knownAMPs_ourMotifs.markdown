@@ -3,9 +3,9 @@
 This document is a write up of the most important discoveries from the knownAMP_intersect_our_motifs.csv document.
 
 ## Most important Peptides/motifs:
-
-### Temporin-SHF : FFFLSRIF
-
+```diff
+- ### Temporin-SHF : FFFLSRIF
+```
 **Number of matching motifs:** Temporin-SHF targets the membranes of bacteria. It likely acts as a detergent, preferentially disrupting bacterial membranes likely by the ["carpet method"](https://www.researchgate.net/figure/A-model-of-a-carpet-like-mechanism-for-membrane-disruption-In-this-model-the-peptides_fig2_23981203).
 
 **Mode of action:**
