@@ -4,7 +4,7 @@ This document is a write up of the most important discoveries from the knownAMP_
 
 ## Most important Peptides/motifs:
 
-### Temporin-SHF : FFFLSRIF
+### 1) Temporin-SHF : FFFLSRIF
 
 **Number of matching motifs:** 
 
@@ -19,7 +19,7 @@ This document is a write up of the most important discoveries from the knownAMP_
 http://www.jbc.org/content/285/22/16880.full.pdf
 
 --------
-### 	pleurostrin : VRPYLVAF
+### 2)	pleurostrin : VRPYLVAF
 
 **Number of matching motifs:**
 
@@ -35,7 +35,7 @@ https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978105001
 
 --------
 
-### Cr‐ACP1 : WKLFDDGV
+### 3) Cr‐ACP1 : WKLFDDGV
 
 **Number of matching motifs:**
 
