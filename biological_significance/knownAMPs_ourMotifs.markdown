@@ -5,7 +5,7 @@ This document is a write up of the most important discoveries from the knownAMP_
 ## Most important Peptides/motifs:
 
 ### Temporin-SHF : FFFLSRIF
-------
+
 **Number of matching motifs:** 
 
 **Mode of action:** Temporin-SHF targets the membranes of bacteria. It likely acts as a detergent, preferentially disrupting bacterial membranes likely by the ["carpet method"](https://www.researchgate.net/figure/A-model-of-a-carpet-like-mechanism-for-membrane-disruption-In-this-model-the-peptides_fig2_23981203).
@@ -15,8 +15,9 @@ This document is a write up of the most important discoveries from the knownAMP_
 
 http://www.jbc.org/content/285/22/16880.full.pdf
 
-### 	pleurostrin : VRPYLVAF
 --------
+### 	pleurostrin : VRPYLVAF
+
 **Number of matching motifs:**
 **Mode of action:**
 **canonical:**
@@ -25,8 +26,10 @@ http://www.jbc.org/content/285/22/16880.full.pdf
 
 https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978105001816
 
-### Cr‐ACP1 : WKLFDDGV
 --------
+
+### Cr‐ACP1 : WKLFDDGV
+
 **Number of matching motifs:**
 **Mode of action:**
 **canonical:**
