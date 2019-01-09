@@ -9,7 +9,7 @@ This document is a write up of the most important discoveries from the knownAMP_
 
 http://www.jbc.org/content/285/22/16880.full.pdf
 
-#### 	pleurostrin
+#### 	pleurostrin : VRPYLVAF
 
 https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978105001816
 
