@@ -39,13 +39,16 @@ https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978105001
 
 **Number of matching motifs:** 2
 
-**Mode of action:**
+**Mode of action:** Seems to target DNA (based on *in vitro* binding studies)
+ > The Trp2 residue was positioned between two hydrophilic branches and inserted into two nucleotide bases that assist in a “hydrophilic hug.” Coleman and Oakley [1980] observed that this might be an important factor in the recognition of single‐stranded nucleic acids by single‐strand binding proteins. The insertion of an aromatic amino acid side chain into an apurinic site might form the basis for the selective recognition of such sites in apurinic DNA [Behmoaras et al., 1981b]. As observed with the peptide isolated here, the presence of hydrophobic residues surrounding cationic residues is observed in 80% of peptides with anticancer activity deposited on APD2 [Behmoaras et al., 1981a].
 
-**canonical:**
+**canonical:** No (I think)
 
-**eye candy:** 
+**eye candy:** Figure 4 is probably the best figure this analysis found.
 
-**biological proof**
+**biological proof** Molecular modeling.
+
+**fun fact:** This peptide comes from a plant in the Cycad Family, which means it is related to those plants that look like a cross between pineapples and palm trees that you see in depictions of dinosaur landscapes. 
 
 https://onlinelibrary-wiley-com.erl.lib.byu.edu/doi/full/10.1002/jcb.23343 http://www.camp.bicnirrh.res.in/seqDisp.php?id=CAMPSQ2471
 
