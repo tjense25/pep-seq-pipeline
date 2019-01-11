@@ -46,7 +46,7 @@ https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978105001
 
 **eye candy:** Figure 4 is probably the best figure this analysis found.
 
-**biological proof** Molecular modeling.
+**biological proof** Chemical modificiation (acetylation) weakened the anticancer and antimicrobial activity. Molecular modeling was used to demonstrate how the peptide could bind to DNA.
 
 **fun fact:** This peptide comes from a plant in the Cycad Family, which means it is related to those plants that look like a cross between pineapples and palm trees that you see in depictions of dinosaur landscapes. 
 
@@ -62,3 +62,8 @@ Many of the peptides were *bradykinins*. This is a bit puzzling at first, since 
 #### Bacteroicins
 
 
+## Additional Papers:
+
+#### Mandal SM, Dey S, Mandal M, Sarkar S, Maria‐Neto S, Franco OL. 2009. Identification and structural insights of three novel antimicrobial peptides isolated from green coconut water. Peptides 30: 633–637.
+
+This paper identified 3 new antimicrobial peptides of length 8, 11, and 9. The peptides are non-canonical in nature.
