@@ -61,7 +61,9 @@ Page Author: Brian
 
 ### [knownAMPs_ourMotifs.markdown](../biological_significance/knownAMPs_ourMotifs.markdown)
 
+This file contains a write up of the most important findings from the knownAMP_intersect_ourMotifs.csv analysis. It includes links to the most relevent papers related to peptides that matched our motifs.
 
+Page Author: Brian
 
 ### [most_toxic.csv](../biological_significance/most_toxic.csv)
 
