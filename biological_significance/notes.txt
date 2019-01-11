@@ -1,4 +1,6 @@
 **Get all the non canonical motifs and see which ones match the knownAMP.csv file, and look there for more interesting stuff**
+**can we update the machine learning algorithm so that it looks not by index, but position relative to other residues.** -> Then it could be expanded beyond our simple 8-mers.
+
 
 Things I'd still like to do:
 - find the average phobicity score and charge of our motifs
