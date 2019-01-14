@@ -74,7 +74,7 @@ Many of the peptides were *bradykinins*. This is a bit puzzling at first, since 
 
 additional 8-mers I found
 | sequence | canonical? | source
-----------------
+| ------ | ------- | -------
 | YCSYTMEA | no | https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978108004968
 
 
