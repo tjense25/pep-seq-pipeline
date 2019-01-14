@@ -73,6 +73,7 @@ Many of the peptides were *bradykinins*. This is a bit puzzling at first, since 
 [this database](https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978108004968) reports that only 9.2% of the toxic peptides they have on file have a net negative charge. Systein, glycine, serine, and alanine are the 4 most abundant amino acids in this database.
 
 additional 8-mers I found
+
 | sequence | canonical? | source
 | ------ | ------- | -------
 | YCSYTMEA | no | https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978108004968
