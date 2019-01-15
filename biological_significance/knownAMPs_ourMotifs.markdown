@@ -109,7 +109,7 @@ Again, to quote the paper:
 
 | sequence | canonical? | number of matching motifs | name | source 
 | ------ | ------- | ----- | ----- | -------
-| YCSYTMEA | sort of | 1 | Cn-AMP3 | https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978108004968
+| YCSYTMEA | sort of | 1 (Y..Y....) | Cn-AMP3 | https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978108004968
 
 ## General Notes:
 
