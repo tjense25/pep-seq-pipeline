@@ -14,6 +14,9 @@ This document is a write up of the most important discoveries from the knownAMP_
 
 **eye candy:** Figure 9 contains a nice 3-dimentional model of the conformation the peptide takes when interacting with a micel (a dissintigrated portion of a bacterial membrane).
 
+
+![alt text](https://github.com/tjense25/pep-seq-pipeline/blob/master/biological_significance/dallon_analysis_number_2.png "")
+
 **biological proof**: A variety of assays demonstate the antimicrobial nature of the peptide.
 
 http://www.jbc.org/content/285/22/16880.full.pdf
