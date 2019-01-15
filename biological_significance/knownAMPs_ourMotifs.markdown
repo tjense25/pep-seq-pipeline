@@ -38,6 +38,11 @@ http://www.jbc.org/content/285/22/16880.full.pdf
 
 https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978105001816
 
+**quick summary table:**
+
+| sequence | canonical? | number of matching motifs | name | source 
+| ------ | ------- | ----- | ----- | -------
+| VRPYLVAF | ?? | 3 | pleurostrin | https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978105001816
 
 
 --------
@@ -64,8 +69,6 @@ https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978105001
 | sequence | canonical? | number of matching motifs | name | source 
 | ------ | ------- | ----- | ----- | -------
 | WKLFDDGV | no | 2 | Cr‐ACP1 | https://onlinelibrary-wiley-com.erl.lib.byu.edu/doi/full/10.1002/jcb.23343 
-
-http://www.camp.bicnirrh.res.in/seqDisp.php?id=CAMPSQ2471
 
 ----------------------------
 
