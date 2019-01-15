@@ -32,7 +32,7 @@ This document is a write up of the most important discoveries from the knownAMP_
 
 **Mode of action:** The mode of action isn't explicitely given in the study. However, the authors report results from an assay in which ribosomal activity was reduced in response to pleurostrin. This finding is consistent with [other antifungal peptides](https://www.degruyter.com/view/j/bchm.2003.384.issue-5/bc.2003.090/bc.2003.090.xml), which also decrease the speed of ribosomal activity. This may indicate that pleurostrin interacts with ribosomes to decrease cell proliferation.
 
-**canonical:** *no data given in the study*.
+**canonical:** Yes: charge of +1, hydropathy total score of 9.4 (based on the [wikipedia article](https://en.wikipedia.org/wiki/Amino_acid) about amino acids)
 
 **eye candy:** Figure 4 shows side-by-side the effect of pleurostrin on strains of fungi that cause harm to crops.
 
@@ -44,7 +44,7 @@ This document is a write up of the most important discoveries from the knownAMP_
 
 | sequence | canonical? | number of matching motifs | name | source 
 | ------ | ------- | ----- | ----- | -------
-| VRPYLVAF | ?? | 3 | pleurostrin | https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978105001816
+| VRPYLVAF | Yes | 3 | pleurostrin | https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978105001816
 
 
 --------
@@ -56,7 +56,7 @@ This document is a write up of the most important discoveries from the knownAMP_
 **Mode of action:** Seems to target DNA (based on *in vitro* binding studies)
  > The Trp2 residue was positioned between two hydrophilic branches and inserted into two nucleotide bases that assist in a “hydrophilic hug.” Coleman and Oakley [1980] observed that this might be an important factor in the recognition of single‐stranded nucleic acids by single‐strand binding proteins. The insertion of an aromatic amino acid side chain into an apurinic site might form the basis for the selective recognition of such sites in apurinic DNA [Behmoaras et al., 1981b]. As observed with the peptide isolated here, **the presence of hydrophobic residues surrounding cationic residues is observed in 80% of peptides with anticancer activity.** deposited on APD2 [Behmoaras et al., 1981a].
 
-**canonical:** No (charge of -1 at normal pH, *hydrophobic*, with a hydropathy score of -1.4)
+**canonical:** No (charge of -1 at normal pH, *hydrophobic*, with a hydropathy score of -1.4) (based on the [wikipedia article](https://en.wikipedia.org/wiki/Amino_acid) about amino acids)
 
 **eye candy:** Figure 4 is probably the best figure this analysis found.
 
