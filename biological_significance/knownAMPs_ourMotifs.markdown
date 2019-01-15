@@ -71,16 +71,18 @@ https://onlinelibrary-wiley-com.erl.lib.byu.edu/doi/full/10.1002/jcb.23343 http:
 
 >  Despite of most antimicrobial peptides found in plants have been characterized as cationic [19], few organisms have shown the presence of acidic bactericidal peptides with included chilli peppers [7], snakes [31] and several others.
 
-**canonical:** Yes and no. The peptide has a charge of -1, which is unusual. But it also has hydrophobic regions. A similar, related compound had a positive charge and hydrophobic regions and had much stronger antimicrobial activity. The authors think that the combination of hydrophobic regions and basicity/positive are what cause the three peptides discussed 
+**canonical:** Yes and no. The peptide has a charge of -1, which is unusual. But it also has hydrophobic regions. A similar, related compound (Cn-AMP1) had a positive charge and hydrophobic regions and had much stronger antimicrobial activity. The authors think that the combination of hydrophobic regions and basicity/positive are what cause the three peptides discussed in the paper to be antimicrobial.
 
-**biological proof:** The peptide was effective against 
+**biological proof:** Bacteriocidal activity was tested against four strains of infectious bacteria. MIC represented the concentration at which the peptide's presence inhibited bacterial growth. below is the data from a figure that summarized the effectiveness of each peptide. The Cn-AMP1 and Cn-AMP2 were both more effective, though Cn-AMP3 was the only 8-mer.
 
-Pathogenic bacteria	| Cn-AMP1 MIC (μg ml−1)	| Cn-AMP2 MIC (μg ml−1)	| Cn-AMP3 MIC (μg ml−1)
+Pathogenic bacteria	| Cn-AMP1 MIC (μg ml−1)	| Cn-AMP2 MIC (μg ml−1)	| **Cn-AMP3 MIC (μg ml−1)**
 ----- | ----- | ----- | -----
-E. coli	| 82	| 170	| 302
-B. subtilis	| 76	| 150	| 257
-P. aeruginosa	| 79	| 169	| 259
-S. aureus	| 80	| 170	| 274
+E. coli	| 82	| 170	| **302**
+B. subtilis	| 76	| 150	| **257**
+P. aeruginosa	| 79	| 169	| **259**
+S. aureus	| 80	| 170	| **274**
+
+**Eye candy:** ![alt text](https://github.com/tjense25/pep-seq-pipeline/blob/master/biological_significance/Cn-AMP3.jpg "Molecular Dynamics (MD) simulation of Cn-AMP3 (bottom one)")
 
 **Fun fact:** the peptide was derived from *Cocos nucifera*, aka green coconot water!
 
@@ -100,7 +102,7 @@ Several of the compounds were *bacteroicins*. Bacterioicins are compounds produc
 
 [This paper](https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978108004968) identified 3 new antimicrobial peptides of length 8, 11, and 9. The peptides are non-canonical in nature. The paper has great molecular models of the peptides, one of which is a **non-canonical** 8-mer that matched 1 of our motifs (see the image below and the table below). The motif that matched was > Y..Y....
 
-![alt text](https://github.com/tjense25/pep-seq-pipeline/blob/master/biological_significance/Cn-AMP3.jpg "Molecular Dynamics (MD) simulation of Cn-AMP3 (bottom one)")
+
 
 > The total net charge of Cn-AMP1 is +1, exhibiting a hydrophobic ratio of 44% and a boman index of 1.32 kcal/mol. **These properties, associated to the ability to form a helix**, as observed by helix wheel predictor (data not shown) and molecular modeling (Fig. 3) explain why this peptide was able to cause deleterious effects in bacteria. Moreover, **antibacterial activity of cationic peptides can also be modulated through modification in peptide's hydrophobicity or net charge** [14], [32]. Moreover, Cn-AMP2 and 3 showed acidic properties (Table 2) but similar hydrophobic rate suggesting that **cationic charges found in Cn-AMP1 is the main cause for higher antibacterial activity when compared to Cn-AMP2 and 3**. Ionic interaction probably is the initial attraction between AMPs and target cell, which occur through an electrostatic bonding between cationic peptide and negatively charged components present on the **outer bacterial envelope**, such as phosphate groups from lipopolysaccharides of Gram-negative bacteria or lipoteichoic acids exposed on Gram-positive bacteria surfaces. In the case of Gram-negative bacteria, **this peptide may also insert into the outer membrane structure in a process driven by hydrophobic interactions** and possibly involving refolding of the peptides into a membrane-associated structure [13]. However, the **antibacterial activity caused by acidic peptides such as Cn-AMP2 and 3 was a surprisingly data, since no basic exposed residue was observed. This result indicates that basic residues are truly important for bactericidal activity, since Cn-AMP1 showed a clear higher activity. Nevertheless these residues seems to be not essential, being the antimicrobial activity of Cn-AMP2 and 3 more related to hydrophobic amino acid residues as described above.**
 
