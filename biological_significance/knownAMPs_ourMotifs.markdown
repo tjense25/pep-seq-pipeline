@@ -76,16 +76,18 @@ Several of the compounds were *bacteroicins*. Bacterioicins are compounds produc
 
 #### Mandal SM, Dey S, Mandal M, Sarkar S, Maria‐Neto S, Franco OL. 2009. Identification and structural insights of three novel antimicrobial peptides isolated from green coconut water. Peptides 30: 633–637.
 
-[This paper](https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978108004968) identified 3 new antimicrobial peptides of length 8, 11, and 9. The peptides are non-canonical in nature. The paper has great molecular models of the peptides, one of which is an 8-mer that matched 1 of our motifs (see the image below and the table below). The motif that matched was > Y..Y....
+[This paper](https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978108004968) identified 3 new antimicrobial peptides of length 8, 11, and 9. The peptides are non-canonical in nature. The paper has great molecular models of the peptides, one of which is a **non-canonical** 8-mer that matched 1 of our motifs (see the image below and the table below). The motif that matched was > Y..Y....
 
 > The total net charge of Cn-AMP1 is +1, exhibiting a hydrophobic ratio of 44% and a boman index of 1.32 kcal/mol. **These properties, associated to the ability to form a helix**, as observed by helix wheel predictor (data not shown) and molecular modeling (Fig. 3) explain why this peptide was able to cause deleterious effects in bacteria. Moreover, **antibacterial activity of cationic peptides can also be modulated through modification in peptide's hydrophobicity or net charge** [14], [32]. Moreover, Cn-AMP2 and 3 showed acidic properties (Table 2) but similar hydrophobic rate suggesting that **cationic charges found in Cn-AMP1 is the main cause for higher antibacterial activity when compared to Cn-AMP2 and 3**. Ionic interaction probably is the initial attraction between AMPs and target cell, which occur through an electrostatic bonding between cationic peptide and negatively charged components present on the **outer bacterial envelope**, such as phosphate groups from lipopolysaccharides of Gram-negative bacteria or lipoteichoic acids exposed on Gram-positive bacteria surfaces. In the case of Gram-negative bacteria, **this peptide may also insert into the outer membrane structure in a process driven by hydrophobic interactions** and possibly involving refolding of the peptides into a membrane-associated structure [13]. However, the **antibacterial activity caused by acidic peptides such as Cn-AMP2 and 3 was a surprisingly data, since no basic exposed residue was observed. This result indicates that basic residues are truly important for bactericidal activity, since Cn-AMP1 showed a clear higher activity. Nevertheless these residues seems to be not essential, being the antimicrobial activity of Cn-AMP2 and 3 more related to hydrophobic amino acid residues as described above.**
-
-[this database](https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978108004968) reports that only 9.2% of the toxic peptides they have on file have a net negative charge. Systein, glycine, serine, and alanine are the 4 most abundant amino acids in this database.
 
 additional 8-mers I found
 
 | sequence | canonical? | number of matching motifs | name | source 
 | ------ | ------- | ----- | ----- | -------
 | YCSYTMEA | no | 1 | Cn-AMP3 | https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978108004968
+
+
+
+[this database](https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978108004968) reports that only 9.2% of the toxic peptides they have on file have a net negative charge. Systein, glycine, serine, and alanine are the 4 most abundant amino acids in this database.
 
 
