@@ -110,17 +110,9 @@ Many of the peptides were *bradykinins*. This is a bit puzzling at first, since 
 
 Several of the compounds were *bacteroicins*. Bacterioicins are compounds produced *by bacteria* that are active against other types of bacteria.
 
-## Additional Papers:
-
-#### 
-
-
-additional 8-mers I found
-
-
-
-
+#### Charge/hydrophobicity and toxicity
 
 [this database](https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978108004968) reports that only 9.2% of the toxic peptides they have on file have a net negative charge. Systein, glycine, serine, and alanine are the 4 most abundant amino acids in this database.
 
+[the paper](https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978108004968) from which Cn-AMP3 came speculated about the importance of having high charge and hydrophobicity for a peptide to interact with bacterial membranes.
 
