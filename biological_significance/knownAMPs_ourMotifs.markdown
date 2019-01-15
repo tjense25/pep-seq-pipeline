@@ -12,7 +12,7 @@ This document is a write up of the most important discoveries from the knownAMP_
 
 **canonical:** The peptide is **highly canonical**; it has a net charge of +2, and, at 50% phenylalanine, has a high level of hydrophobicity.
 
-**eye candy:** Figure 9 contains a nice 3-dimentional model of the conformation the peptide takes when interacting with a micel (a small bubble of surfactant). Information on the surfactant (DPC) used in this study can be found [here](https://pubs.acs.org/doi/10.1021/acs.langmuir.5b02077)
+**eye candy:** Figure 9 contains a nice 3-dimentional model of the conformation the peptide takes when interacting with a micel (a small bubble of surfactant). Information on the surfactant (DPC) used in this study can be found [here](https://pubs.acs.org/doi/10.1021/acs.langmuir.5b02077) and [here](https://en.wikipedia.org/wiki/Phosphocholine)
 
 
 ![alt text](https://github.com/tjense25/pep-seq-pipeline/blob/master/biological_significance/temporin-SHf.jpg "TEMPORIN-sHf model based on NMR spectroscopy")
