@@ -55,13 +55,34 @@ https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978105001
 
 ![alt text](https://github.com/tjense25/pep-seq-pipeline/blob/master/biological_significance/Cr‐ACP1.jpg "Molecular Dynamics (MD) simulation of Cr-ACP1 binding to DNA.")
 
-
 **biological proof** Chemical modificiation (acetylation) weakened the anticancer and antimicrobial activity. Molecular modeling was used to demonstrate how the peptide could bind to DNA.
 
 **fun fact:** This peptide comes from a plant in the Cycad Family, which means it is related to those plants that look like a cross between pineapples and palm trees that you see in depictions of dinosaur landscapes. 
-![alt text](https://github.com/tjense25/pep-seq-pipeline/blob/master/biological_significance/330px-Cycas_circinalis.jpg "Molecular Dynamics (MD) simulation of Cr-ACP1 binding to DNA.")
 
 https://onlinelibrary-wiley-com.erl.lib.byu.edu/doi/full/10.1002/jcb.23343 http://www.camp.bicnirrh.res.in/seqDisp.php?id=CAMPSQ2471
+
+### 4) Cn-AMP3 : YCSYTMEA
+
+*This peptide is not found in the "known_AMP.csv" or "known_AMP_intersect_our_motifs.csv" documents. Rather, I (happily) found this peptide while searching through the literature. I found the number of matching motifs using the same process as above, running motifFinder.py against this peptide and the list of motifs from the first round of the pep-seq pipeline.*
+
+**Number of matching motifs:** 1 (Y..Y....)
+
+**Mode of action:** probably through membrane interactions. However, the mechanism may be novel. Most membrane-interacting bacteriocides are basic, while this peptide was acidic. To quote the paper:
+
+>  Despite of most antimicrobial peptides found in plants have been characterized as cationic [19], few organisms have shown the presence of acidic bactericidal peptides with included chilli peppers [7], snakes [31] and several others.
+
+**canonical:** Yes and no. The peptide has a charge of -1, which is unusual. But it also has hydrophobic regions. A similar, related compound had a positive charge and hydrophobic regions and had much stronger antimicrobial activity. The authors think that the combination of hydrophobic regions and basicity/positive are what cause the three peptides discussed 
+
+**biological proof:** The peptide was effective against 
+
+Pathogenic bacteria	| Cn-AMP1 MIC (μg ml−1)	| Cn-AMP2 MIC (μg ml−1)	| Cn-AMP3 MIC (μg ml−1)
+----- | ----- | ----- | -----
+E. coli	| 82	| 170	| 302
+B. subtilis	| 76	| 150	| 257
+P. aeruginosa	| 79	| 169	| 259
+S. aureus	| 80	| 170	| 274
+
+**Fun fact:** the peptide was derived from *Cocos nucifera*, aka green coconot water!
 
 ## General Notes:
 
@@ -88,6 +109,8 @@ additional 8-mers I found
 | sequence | canonical? | number of matching motifs | name | source 
 | ------ | ------- | ----- | ----- | -------
 | YCSYTMEA | no | 1 | Cn-AMP3 | https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978108004968
+
+
 
 
 
