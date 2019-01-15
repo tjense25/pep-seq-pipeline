@@ -59,6 +59,7 @@ https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978105001
 **biological proof** Chemical modificiation (acetylation) weakened the anticancer and antimicrobial activity. Molecular modeling was used to demonstrate how the peptide could bind to DNA.
 
 **fun fact:** This peptide comes from a plant in the Cycad Family, which means it is related to those plants that look like a cross between pineapples and palm trees that you see in depictions of dinosaur landscapes. 
+![alt text](https://github.com/tjense25/pep-seq-pipeline/blob/master/biological_significance/330px-Cycas_circinalis.jpg "Molecular Dynamics (MD) simulation of Cr-ACP1 binding to DNA.")
 
 https://onlinelibrary-wiley-com.erl.lib.byu.edu/doi/full/10.1002/jcb.23343 http://www.camp.bicnirrh.res.in/seqDisp.php?id=CAMPSQ2471
 
