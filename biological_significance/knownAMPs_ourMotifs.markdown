@@ -59,7 +59,15 @@ https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978105001
 
 **fun fact:** This peptide comes from a plant in the Cycad Family, which means it is related to those plants that look like a cross between pineapples and palm trees that you see in depictions of dinosaur landscapes. 
 
-https://onlinelibrary-wiley-com.erl.lib.byu.edu/doi/full/10.1002/jcb.23343 http://www.camp.bicnirrh.res.in/seqDisp.php?id=CAMPSQ2471
+**quick summary table:**
+
+| sequence | canonical? | number of matching motifs | name | source 
+| ------ | ------- | ----- | ----- | -------
+| WKLFDDGV | no | 2 | Cr‐ACP1 | https://onlinelibrary-wiley-com.erl.lib.byu.edu/doi/full/10.1002/jcb.23343 
+
+http://www.camp.bicnirrh.res.in/seqDisp.php?id=CAMPSQ2471
+
+----------------------------
 
 ### 4) Cn-AMP3 : YCSYTMEA
 
@@ -90,15 +98,11 @@ Again, to quote the paper:
 
 **Fun fact:** the peptide was derived from *Cocos nucifera*, aka green coconot water!
 
-Here is some of this data in table form:
+**quick summary table:**
 
 | sequence | canonical? | number of matching motifs | name | source 
 | ------ | ------- | ----- | ----- | -------
 | YCSYTMEA | sort of | 1 | Cn-AMP3 | https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978108004968
-
-Mandal SM, Dey S, Mandal M, Sarkar S, Maria‐Neto S, Franco OL. 2009. Identification and structural insights of three novel antimicrobial peptides isolated from green coconut water. Peptides 30: 633–637.
-
-https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978108004968
 
 ## General Notes:
 
