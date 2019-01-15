@@ -84,8 +84,8 @@ Several of the compounds were *bacteroicins*. Bacterioicins are compounds produc
 
 additional 8-mers I found
 
-| sequence | canonical? | number of matching motifs | source 
-| ------ | ------- | ----- | -------
-| YCSYTMEA | no | 1 | https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978108004968
+| sequence | canonical? | number of matching motifs | name | source 
+| ------ | ------- | ----- | ----- | -------
+| YCSYTMEA | no | 1 | Cn-AMP3 | https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978108004968
 
 
