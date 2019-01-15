@@ -21,6 +21,12 @@ This document is a write up of the most important discoveries from the knownAMP_
 
 http://www.jbc.org/content/285/22/16880.full.pdf
 
+**quick summary table:**
+
+| sequence | canonical? | number of matching motifs | name | source 
+| ------ | ------- | ----- | ----- | -------
+| FFFLSRIF | very canonical | 5 | Temporin-SHF | http://www.jbc.org/content/285/22/16880.full.pdf
+
 --------
 ### 2)	pleurostrin : VRPYLVAF
 
@@ -35,8 +41,6 @@ http://www.jbc.org/content/285/22/16880.full.pdf
 ![alt text](https://github.com/tjense25/pep-seq-pipeline/blob/master/biological_significance/pleurostrin_on_p_piricola.jpg "Pleurostrin fungisidal assay on the fungus *P. piricola*")
 
 **biological proof**  One assay was used to determine antifungal activity, while a second assay was used to determine the peptides effect on ribosomal efficiency. This peptide is a little interesting because it is an *antifungal* peptide isolated *from a fungus!*
-
-https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978105001816
 
 **quick summary table:**
 
