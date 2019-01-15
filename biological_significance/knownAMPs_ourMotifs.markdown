@@ -19,8 +19,6 @@ This document is a write up of the most important discoveries from the knownAMP_
 
 **biological proof**: A variety of assays demonstate the antimicrobial nature of the peptide.
 
-http://www.jbc.org/content/285/22/16880.full.pdf
-
 **quick summary table:**
 
 | sequence | canonical? | number of matching motifs | name | source 
@@ -101,7 +99,9 @@ Again, to quote the paper:
 
 > This result indicates that basic residues are truly important for bactericidal activity, since Cn-AMP1 showed a clear higher activity. Nevertheless these residues seems to be not essential, being the antimicrobial activity of Cn-AMP2 and 3 more related to hydrophobic amino acid residues as described above.**
 
-**Eye candy:** ![alt text](https://github.com/tjense25/pep-seq-pipeline/blob/master/biological_significance/Cn-AMP3.jpg "Molecular Dynamics (MD) simulation of Cn-AMP3 (bottom one)")
+**Eye candy:** This figure is a molecular dynamics simulation of the peptide. Ours is the bottom peptide.
+
+![alt text](https://github.com/tjense25/pep-seq-pipeline/blob/master/biological_significance/Cn-AMP3.jpg "Molecular Dynamics (MD) simulation of Cn-AMP3 (bottom one)")
 
 **Fun fact:** the peptide was derived from *Cocos nucifera*, aka green coconot water!
 
