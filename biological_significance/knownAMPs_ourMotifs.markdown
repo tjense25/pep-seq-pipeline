@@ -32,7 +32,7 @@ http://www.jbc.org/content/285/22/16880.full.pdf
 
 **eye candy:** Figure 4 shows side-by-side the effect of pleurostrin on strains of fungi that cause harm to crops.
 
-![alt text](https://github.com/tjense25/pep-seq-pipeline/blob/master/biological_significance/pleurostrin_on_p_piricola.jpg "TEMPORIN-sHf model based on NMR spectroscopy")
+![alt text](https://github.com/tjense25/pep-seq-pipeline/blob/master/biological_significance/pleurostrin_on_p_piricola.jpg "Pleurostrin fungisidal assay on the fungus *P. piricola*")
 
 **biological proof**  One assay was used to determine antifungal activity, while a second assay was used to determine the peptides effect on ribosomal efficiency. This peptide is a little interesting because it is an *antifungal* peptide isolated *from a fungus!*
 
@@ -52,6 +52,9 @@ https://www-sciencedirect-com.erl.lib.byu.edu/science/article/pii/S0196978105001
 **canonical:** No (I think)
 
 **eye candy:** Figure 4 is probably the best figure this analysis found.
+
+![alt text](https://github.com/tjense25/pep-seq-pipeline/blob/master/biological_significance/Cr‐ACP1.jpg "Molecular Dynamics (MD) simulation of Cr-ACP1 binding to DNA.")
+
 
 **biological proof** Chemical modificiation (acetylation) weakened the anticancer and antimicrobial activity. Molecular modeling was used to demonstrate how the peptide could bind to DNA.
 
