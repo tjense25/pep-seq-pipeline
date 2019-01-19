@@ -1,0 +1,38 @@
+DNA Motif,Pep Motif,Method,Filtering,AMPScanner Score
+TTT CTT TTT,FLT,Randomized Motif,250 Most Toxic Peptides,0.6639
+TTC TTT TTC,FFF,Randomized Motif,250 Most Toxic Peptides,0.6342
+TTG CGG TGT,LRC,Randomized Motif,1000 Random Peptides,0.6454
+TGC GGT GTC,CGV,Randomized Motif,1000 Random Peptides,0.6674
+TGG CGG TGT,WRC,Randomized Motif,250 Least Toxic Peptides,0.7918
+GGC GGT GTC,GGV,Randomized Motif,250 Least Toxic Peptides,0.5817
+TAT TTC TTT TTC TTT TAC TAT TAC,YFFFFYYY,Gibbs Sampling and Randomized Motifs,799 Peptides with hamming distance 6 from non-toxic,0.4653
+TTT CTC GAT TAC ATT ATC GAT GTC,FLDYIIDV,MEME,Hamming Distance of 4 from Consensus of Known Binding Motifs,0.4247
+TGT AAC GAT TAC ATT TTC GGT GAC,CNDYIFGD,MEME,"",0.0602
+-,FCVFF,His own algorithm (Found best matching peptide to whole set),1000 Most Toxic Peptides,0.8246
+-,FFFVFLF,"",1000 Most Toxic Peptides,0.9265
+-,FFFFFFFF,"",1000 Most Toxic Peptides,0.8416
+-,FCVCF,"",10000 Most Toxic Peptides,0.9514
+-,FCVFCF,"",10000 Most Toxic Peptides,0.7452
+-,FVFVFCF,"",10000 Most Toxic Peptides,0.8316
+TTT TGC TTT TTC TGT TTC,FCFFCF,Gibbs Sampling, Random Subset of 1000,0.7122
+TTT TTC TTT TTC TTT TTC,FFFFFF,Randomized Motif,10% Most Toxic Peptides,0.8745
+*TTTCG*,-,Gibbs Sampling,Peptides with Toxicity at least 0.5,-
+TTT CTC ATT TTC TTT TTC TTT CTC,FLIFFFFL,Randomized Motif,Toxicity at least -1.5,0.8755
+TTT TTC TTT TTC TTT TTC TTT TTC,FFFFFFFF,Greedy Motif,Toxicity at least -1,0.8416
+TTT TTC TTT TTC TTT CGC TTT TTC,FFFFFRFF,Greedy Gibbs,Toxicity at least -2,0.8394
+TTT CTT TTT CTT TTT CTT TT,FLFLFL(F/L),Gibbs Sampling, Random Subset of 500 Toxic Peptides,0.9349
+CAT TAC ATT CGC GTT TTC TAT CTC,HYIRVFYL,Hamming Distance at least 6 from non-toxic peptides,Toxicity -2 ~ -1.5,0.3429
+TTT ATC TTT TTC TTT TGC AAT CGC,FIFFFCNR,"","",0.9398
+GTT CAC CTT TTC TTT CTC TTT CGC,VHLFFLFR,"","",0.9002
+*TTTCTTT*,-,Greedy Search with Pseuodocounts,Random subset of 400,-
+TTT CTT TTT CTT TTT CTT TT,FLFLFL(F/L),Gibbs Sampling,Random Subset of 400 toxic peptides,0.9349
+-,LFVLVIRG,Gibbs Sampling and Random Search,Toxicity at least -0.5 and distinct from non-toxic,0.8486
+-,FCCICVCI,"","",0.9992
+GTT TGC AGT TAC TGT AAC GTT TGC,VCSYCNVC,https://www.genome.jp/tools/motif/,-,0.6225
+CTT TTC CGT TTC CGT TGC CGT TGC,LFRFRCRC,Peptides most closely matching consensus string of toxics,Distinct from non-toxic,0.9819
+TTT TTC CGT TGC CGT TTC GGT TGC,FFRCRFGC,"",Distinct from non-toxic,0.9973
+TTT TTC TTT TGC TGT TGC TGT TTC,FFFCCCCF,Consensus string of Greedy Motif and Randomized Motif and Gibbs Sampling results,-,0.9608
+TTT TTC TTT TTC TTT TTC TT,FFFFFF(F/L),Greedy,Toxic at least -1,0.8565
+TTT TTC TTT TTC TTT TTC,FFFFFF,Gibbs Sampling,"",0.8745
+TTT TTC TTT TTC TTT TTC TTT TTC,FFFFFFFF,Consensus motif,Peptides with high hydrophobicity,0.8416
+*TTTTCCTT*,-,Randomized Motif,Most toxic and hydrophobic,-
