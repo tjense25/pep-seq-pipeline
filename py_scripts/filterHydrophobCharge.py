@@ -1,4 +1,4 @@
-# This program creates a csv file containing peptide sequence data as well as dna sequence
+# This program filters out peptides with high hydrophobicity and charge and creates a csv file with the rest of the peptides
 #
 # USAGE: python filterHydrophobCharge.py raw_data.csv outFile.csv chargeCutoff hphobCutoff
 
