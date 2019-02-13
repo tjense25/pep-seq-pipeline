@@ -2,7 +2,11 @@ Before our analysis on the PepSeq data, another bioinformatics student, Alex, di
 
 
 3mer, 0 wildcards: 94%
+
 4mer, 1 wildcard: 98%
+
 5mer, 1 wildcard: 100%
+
 5mer, 2 wildcards: 100%
+
 6mer, 2 wildcards: 94%
