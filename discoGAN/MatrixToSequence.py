@@ -57,6 +57,7 @@ def findConsensusString(allPeps):
 
 def matrixToSequence(matrix):
     referenceDict = getRefDict()
+    referenceDict.pop('_', None)
     possible = []
 
     p = 0
