@@ -1,0 +1,312 @@
+#!/usr/bin/python
+import sys
+import random
+import numpy as np
+import csv
+
+
+def amplifyMotif(numPeptides, motif):
+    peptides = set()
+    aminoAcids = ["G","A","P","V","L","I","M","F","Y","W","S","T","C","N","Q","K","H","R","D","E"]
+
+    for index in range(numPeptides):
+        peptide = ""
+        for letter in motif:
+            if letter == "-":
+                randomNum = random.randint(0,19)
+                peptide = peptide + aminoAcids[randomNum]
+            else:
+                peptide = (peptide + letter)
+        peptides.add(peptide)
+    return peptides
+
+
+def getMotifs2(index1, index2):
+    motifs = []
+
+    motif1 = ["-","A","A","A","-","-","-","-"]
+    motif2 = ["A","W","T","-","-","-","-","-"]
+    motif3 = ["-","-","F","I","M","-","-","-"]
+    motif4 = ["-","-","C","T","C","-","-","-"]
+    motif5 = ["-","E","-","-","-","-","-","A"]
+
+    motif6 = ["I","-","-","-","-","-","-","C"]
+    motif7 = ["E","-","-","-","-","-","-","E"]
+    motif8 = ["-","T","V","A","-","-","-","I"]
+    motif9 = ["-","E","-","E","-","-","-","-"]
+    motif10 = ["-","S","H","S","-","-","-","-"]
+
+    motif11 = ["H","-","-","-","-","-","H","-"]
+    motif12 = ["-","-","-","-","E","H","-","-"]
+    motif13 = ["C","A","T","-","-","-","-","-"]
+    motif14 = ["-","-","-","I","I","-","-","-"]
+    motif15 = ["-","-","M","R","-","-","-","G"]
+
+    motif16 = ["-","-","-","-","-","F","E","G"]
+    motif17 = ["-","G","G","-","-","-","-","E"]
+    motif18 = ["-","M","-","-","-","-","T","-"]
+    motif19 = ["T","-","T","-","T","-","T","-"]
+    motif20 = ["-","E","-","E","-","E","-","E"]
+
+    motif21 = ["-","-","-","-","G","S","A","-"]
+    motif22 = ["-","-","-","E","H","-","-","W"]
+    motif23 = ["-","R","A","T","-","-","A","-"]
+    motif24 = ["M","-","-","M","-","-","-","W"]
+    motif25 = ["-","-","P","-","P","G","-","-"]
+
+    motifs.append(motif1)
+    motifs.append(motif2)
+    motifs.append(motif3)
+    motifs.append(motif4)
+    motifs.append(motif5)
+    motifs.append(motif6)
+    motifs.append(motif7)
+    motifs.append(motif8)
+    motifs.append(motif9)
+    motifs.append(motif10)
+    motifs.append(motif11)
+    motifs.append(motif12)
+    motifs.append(motif13)
+    motifs.append(motif14)
+    motifs.append(motif15)
+    motifs.append(motif16)
+    motifs.append(motif17)
+    motifs.append(motif18)
+    motifs.append(motif19)
+    motifs.append(motif20)
+    motifs.append(motif21)
+    motifs.append(motif22)
+    motifs.append(motif23)
+    motifs.append(motif24)
+    motifs.append(motif25)
+
+    return motifs[index1:index2]
+
+
+
+
+def getMotifs1(index1, index2):
+    motifs = []
+
+    motif1 = ["-","T","T","P","-","-","-","A"]
+    motif2 = ["A","W","T","-","-","-","-","-"]
+    motif3 = ["-","-","T","-","T","-","T","-"]
+    motif4 = ["-","-","C","N","C","-","-","-"]
+    motif5 = ["-","Q","-","-","-","-","-","A"]
+
+    motif6 = ["P","-","-","-","-","-","-","W"]
+    motif7 = ["M","-","-","-","-","-","-","L"]
+    motif8 = ["-","V","V","L","-","-","-","I"]
+    motif9 = ["-","I","-","-","-","-","-","-"]
+    motif10 = ["-","S","S","S","-","-","-","-"]
+
+    motif11 = ["Y","-","-","-","-","-","Y","-"]
+    motif12 = ["-","-","-","-","Y","Y","-","-"]
+    motif13 = ["H","K","H","-","-","-","-","-"]
+    motif14 = ["-","-","-","L","L","-","-","-"]
+    motif15 = ["-","-","D","R","-","-","-","R"]
+
+    motif16 = ["-","-","-","-","-","F","Y","P"]
+    motif17 = ["-","T","M","-","-","-","-","T"]
+    motif18 = ["-","R","-","-","-","-","G","-"]
+    motif19 = ["A","-","A","-","A","-","A","-"]
+    motif20 = ["-","C","-","C","-","C","-","C"]
+
+    motif21 = ["-","-","-","-","-","F","Y","P"]
+    motif22 = ["-","-","K","-","H","-","-","-"]
+    motif23 = ["-","V","I","V","-","-","-","-"]
+    motif24 = ["-","-","-","S","P","S","-","-"]
+    motif25 = ["-","T","W","-","-","-","-","W"]
+
+    motifs.append(motif1)
+    motifs.append(motif2)
+    motifs.append(motif3)
+    motifs.append(motif4)
+    motifs.append(motif5)
+    motifs.append(motif6)
+    motifs.append(motif7)
+    motifs.append(motif8)
+    motifs.append(motif9)
+    motifs.append(motif10)
+    motifs.append(motif11)
+    motifs.append(motif12)
+    motifs.append(motif13)
+    motifs.append(motif14)
+    motifs.append(motif15)
+    motifs.append(motif16)
+    motifs.append(motif17)
+    motifs.append(motif18)
+    motifs.append(motif19)
+    motifs.append(motif20)
+    motifs.append(motif21)
+    motifs.append(motif22)
+    motifs.append(motif23)
+    motifs.append(motif24)
+    motifs.append(motif25)
+
+    return motifs[index1:index2]
+
+# generates output of size: (size * motifs1) [file1] + (size * motifs2) [file2]
+def generateTestingBatch(size, motifs1, motifs2):
+    set1Peptides = set()
+    set2Peptides = set()
+
+    for motif1 in motifs1:
+        newPeptides1 = amplifyMotif(size, motif1)
+        set1Peptides = set1Peptides.union(newPeptides1)
+
+    for motif2 in motifs2:
+        newPeptides2 = amplifyMotif(size, motif2)
+        set2Peptides = set2Peptides.union(newPeptides2)
+
+    # write output to file
+    OutFile1 = open('randomPeptides.txt', 'w')
+    for peptide in set1Peptides:
+        OutFile1.write(peptide + "\n")
+
+    # OutFile2 = open('large_sim_peptides2.txt', 'w')
+    # for peptide in set2Peptides:
+    #     OutFile2.write(peptide + "\n")
+
+    OutFile1.close()
+    # OutFile2.close()
+
+def getRefDict():
+    referenceDict = {}
+    aminoAcidMatrix = "C:\\Users\\BCBrown\\Desktop\\ClementLab\\aaMatrix.csv"
+    with open(aminoAcidMatrix) as csvfile:
+        reader = csv.reader(csvfile, delimiter=",")
+        for row in reader:
+            # make new list
+            aminoAcid = ""
+
+            attributes = np.ndarray(shape = (0,), dtype = float)
+            i = 0
+            for value in row:
+                if i == 0:
+                    aminoAcid = value # save which amino acid this is for
+                else:
+                    attributes = np.append(attributes, float(value))
+                i = i + 1
+            referenceDict[aminoAcid] = attributes
+
+    return referenceDict
+
+def buildNewRow(qualityIndex, peptideSequence, referenceDict):
+    newRow = []
+    for sequenceIndex in range(len(peptideSequence)):
+        peptide = peptideSequence[sequenceIndex]
+        if peptide != "\n":
+            try:
+                newRow.append(referenceDict[peptide][qualityIndex])
+            except:
+                print(peptide)
+                print(qualityIndex)
+    return newRow
+
+
+def makeMatrix(data, referenceDict):
+    imageStack = []
+
+    numQualities = len(referenceDict["A"])
+    for peptide in data:
+        newImage = []
+
+        for quality in range(numQualities): # 25 of these
+            newRow = buildNewRow(quality, peptide, referenceDict) # 25 new rows
+            newImage.append(newRow)
+        newImage = np.stack(newImage)
+        imageStack.append(newImage)
+    imageStack = np.stack(imageStack)
+    return imageStack
+
+
+# def diff():
+#     blankMotif = ["-","-","-","-","-","-","-","-"]
+#     # save generated peptides to files
+#     generateTestingBatch(30000, blankMotif, blankMotif)
+# 
+#     # open those files
+#     randomDomainData = []
+#     OutFile1 = open('randomPeptides.txt', 'r')
+# 
+#     for line in OutFile1:
+#         print(line)
+#         randomDomainData.append(line)
+#     OutFile1.close()
+# 
+#     # get the reference dictionary that contains the amino acid data
+#     aminoAcidDict = getRefDict()
+# 
+# 
+#     # convert the lists into numpy arrays that are 8 x 25 images
+#     randomDomain = makeMatrix(randomDomainData, aminoAcidDict)
+# 
+#     randomDomain = np.expand_dims(randomDomain, axis=1)
+#     print(randomDomain.shape)
+#     print(randomDomain[0])
+# 
+#     # save those arrays
+# 
+#     np.save("random_domain", randomDomain)
+# 
+# diff()
+
+
+def main():
+    numResidues = 8
+    numQualities = 25
+
+    motifs1 = getMotifs1(0,25)
+    motifs2 = getMotifs2(0,25)
+
+    # save generated peptides to files
+    generateTestingBatch(1000, motifs1, motifs2)
+
+    # open those files
+    OutFile1 = open('large_sim_peptides1.txt', 'r')
+    OutFile2 = open('large_sim_peptides2.txt', 'r')
+
+    # save those peptides in a list
+    domain1Data = []
+    domain2Data = []
+    for line in OutFile1:
+        domain1Data.append(line)
+    for line in OutFile2:
+        domain2Data.append(line)
+    OutFile1.close()
+    OutFile2.close()
+
+    # get the reference dictionary that contains the amino acid data
+    aminoAcidDict = getRefDict()
+
+    # convert the lists into numpy arrays that are 8 x 25 images
+    domain1 = makeMatrix(domain1Data, aminoAcidDict)
+    domain2 = makeMatrix(domain2Data, aminoAcidDict)
+
+    domain1 = np.expand_dims(domain1, axis=1)
+    domain2 = np.expand_dims(domain2, axis=1)
+    print(domain1.shape)
+    print(domain1[0])
+    print(domain2.shape)
+    print(domain2[0])
+
+    # save those arrays
+
+    np.save("large_domain1", domain1)
+    np.save("large_domain2", domain2)
+    # tiny: 0,1
+    # small: 2,7
+    # large: 0,25
+
+    # tiny 4.0:
+    # small 4.0:
+    # domain 4.0:
+
+
+main()
+
+
+
+
+
